@@ -1,7 +1,11 @@
 
 ;;;load a Cask's configuration file
 
-(require 'cask "~/.emacs.d/.cask/24.5.1/elpa/cask-20151123.528/cask.el")
+;; if you use OSX
+(require 'cask)
+;; if you use linux
+;; (require 'cask"~/.cask/cask.el")
+
 (cask-initialize)
 
 ;;; init-loader.el
