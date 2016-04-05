@@ -1,0 +1,49 @@
+
+;;;load a Cask's configuration file
+
+(require 'cask)
+(cask-initialize)
+
+;;; その他の参照
+(require 'pallet)
+(require 'init-loader)
+(require 'bind-key)
+(require 'cask)
+(require 'dash)
+(require 'drag-stuff)
+(require 'exec-path-from-shell)
+(require 'expand-region)
+(require 'f)
+(require 'flycheck)
+(require 'flycheck-cask)
+(require 'htmlize)
+(require 'idle-highlight-mode)
+(require 'magit)
+(require 'multiple-cursors)
+(require 'nyan-mode)
+(require 'popwin)
+(require 'prodigy)
+(require 'projectile)
+(require 's)
+(require 'smartparens)
+(require 'smex)
+(require 'use-package)
+(require 'web-mode)
+(require 'yasnippet)
+(require 'init-loader)
+
+(require 'jedi)
+
+(pallet-mode t)
+(require 'py-autopep8)
+
+(add-hook 'python-mode-hook
+	  '(lambda()
+	     (define-key python-mode-map (kbd "C-c F") 'py-autopep8)
+	     ; バッファ全体のコード整形
+	     (define-key python-mode-map (kbd "C-c f") 'py-autopep8-region)))
+	     ; 選択リジョン内のコード整形
+
+(setq init-loader-show-log-after-init nil)
+(init-loader-load "~/.emacs.d/inits")
+;;; init.el ends here
