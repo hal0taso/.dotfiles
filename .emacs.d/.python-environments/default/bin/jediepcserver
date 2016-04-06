@@ -1,4 +1,4 @@
-#!/Users/hal0taso/.emacs.d/.python-environments/default/bin/python3.5
+#!/root/.emacs.d/.python-environments/default/bin/python
 
 # -*- coding: utf-8 -*-
 import re
