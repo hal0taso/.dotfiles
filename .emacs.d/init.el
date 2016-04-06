@@ -2,9 +2,9 @@
 ;;;load a Cask's configuration file
 
 ;; if you use OSX
-;; (require 'cask)
+(require 'cask)
 ;; if you use linux
-(require 'cask"~/.cask/cask.el")
+;;(require 'cask"~/.cask/cask.el")
 
 (cask-initialize)
 
