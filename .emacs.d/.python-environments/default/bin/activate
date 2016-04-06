@@ -40,7 +40,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/Users/hal0taso/.emacs.d/.python-environments/default"
+VIRTUAL_ENV="/root/.emacs.d/.python-environments/default"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
