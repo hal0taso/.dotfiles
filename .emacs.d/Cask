@@ -28,7 +28,7 @@
 (depends-on "use-package")
 (depends-on "web-mode")
 (depends-on "yasnippet")
-(depends-on "init-loader")  
+(depends-on "init-loader")
 
 ;; Python
 (depends-on "py-autopep8")
@@ -37,3 +37,18 @@
 
 ;; ファイラ
 (depends-on "direx")
+
+;; YaTeX
+(depends-on "yatex")
+
+;; high-light current line
+(depends-on "hlinum")
+
+;; ac-math
+(depends-on "ac-math")
+
+;; slack
+(depends-on "slack")
+
+;; mark-down mode+
+(depends-on "markdown-mode+")
