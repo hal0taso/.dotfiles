@@ -52,3 +52,10 @@
 
 ;; mark-down mode+
 (depends-on "markdown-mode+")
+
+;; flycheck-pops-tip
+(depends-on "flycheck-pos-tip")
+
+;; color theme
+(depends-on "color-theme-modern")
+

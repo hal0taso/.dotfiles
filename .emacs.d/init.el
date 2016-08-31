@@ -13,4 +13,9 @@
 (require 'init-loader)
 (init-loader-load "~/.emacs.d/inits")
 
+;;; color theme
+
+(load-theme 'calm-forest t t)
+(enable-theme 'calm-forest)
+
 ;;; init.el ends here
