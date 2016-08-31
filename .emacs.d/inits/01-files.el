@@ -1,6 +1,8 @@
+;;; 参考url:
+;;; http://qiita.com/masato/items/ef0ffa626ca8bf46bf8a
 
-;;参考url:http://qiita.com/masato/items/ef0ffa626ca8bf46bf8a
-(setq backup-inhibited t) ;バックアップの保存をしない
+;;;Code:
+(setq backup-inhibited t) ; バックアップの保存をしない
 (setq next-line-add-newlines nil) ;
 (setq-default tab-width 4 indent-tabs-mode nil) ;tabキーは4スペース分
 
