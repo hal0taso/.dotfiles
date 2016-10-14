@@ -57,9 +57,11 @@
                                 (interactive)
                                 (term shell-file-name)))
 
-(scroll-bar-mode -1)
-(tool-bar-mode -1)
-(setq inhibit-startup-screen t)
+;; 処理の分岐が必要らしい
+if [ "$EMACS" ];then
+  export TERM=xterm-256color
+fi
+
 
 ;;; init-loader.el
 
