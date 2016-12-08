@@ -2,10 +2,11 @@
 ;;;load a Cask's configuration file
 
 ;; if you use OSX
-(require 'cask)
+;;(require 'cask)
 ;; if you use linux
-;;(require 'cask"~/.cask/cask.el")
+(require 'cask"~/.cask/cask.el")
 
+;;; Code:
 (cask-initialize)
 
 ;; 参考http://sakito.jp/emacs/emacsshell.html
@@ -68,7 +69,23 @@
 
 ;;; color theme
 
-(load-theme 'calm-forest t t)
-(enable-theme 'calm-forest)
+(load-theme 'darktooth t t)
+(enable-theme 'darktooth)
+
+;; 透明度を変更するコマンド M-x set-alpha
+;; http://qiita.com/marcy@github/items/ba0d018a03381a964f24
+(defun set-alpha (alpha-num)
+  "set frame parameter 'alpha"
+  (interactive "nAlpha: ")
+  (set-frame-parameter nil 'alpha (cons alpha-num '(90))))
+
+
+
+;; default window alpha
+(set-frame-parameter nil 'alpha 95)
 
 ;;; init.el ends here
+
+;; change font size
+(set-frame-font "Monospace 9")
+(put 'upcase-region 'disabled nil)

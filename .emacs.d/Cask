@@ -32,11 +32,10 @@
 
 ;; Python
 (depends-on "py-autopep8")
-(depends-on "jedi")
-(depends-on "jedi-direx")
 
 ;; ファイラ
 (depends-on "direx")
+(depends-on "dired-ranger")
 
 ;; YaTeX
 (depends-on "yatex")
@@ -58,4 +57,5 @@
 
 ;; color theme
 (depends-on "color-theme-modern")
-
+(depends-on "abyss-theme")
+(depends-on "darktooth-theme")
