@@ -1,0 +1,1 @@
+(function(){window.Scanner=new LinkedinPScanner;window.Fixer=new LinkedinPFixer;var a=function(){"undefined"!=typeof TMExt_$?TMExt_$(document).ready(function(){PSContentEstablishConnection("ContentPage_Background_LINKEDIN");window.SyncPrivacyScannerSettings("ContentPage_Background_LINKEDIN")}):setTimeout(a,500)};a()})();

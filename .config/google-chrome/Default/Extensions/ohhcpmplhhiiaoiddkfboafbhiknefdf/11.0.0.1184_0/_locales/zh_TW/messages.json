@@ -1,0 +1,29 @@
+{
+   "facebookscanner": {
+      "message": "檢查網路隱私設定"
+   },
+   "help": {
+      "message": "說明"
+   },
+   "help_page_base_url": {
+      "message": "http://docs.trendmicro.com/TMT/ZH-TW/"
+   },
+   "pagerating": {
+      "message": "為網頁上的連結分級"
+   },
+   "product_name": {
+      "message": "趨勢科技網路隱私偵測"
+   },
+   "setting": {
+      "message": "設定"
+   },
+   "toolbar_description": {
+      "message": "簡要查看可能有風險的網站連結。透過趨勢科技股安全防護軟體增強防護。"
+   },
+   "toolbar_name": {
+      "message": "趨勢科技工具列"
+   },
+   "umsrating": {
+      "message": "滑鼠移到連結上方時顯示分級"
+   }
+}

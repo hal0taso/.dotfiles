@@ -1,0 +1,33 @@
+﻿{
+  "g_oPrivacyScannerString": {
+    "ScanButtonText": "Comprobar mi privacidad",
+    "WelcomeString": {
+      "Head": {
+        "FACEBOOK": "¿Le preocupa quién ve lo que comparte en Facebook?",
+        "TWITTER": "¿Le preocupa quién ve lo que comparte en Twitter?",
+        "GOOGLEPLUS": "¿Le preocupa quién ve lo que comparte en Google+?",
+        "LINKEDIN": "¿Le preocupa quién ve lo que comparte en LinkedIn?"
+      },
+      "Content": "Ejecute el Explorador de privacidad de Trend Micro para asegurarse de que comparte lo que quiere solo con quien quiere.",
+      "LearnMore": "Más información",
+      "AskLater": "Seguir mostrando estas alertas"
+    }
+  },
+  "g_oPrivacyScannerString_autoScan": {
+    "ScanButtonText": "Ver los resultados de la exploración",
+    "WelcomeString": {
+      "Head": {
+        "SeveralConcern": "%d Problemas de privacidad detectados",
+        "OneConcern": "%d Problema de privacidad detectado"
+      },
+      "Content": {
+        "FACEBOOK": "Haga clic en el siguiente botón para comenzar a mejorar su configuración de privacidad de Facebook.",
+        "TWITTER": "Haga clic en el siguiente botón para comenzar a mejorar su configuración de privacidad de Twitter.",
+        "GOOGLEPLUS": "Haga clic en el siguiente botón para comenzar a mejorar su configuración de privacidad de Google+.",
+        "LINKEDIN": "Haga clic en el siguiente botón para comenzar a mejorar su configuración de privacidad de LinkedIn."
+      },
+      "LearnMore": "Más información",
+      "AskLater": "Seguir mostrando estas alertas"
+    }
+  }
+}

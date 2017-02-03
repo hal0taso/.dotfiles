@@ -1,0 +1,10 @@
+{
+   "appDesc": {
+      "description": "App description.",
+      "message": "온라인 양식 및 설문조사 만들기"
+   },
+   "appName": {
+      "description": "App name.",
+      "message": "Google 양식"
+   }
+}

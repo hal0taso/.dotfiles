@@ -1,0 +1,697 @@
+/*
+ tabsContent
+ */
+.bFacekookApplications label {
+    font-size: 13px;
+    color : #777;
+ } 
+input[type=radio   ]:not(old){
+  width   : 22px;
+  margin  : 0;
+  padding : 0;
+  opacity : 0;
+}
+
+input[type=radio]:not(old) + label{
+  display      : inline-block;
+  margin-left  : -22px;
+  padding-left : 22px;
+  background   : url('../img/ic_radiabtn.png') no-repeat 0 -18px;
+  line-height  : 20px;
+  width        : 350px;
+}
+
+
+input[type=radio]:not(old):checked + label{
+  background-position : 0 -134px;
+}
+
+ li.oneApp {
+      border-bottom: solid 1px #d9d9d9;
+ }
+.waiting {
+    background: url('../img/loading_24-r.gif') no-repeat 0px 0px;
+    height: 24px;
+    width: 24px;
+    margin-top: 20px;
+}
+.waiting.hidden {
+    background-position : 0px -24px;
+}
+.extendBar .arrow{
+    background: url('../img/ic_showdetail_arrow.png') no-repeat 0 -21px;
+    margin-left: 2px;
+    width:20px;
+    height:20px;
+    display: inline-block;
+}
+.extendBar.unextended  .arrow{
+    background: url('../img/ic_showdetail_arrow.png') no-repeat  0 -2px;
+}
+.extendBar{
+    text-align:center;
+    font-size: 15px;
+    color : #1885cf;
+    cursor: pointer;
+    height : 20px;
+    margin-top: 15px;
+}
+ 
+.how_many_app_counts {
+    font-size: 18px;
+    color: #ff9900;
+    font-weight: bold;
+}
+.radioBtnApplyAll {
+    margin-top:10px;
+    margin-left: 15px;
+
+}
+.radioBtnApplyIndividual {
+    display: block;
+    margin-top:32px;
+    margin-left: 15px;
+
+}
+.appNameWording {
+    margin-top : 20px;
+    padding-left: 8px;
+    width: 250px;
+    font-size: 13px;
+    color : #777;
+}
+ul.oneAppDetails li.detailItem {
+    float: left;
+}
+.deleteBtn.facebookApp {
+    position: absolute;
+    float: right;
+    right: 30px;
+    margin-top: 18px;
+    margin-right: 20px;
+
+    background: url('../img/ic_close.png') no-repeat 0px -60px;
+    width: 20px;
+    height: 20px;
+}
+.deleteBtn.facebookApp:hover {
+    background: url('../img/ic_close.png') no-repeat 0px 0px;
+    cursor: pointer;
+}
+.beFacebookApplications.privacy_item_content_selector {
+      margin-top: 40px;
+
+}
+.tabsContent_content {
+    display: none;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    min-height: 500px;
+}
+
+.tabsContent_loading {
+    display: none;
+    height: 500px;
+    display: none;
+    background-image: url('../img/loading_48.gif');
+    background-repeat: no-repeat;
+    background-position: center 218px;
+}
+
+.tabsContent_content_ok {
+    overflow: hidden;
+}
+
+.scanAll_loading {
+    height: 48px;
+    width: 48px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.scan_result_main{
+    overflow: hidden;
+    margin: 30px 30px 0px 30px;
+}
+
+.user_area {
+    margin: 30px 30px 5px 30px;
+    position: relative;
+}
+
+.div_user {
+    overflow: hidden;
+}
+
+.div_head {
+    
+}
+
+.div_head_image_area{
+    float: left;
+    height: 63px;
+    margin: 2px 0px 0px 0px;
+    background: #FFFFFF;
+    padding-right: 20px;
+}
+
+.div_head_image {
+    height: 50px;
+    width: 50px;
+    margin: 0px auto 0px auto;
+    display: block;
+}
+
+.clear{
+    clear: both;
+}
+
+.user_area_name {
+    text-decoration: underline;
+    font-size: 17px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #444;
+    margin-bottom: 5px;
+    float: left;
+    padding-right: 13px;
+}
+
+.wrongAccount_area {
+    position: absolute;
+    z-index: 8000;
+}
+
+.wrongAccount_area_content {
+    /* position: relative; */
+}
+
+.anotherAccount_name{
+    top: -10px;
+}
+
+.anotherAccount_image{
+    top: 24px;
+}
+
+.wrongAccount_area_content_arrow {
+    position: absolute;
+    top: 10px;
+    z-index: 10000;
+    background: url('../img/ic_menu_arrow_left.png') no-repeat 0px 0px;
+    width: 12px;
+    height: 23px;
+}
+
+.wrongAccount_area_content_frame {
+    position: absolute;
+    left: 11px;
+    width: 258px;
+    border: solid 1px #8c8c8c;
+    color: #ffffff;
+    box-shadow: 0px 1px 2px 0px rgb(0,0,0); /* IE 8 hack */
+    box-shadow: 0px 1px 2px 0px rgba(0,0,0,.3);
+    background: #ffffff;
+    padding: 30px 20px 30px 20px;
+}
+
+/*
+    this rule is also defined in l10n.css. Change this rule should also change related one in that file.
+*/
+.wrongAccount_area_content_title {
+    font-family: "Interstate-ExtraLight";
+    font-size: 23px;
+    color: #444;
+    margin-bottom: 5px;
+}
+
+.wrongAccount_area_content_content {
+    font-size: 13px;
+    color: #3399cc;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/*
+    this rule is also defined in l10n.css. Change this rule should also change related one in that file.
+*/
+.have_no_concerns_title {
+    font-family: "Interstate-ExtraLight";
+    font-size: 27px;
+    text-align: left;
+}
+
+.have_no_concerns_image_area {
+    margin: 65px 0px 0px 0px;
+    height: 250px;
+    background: url('../img/img_nice_work.png') no-repeat center bottom;
+}
+
+.fix_all_area_wrapper{
+    margin: 0px 30px 0px 70px;
+}
+
+.fix_all_area_wrapper_browser{
+    margin: 10px 30px 20px 80px;
+}
+
+.fix_all_area {
+    overflow: hidden;
+}
+
+/*
+    this rule is also defined in l10n.css. Change this rule should also change related one in that file.
+*/
+.how_many_privacy_concerns {
+    font-family: "Interstate-ExtraLight";
+    font-size: 32px;
+    margin: 0px 14px 0px 0px;
+    letter-spacing: -0.02em;
+}
+
+/*
+    this rule is also defined in l10n.css. Change this rule should also change related one in that file.
+*/
+.how_many_privacy_concerns_number {
+    font-family: "Interstate-ExtraLight";
+    font-size: 32px;
+    color: #ff9900;
+}
+
+.fix_all_area_fix {
+    float: left;
+    padding: 0px 20px;
+    height: 30px;
+    font-size: 13px;
+    font-weight: bold;
+    margin: 6px;
+}
+
+.changesMade_wrapper{
+    display: block;
+    position: relative;
+    /* overflow: hidden; */
+}
+
+.changesMade_area {
+    overflow: hidden;
+    padding: 8px 0px 8px 0px;
+    background-color: #fff6ca;
+    border: solid 1px #ffe777;
+    border-radius: 0 0 5px 5px;
+    display: none;
+    border-radius: 2px;
+    margin-bottom: 20px;
+}
+
+.changesMade_area_hitArea {
+    padding: 0px 0px 0px 20px;
+    margin: 0px 250px 0px 0px;
+}
+
+.changesMade_area_changesMade_wording {
+    margin-right: 3px;
+    font-size: 14px;
+    color: #666666;
+}
+
+.changesMade_area_changesMade_number {
+    font-size: 14px;
+    color: #000000;
+    font-weight:bold;
+}
+
+.changesMade_area_changesMade_twitterTips {
+    margin: 3px 0px 0px 0px;
+    font-size: 14px;
+    color: #666666;
+}
+
+.changesMade_area_saveChanges {
+    margin: 3px 20px 0px 0px;
+    float: right;
+    height: 30px;
+    padding: 0px 20px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.ul_category_list {
+    overflow: hidden;
+}
+
+.ul_category_list > li {
+    display: block;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.ul_category_list > li > div.category_title {
+    font-size: 15px;
+    color: #333;
+    display: block;
+    overflow: hidden;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.ul_concerns_list {
+    margin: 0px;
+    padding: 0px;
+}
+
+.ul_concerns_list > li {
+    display: block;
+    overflow: hidden;
+}
+
+.privacy_item_content {
+    min-height: 60px;
+    display: block;
+    overflow: hidden;
+    border-top: solid 1px #d9d9d9;
+}
+
+.privacy_item_content_fix {
+    display: none;
+    padding: 16px 5px 0px 12px;
+    overflow: hidden;
+}
+
+.privacy_item_content_titleArea {
+    font-size: 13px;
+    overflow: hidden;
+}
+
+.privacy_item_content_titleArea_title {
+}
+
+.privacy_item_content_titleArea_title_wording {
+    color: #333333;
+    overflow: hidden;
+}
+
+.privacy_item_content_titleArea_title_wording_icon{
+    width: 18px;
+    height: 18px;
+    background: url('../img/ic_bullet.png') no-repeat;
+    margin: 10px 0px 0px 3px;
+    float: left;
+}
+
+.privacy_item_content_titleArea_title_wording_title{
+    color: #777;
+    margin: 11px 0px 0px 21px;
+}
+
+.moreInfo_area {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+}
+
+.privacy_item_content_titleArea_moreInfo {
+    margin: 0px 0px 0px 5px;
+    width: 18px;
+    height: 18px;
+    background: url('../img/ic_info.png') no-repeat 0px 0px;
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    cursor: pointer;
+}
+
+.privacy_item_content_titleArea_moreInfo:hover {
+    background: url('../img/ic_info.png') no-repeat 0px -18px;
+}
+
+.tooltip {
+    position: absolute;
+    z-index: 10000;
+    display: none;
+}
+
+.tooltip .tooltipArrow{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: url('../img/arrow_tutorial.png') no-repeat 0px 0px;
+    width: 15px;
+    height: 8px;
+}
+
+.tooltip .tooltipContent{
+    position: absolute;
+    top: 7px;
+    left: 0px;
+    border-radius: 2px;
+    background: #444;
+    padding: 10px 12px 10px 12px;
+    width: 200px;
+    font-size: 13px;
+    color: #eee;
+    line-height: 1.3em;
+}
+
+.privacy_item_content_selector {
+    float: right;
+    margin: 10px 10px 0px 40px;
+    width: 214px;
+}
+.beFacebookSubApplications{
+    margin-left:38px;
+}
+
+/*
+    this rule is also defined in l10n.css. Change this rule should also change related one in that file.
+*/
+.privacy_item_content_setting_Longger_2 .privacy_item_content_selector{
+    width: 348px;
+}
+
+/*
+    this rule is also defined in l10n.css. Change this rule should also change related one in that file.
+*/
+.privacy_item_content_setting_Longger_1_5 .privacy_item_content_selector{
+    width: 210px;
+}
+
+.privacy_item_content_current {
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.privacy_item_content_current_wording {
+    font-size: 15px;
+    padding: 8px 0px 8px 0px;
+    margin-left: 27px;
+    margin-right: 20px;
+    color: #555;
+}
+
+.privacy_item_content_current_wording.risk {
+    
+}
+
+.privacy_item_content_current_wording.safe {
+    
+}
+
+
+.privacy_item_content_current_riskImage{
+    width: 16px;
+    height: 16px;
+    float: left;
+    margin: 8px 5px 0px 6px;
+}
+
+.privacy_item_content_current_riskImage.risk{
+    background: url('../img/ic_small_alert.png') no-repeat;
+}
+
+.privacy_item_content_current_riskImage.safe{
+    background: url('../img/ic_small_good.png') no-repeat;
+}
+
+.privacy_item_content_current_arrow {
+    height: 12px;
+    width: 12px;
+    background: url('../img/btn_arrow.png') 0px 0px;
+    float: right;
+    margin: 16px 6px 0px 2px;
+}
+
+.privacy_item_content_ul {
+    display: none;
+    position: absolute;
+    left: auto;
+    right: 40px;
+    padding: 6px 6px 6px 6px;
+    background-color: #FFFFFF;
+    border: solid #bcbcbc 1px;
+    margin-top: -15px;
+}
+
+.privacy_item_content_ul_detail_app {
+    margin-top: 0px;
+    right: 80px;
+}
+
+.privacy_item_content_ul li {
+    cursor: pointer;
+    line-height: 28px;
+    font-size: 13px;
+    color: #555;
+}
+
+.privacy_item_content_ul li:hover {
+    background: #EEEEEE;
+    color: #222;
+}
+
+.privacy_item_content_selector_safe_icon{
+    width: 16px;
+    height: 16px;
+    background: url('../img/ic_small_good.png') no-repeat;
+    float: left;
+    margin: 6px 5px 0px 8px;
+}
+
+.privacy_item_content_selector_risk_icon{
+    width: 16px;
+    height: 16px;
+    background: url('../img/ic_small_alert.png') no-repeat;
+    float: left;
+    margin: 6px 5px 0px 8px;
+}
+
+
+.privacy_item_content_selector_recommend {
+    color: #888;
+    font-size: 11px;
+    margin: 0px 0px 0px 7px;
+}
+
+.privacy_item_content_selector_disabled {
+    color: #808080;
+}
+
+.alertInTabContentArea{
+    
+}
+
+.alertInTabContentArea_logoArea{
+    height: 110px;
+    background: url('../img/img_shadow.png') no-repeat center bottom;
+    position: relative;
+}
+
+.alertInTabContentArea_logo{
+    width: 60px;
+    height: 60px;
+    display: inline-block;
+    margin: 50px 0px 0px 329px;
+}
+
+.alert_logo_ALERT{
+    background: url('../img/ic_socialmedia_60.png') no-repeat 0px 0px;
+} 
+
+.alert_logo_FACEBOOK{
+    background: url('../img/ic_socialmedia_60.png') no-repeat 0px -60px;
+}
+
+.alert_logo_GOOGLEPLUS{
+    background: url('../img/ic_socialmedia_60.png') no-repeat 0px -120px;
+}
+
+.alert_logo_TWITTER{
+    background: url('../img/ic_socialmedia_60.png') no-repeat 0px -180px;
+}
+
+.alert_logo_LINKEDIN{
+    background: url('../img/ic_socialmedia_60.png') no-repeat 0px -240px;
+} 
+
+.alert_logo_INTERNET_EXPLORER{
+    background: url('../img/ic_socialmedia_60.png') no-repeat 0px -300px;
+} 
+
+.alert_logo_CHROME{
+    background: url('../img/ic_socialmedia_60.png') no-repeat 0px -360px;
+}
+
+.alert_logo_FIREFOX{
+    background: url('../img/ic_socialmedia_60.png') no-repeat 0px -420px;
+}  
+
+
+.header_logo_CHROME{
+    height: 60px;
+    width: 60px;
+    background: url('../img/ic_socialmedia_60.png') no-repeat 0px -360px;
+}
+
+.header_logo_FIREFOX{
+    height: 60px;
+    width: 60px;
+    background: url('../img/ic_socialmedia_60.png') no-repeat 0px -420px;
+}
+
+.header_logo_INTERNET_EXPLORER{
+    height: 60px;
+    width: 60px;
+    background: url('../img/ic_socialmedia_60.png') no-repeat 0px -300px;
+}
+
+/*
+    this rule is also defined in l10n.css. Change this rule should also change related one in that file.
+*/
+.alertInTabContentArea_title {
+    font-size: 32px;
+    font-family: "Interstate-ExtraLight";
+    color: #333;
+    margin: 20px auto 30px auto;
+    width: 568px;
+}
+
+.withLink{
+    margin-bottom: 20px;
+}
+
+.alertInTabContentArea_title_content{
+    width: auto;
+    display: inline-block;
+}
+
+.alertInTabContentArea_titleWithLearnMore_learnMore_wrapper{
+    margin: 0px auto 10px auto;    
+    text-align: center;
+}
+
+.alertInTabContentArea_titleWithLearnMore_learnMore {
+    font-size: 14px;
+    color: #3399cc;
+    cursor: pointer;
+}
+
+.alertInTabContentArea_button {    
+    padding: 0px 20px;
+    height: 40px;
+    font-size: 13px;
+    font-weight: bold;
+    display: block;
+    min-width: 20px;
+}
+
+.enable_toolbar_wording {
+    margin: 35px 34px 0px 30px;
+    font-size: 25px;
+}
+
+.image_busy_fixing{
+    background: url('../img/img_busy_fixing.png') no-repeat center bottom;
+    height: 250px;
+}

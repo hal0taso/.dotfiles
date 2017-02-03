@@ -1,0 +1,60 @@
+﻿#TSRToolTipLayer
+{
+    font-family: Arial, 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+}
+
+#TSRToolTipLayer #TSRToolTipRLString
+{
+	font-family: Arial, 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+}
+
+.TSRUntestURLWindow {
+	font-family: Arial, 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+}
+
+.TSRUntestURLWindow_Wrapper .titleArea {
+	font-family: Arial, 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+}
+
+.TSRUntestURLWindow_Wrapper .descriptionArea .description {
+	font-family: Arial, 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+}
+
+.TSRImageBlock_Wrapper{
+	font-family: Arial, 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+}
+
+#TSRToolTipLayer #TSRToolTipRLDetailed
+{
+	font-size:12px !important;
+}
+
+#TSRToolTipLayer #TSRToolTipTitle .TSRProductTitle
+{
+	font-size:12px !important;
+}
+
+#TSRToolTipLayer #TSRToolTipRLDetailedShare
+{
+	font-size:12px !important;
+}
+
+#TSRToolTipLayer #TSRCheckUrl
+{
+	font-size:12px !important;
+}
+
+.TSRImageBlock_body_title
+{
+	font-size:14px !important;
+}
+
+.TSRImageBlock_body_desc
+{
+	font-size:14px !important;
+}
+
+.TSRImageBlock_footer_productName
+{
+	font-size:14px !important;
+}

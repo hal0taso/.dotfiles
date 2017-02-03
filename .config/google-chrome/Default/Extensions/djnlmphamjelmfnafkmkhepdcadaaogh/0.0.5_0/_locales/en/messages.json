@@ -1,0 +1,11 @@
+{
+   "extDescription": {
+      "message": "Get your notifications from Hatena"
+   },
+   "extName": {
+      "message": "Hatena::Notify"
+   },
+   "notify_for_you": {
+      "message": "Your notifications"
+   }
+}

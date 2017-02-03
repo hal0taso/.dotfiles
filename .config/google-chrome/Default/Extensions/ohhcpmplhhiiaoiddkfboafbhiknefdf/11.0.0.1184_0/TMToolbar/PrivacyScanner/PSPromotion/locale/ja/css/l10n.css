@@ -1,0 +1,11 @@
+.TM_PS_Wrapper {
+	font-family: Arial, 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif !important;
+}
+
+.TM_PS_Wrapper .worryTitle {
+	font-family: Arial, 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif !important;
+}
+
+.TM_PS_Wrapper .askLater_area_wording {
+	font-size: 12px !important;
+}

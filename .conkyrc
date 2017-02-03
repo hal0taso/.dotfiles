@@ -1,0 +1,88 @@
+# Conky, a system monitor, based on torsmo
+#
+# Any original torsmo code is licensed under the BSD license
+#
+# All code written since the fork of torsmo is licensed under the GPL
+#
+# Please see COPYING for details
+#
+# Copyright (c) 2004, Hannu Saransaari and Lauri Hakkarainen
+# Copyright (c) 2005-2010 Brenden Matthews, Philip Kovacs, et. al. (see AUTHORS)
+# All rights reserved.
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+
+alignment top_right
+background yes
+border_width 2
+cpu_avg_samples 2
+default_color white
+default_outline_color white
+default_shade_color white
+draw_borders no
+draw_graph_borders yes
+draw_outline no
+draw_shades no
+use_xft yes
+xftfont Aller Display:size=11
+gap_x 30
+gap_y 60
+minimum_size 130 5
+maximum_width 250
+net_avg_samples 2
+no_buffers yes
+out_to_console no
+out_to_stderr no
+extra_newline no
+own_window yes
+own_window_transparent yes
+own_window_argb_visual true
+own_window_class Conky
+own_window_type desktop
+stippled_borders 1
+update_interval 1.0
+uppercase no
+use_spacer no
+show_graph_scale no
+show_graph_range no
+double_buffer yes
+text_buffer_size 4096
+
+TEXT
+${color #f5deb3}$nodename - $sysname on $machine
+${color #3b444b}$hr
+${color #8c92ac}Uptime: ${color #f5deb3}  $uptime
+${color #8c92ac}Frequency (in GHz):${color #f5deb3} $freq_g
+${color #8c92ac}RAM Usage:${color #f5deb3} $mem/$memmax - $memperc% 
+${membar 4}
+${color #8c92ac}Swap Usage:${color #f5deb3} $swap/$swapmax - $swapperc%
+${swapbar 4}
+${color #8c92ac}CPU Usage:${color #f5deb3} $cpu%
+${cpubar 4}
+${color #8c92ac}Processes:${color #f5deb3} $processes  ${color #8c92ac}Running:${color #f5deb3} $running_processes
+${color #3b444b}$hr
+${color #8c92ac}File systems:
+${color #3b444b} / ${color #f5deb3}${fs_used /}/${fs_size /}
+${fs_bar 6 /}
+${color #3b444b}/home ${color #f5deb3}${fs_used /home}/ ${fs_size /home}
+${fs_bar 6 /home}
+${color #3b444b}$hr
+${color #8c92ac}Networking:
+${color #3b444b}Up:${color #f5deb3} ${upspeed eth0} ${color #3b444b} - Down:${color #f5deb3} ${downspeed eth0}
+${color #3b444b}$hr
+${color #8c92ac}Name              PID   CPU%   MEM%
+${color #f5deb3} ${top name 1} ${color #f5deb3}${top pid 1} ${top cpu 1} ${top mem 1}
+${color #f5deb3} ${top name 2} ${color #f5deb3}${top pid 2} ${top cpu 2} ${top mem 2}
+${color #f5deb3} ${top name 3} ${color #f5deb3}${top pid 3} ${top cpu 3} ${top mem 3}
+${color #f5deb3} ${top name 4} ${color #f5deb3}${top pid 4} ${top cpu 4} ${top mem 4}

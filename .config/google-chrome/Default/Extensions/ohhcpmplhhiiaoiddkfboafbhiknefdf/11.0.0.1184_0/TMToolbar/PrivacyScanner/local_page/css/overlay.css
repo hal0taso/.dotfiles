@@ -1,0 +1,375 @@
+.alertOverTabContentArea {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../img/overlay_background_white.png') 0px 0px;
+    z-index: 10000;
+    display: block;
+}
+
+/*
+    this rule is also defined in l10n.css. Change this rule should also change related one in that file.
+*/
+.alertOverTabContentArea_wrapper{
+    width: 550px;
+    margin: 150px auto 0px auto;
+}
+
+.alertOverTabContentArea_wrapper a{
+    text-decoration: underline;
+}
+
+.alertOverTabContentArea_head{
+    padding-bottom:25px;
+    color:#222222;
+    margin-left:30px;
+    font-size:25px;
+    line-height:28px;
+    font-family: "Interstate-ExtraLight";
+}
+
+.alertOverTabContentArea_wrapper_content{
+    background: #FFFFFF;
+    border: solid 1px rgb(68,68,68); /* IE 8 hack */
+    border: solid 1px rgba(68,68,68,.4);
+    box-shadow: 0px 1px rgb(51,51,51); /* IE 8 hack */
+    box-shadow: 0px 1px rgba(51,51,51,.1);
+    position: fixed;
+    padding-top:40px;
+    width:550px;
+}
+
+.overlay_container_content_divider{
+    margin-top:50px;
+}
+
+.overlay_container_closeButton {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    margin: 5px 5px 0px 0px;
+    background: url('../img/ic_popup_close.png') 0px 0px;
+}
+
+.overlay_container_closeButton:hover {
+    background: url('../img/ic_popup_close.png') 0px -40px;
+}
+
+.overlay_container_closeButton:active {
+    background: url('../img/ic_popup_close.png') 0px -80px;
+}
+
+.overlay_container_buttonArea {
+    overflow: hidden;
+    padding: 0px 30px 15px 30px;
+}
+
+.overlay_container_ok_only {
+    font-size: 13px;
+    font-weight: bold;
+    float: right;
+    padding: 0px 20px;
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    line-height: 30px;
+}
+
+.overlay_container_ok {
+    font-size: 13px;
+    font-weight: bold;
+    float: right;
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    line-height: 30px;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 10px;
+}
+
+.overlay_container_cancel {
+    font-size: 13px;
+    font-weight: bold;
+    float: right;
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    line-height: 30px;
+    margin: 0px 0px 0px 10px;
+    padding: 0px 10px;
+}
+
+.dont_mention_again_area {
+    float: left;
+    margin: 10px 0px 0px 0px;
+    display: block;
+    padding-left: 15px;
+    text-indent: -15px;
+    font-size: 13px;
+    color: #555556;
+    cursor: pointer;
+    line-height: 15px;
+}
+
+.dont_mention_again_area_input {
+    width: 13px;
+    height: 13px;
+    padding: 0;
+    margin: 0px 2px 0px 0px;
+    vertical-align: bottom;
+    position: relative;
+    top: -1px;
+    *overflow: hidden;
+    line-height: 15px;
+}
+
+.alertOverTabContentArea_wrapper_loading{
+    width: 48px;
+    height: 48px;
+    margin: 218px auto 0px auto;
+    background-image: url('../img/loading_48.gif');
+}
+
+.get_help_link {
+    font-size: 14px;
+    color: #3399cc;
+    cursor: pointer;
+}
+
+.overlay_container_content {
+    margin: 0px 30px 0px 30px;
+    font-size: 13px;
+    color: #555555;
+}
+
+.overlay_quickFix_contentWrapper {
+    width: 617px;
+    margin: 0px auto 0px auto;
+    padding: 10px;
+    background: url('../img/shadow_alertOverContentPage.png') 0px 0px;
+}
+
+.overlay_quickFix_content {
+    background: #f5f5f5;
+    border: solid 3px #ffffff;
+    position: relative;
+}
+
+.overlay_quickFix_header {
+    
+}
+
+/*
+    this rule is also defined in l10n.css. Change this rule should also change related one in that file.
+*/
+.overlay_quickFix_content_title {
+    padding: 25px 0px 0px 30px;
+    font-size: 25px;
+    font-family: "Interstate-ExtraLight";
+    line-height: 28px;
+    letter-spacing: -0.02em;
+    color: #222;
+}
+
+.overlay_quickFix_content_secondTitle {
+    margin: 14px 0px 0px 30px;
+    font-size: 13px;
+    color: #666;
+}
+
+.overlay_quickFix_content_settingAndChanges {
+    margin: 0px 30px 5px 30px;
+}
+
+.overlay_quickFix_content_settingAndChanges_textArea {
+    overflow: hidden;
+    margin: 20px 0px 0px 0px;
+    font-weight: bold;
+    font-size: 15px;
+    color: #333;
+}
+
+.overlay_quickFix_content_settingAndChanges_shadowline_setting {
+    float: left;
+    width: 270px;
+}
+
+.overlay_quickFix_content_settingAndChanges_shadowline_current {
+    float: left;
+    width: 110px;
+    padding-left: 20px;
+}
+
+.overlay_quickFix_content_settingAndChanges_shadowline_changes {
+    float: right;
+    width: 110px;
+    /* text-align: center; */
+    /* margin-left: 40px; */
+    padding-left: 40px;
+}
+
+.overlay_quickFix_content_ul {
+    border-top: solid 1px #aaa;
+    border-bottom: solid 1px #aaa;
+    margin: 0px 30px 0px 30px;
+    overflow: auto;
+    max-height: none;
+}
+
+.line_before_quickFix_content_buttonArea {
+    margin: 10px 0px 10px 00px;
+    width: 698px;
+    height: 0px;
+    border: 1px solid #DDDDDD;
+}
+
+.fixAll_item_content_title_ul_li_content {
+    font-size: 13px;
+    overflow: hidden;
+    border-bottom: solid 1px #d9d9d9;
+}
+
+.fixAll_item_content_title {
+    float: left;
+    width: 270px;
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    font-size: 13px;
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+.fixAll_item_content_title_icon{
+    width: 18px;
+    height: 18px;
+    background: url('../img/ic_bullet.png') no-repeat;
+    margin: 10px 249px 0px 3px;    
+}
+
+.fixAll_item_content_title_wording{
+    float: right;
+    color: #777;
+    width: 249px;
+    margin: 11px 0px 0px 0px;
+}
+
+.fixAll_item_content_current {
+    width: 110px;
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    float: left;
+    font-size: 11px;
+    padding: 11px 0px 11px 20px;
+}
+
+.fixAll_item_content_current_icon{
+    width: 16px;
+    height: 16px;
+    float: left;
+    margin-right: 5px;
+    background: url('../img/ic_small_alert.png') no-repeat;
+}
+
+.fixAll_item_content_current_wording{
+    color: #555;
+    margin-top: 1px;
+    margin-left: 21px;
+}
+
+.fixAll_item_content_toIcon{
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    float: left;
+    background: url('../img/ic_next.png') no-repeat;
+}
+
+.fixAll_item_content_suggestion {
+    width: 110px;
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    float: left;
+    font-size: 11px;
+    padding: 11px 0px 11px 30px;
+}
+
+.fixAll_item_content_suggestion_icon{
+    width: 16px;
+    height: 16px;
+    float: left;
+    margin-right: 5px;
+    background: url('../img/ic_small_good.png') no-repeat;
+}
+
+.fixAll_item_content_suggestion_wording{
+    color: #555;
+    margin-top: 1px;
+    margin-left: 21px;
+}
+
+.overlay_quickFix_content_buttonArea {
+    overflow: hidden;
+    padding: 50px 38px 20px 0px;
+}
+
+.overlay_quickFix_content_buttonArea_fixAll {
+    font-size: 13px;
+    font-weight: bold;
+    float: right;
+    min-width: 70px;
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    height: 30px;
+    padding:0 15px;
+}
+
+.overlay_quickFix_content_buttonArea_cancel {
+    font-size: 13px;
+    font-weight: bold;
+    min-width: 70px;
+    float: right;
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    height: 30px;
+    margin: 0px 0px 0px 14px;
+    padding:0 15px;
+}
+
+.overlay_quickFix_closeButton {
+    width: 40px;
+    height: 40px;
+    /* float: right; */
+    /* margin: -70px 6px 0px 0px; */
+    background: url('../img/ic_popup_close.png') 0px 0px;
+    position: absolute;
+    margin: 5px 5px 0px 0px;
+    right: 0px;
+    top: 0px;
+}
+
+.overlay_quickFix_closeButton:hover {
+    background: url('../img/ic_popup_close.png') 0px -40px;
+}
+
+.overlay_quickFix_closeButton:active {
+    background: url('../img/ic_popup_close.png') 0px -80px;
+}
+
+.Setting_display_none {
+    display: none;
+}
+
+.current_setting_display_none {
+    display: none;
+}

@@ -1,0 +1,50 @@
+﻿html {
+	font-family: "arial","微软雅黑","宋体";
+}
+
+.IE_LowVersion_wording{
+	font-family: "arial","微软雅黑","宋体";
+}
+
+.overlay_quickFix_content_title {
+	font-family: "arial","微软雅黑","宋体";
+}
+
+.wrongAccount_area_content_title {
+	font-family: "arial","微软雅黑","宋体";
+}
+
+.have_no_concerns_title {
+	font-family: "arial","微软雅黑","宋体";
+}
+
+.how_many_privacy_concerns {
+	font-family: "arial","微软雅黑","宋体";
+}
+
+.how_many_privacy_concerns_number {
+	font-family: "arial","微软雅黑","宋体";
+}
+
+.alertInTabContentArea_title {
+	font-family: "arial","微软雅黑","宋体";
+}
+
+.privacy_item_content_setting_Longger_2 .privacy_item_content_selector{
+	width: 348px;
+}
+
+.privacy_item_content_setting_Longger_1_5 .privacy_item_content_selector{
+	width: 210px;
+}
+
+/*Keep the alertOverTabContentArea_wrapper and alertOverTabContentArea_wrapper_content the same width to make it vertical center*/
+.alertOverTabContentArea_wrapper {
+    width: 550px;
+}
+.alertOverTabContentArea_wrapper_content{
+    width:550px;
+}
+.alertOverTabContentArea_head{
+    font-family: "arial","微软雅黑","宋体";
+}

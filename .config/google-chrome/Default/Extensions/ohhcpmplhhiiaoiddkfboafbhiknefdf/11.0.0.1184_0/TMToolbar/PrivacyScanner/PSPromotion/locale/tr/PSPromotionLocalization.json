@@ -1,0 +1,33 @@
+﻿{
+  "g_oPrivacyScannerString": {
+    "ScanButtonText": "Gizliliğimi Denetle",
+    "WelcomeString": {
+      "Head": {
+        "FACEBOOK": "Facebook paylaşımlarınızı kimlerin görebildiği konusunda endişeleriniz mi var?",
+        "TWITTER": "Twitter paylaşımlarınızı kimlerin görebildiği konusunda endişeleriniz mi var?",
+        "GOOGLEPLUS": "Google+ paylaşımlarınızı kimlerin görebildiği konusunda endişeleriniz mi var?",
+        "LINKEDIN": "LinkedIn paylaşımlarınızı kimlerin görebildiği konusunda endişeleriniz mi var?"
+      },
+      "Content": "Trend Micro Privacy Scanner sayesinde, yalnızca seçtiğiniz kişilerle, seçtiğiniz şeyleri paylaştığınızdan emin olabilirsiniz.",
+      "LearnMore": "Daha fazla bilgi",
+      "AskLater": "Bu uyarıları göstermeye devam et"
+    }
+  },
+  "g_oPrivacyScannerString_autoScan": {
+    "ScanButtonText": "Tarama Sonuçlarına Bak",
+    "WelcomeString": {
+      "Head": {
+        "SeveralConcern": "%d Gizlilik Endişeleri Bulundu",
+        "OneConcern": "%d Gizlilik Endişeleri Bulundu"
+      },
+      "Content": {
+        "FACEBOOK": "Facebook gizlilik ayarlarınızı geliştirmeye başlamak için aşağıdaki düğmeyi tıklatın.",
+        "TWITTER": "Twitter gizlilik ayarlarınızı geliştirmeye başlamak için aşağıdaki düğmeyi tıklatın.",
+        "GOOGLEPLUS": "Google+ gizlilik ayarlarınızı geliştirmeye başlamak için aşağıdaki düğmeyi tıklatın.",
+        "LINKEDIN": "LinkedIn gizlilik ayarlarınızı geliştirmeye başlamak için aşağıdaki düğmeyi tıklatın."
+      },
+      "LearnMore": "Daha fazla bilgi",
+      "AskLater": "Bu uyarıları göstermeye devam et"
+    }
+  }
+}

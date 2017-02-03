@@ -1,0 +1,29 @@
+{
+   "facebookscanner": {
+      "message": "Kontroller beskyttelsen af dine personlige oplysninger online"
+   },
+   "help": {
+      "message": "Hjælp"
+   },
+   "help_page_base_url": {
+      "message": "http://docs.trendmicro.com/TMT/DA-DK/"
+   },
+   "pagerating": {
+      "message": "Bedøm links på websider"
+   },
+   "product_name": {
+      "message": "Trend Micro Scanner til beskyttelse af personlige oplysninger"
+   },
+   "setting": {
+      "message": "Indstillinger"
+   },
+   "toolbar_description": {
+      "message": "Se link til risikable websteder på et øjeblik. Gør din beskyttelse bedre fra Trend Micro Security Software."
+   },
+   "toolbar_name": {
+      "message": "Trend Micro Toolbar"
+   },
+   "umsrating": {
+      "message": "Bedøm links på mouseover"
+   }
+}

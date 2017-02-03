@@ -1,0 +1,50 @@
+html {
+    font-family: "arial";
+}
+
+.IE_LowVersion_wording{
+    font-family: "Interstate-ExtraLight";
+}
+
+.overlay_quickFix_content_title {
+    font-family: "Interstate-ExtraLight";
+}
+
+.wrongAccount_area_content_title {
+    font-family: "Interstate-ExtraLight";
+}
+
+.have_no_concerns_title {
+    font-family: "Interstate-ExtraLight";
+}
+
+.how_many_privacy_concerns {
+    font-family: "Interstate-ExtraLight";
+}
+
+.how_many_privacy_concerns_number {
+    font-family: "Interstate-ExtraLight";
+}
+
+.alertInTabContentArea_title {
+    font-family: "Interstate-ExtraLight";
+}
+
+.privacy_item_content_setting_Longger_2 .privacy_item_content_selector{
+    width: 348px;
+}
+
+.privacy_item_content_setting_Longger_1_5 .privacy_item_content_selector{
+    width: 210px;
+}
+
+/*Keep the alertOverTabContentArea_wrapper and alertOverTabContentArea_wrapper_content the same width to make it vertical center*/
+.alertOverTabContentArea_wrapper {
+    width: 550px;
+}
+.alertOverTabContentArea_wrapper_content{
+    width:550px;
+}
+.alertOverTabContentArea_head{
+    font-family: "Interstate-ExtraLight";
+}

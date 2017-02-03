@@ -1,0 +1,10 @@
+{
+  "appName": {
+    "message": "Google Skjemaer",
+    "description": "App name."
+  },
+  "appDesc": {
+    "message": "Opprett skjemaer og spørreundersøkelser på nettet",
+    "description": "App description."
+  }
+}

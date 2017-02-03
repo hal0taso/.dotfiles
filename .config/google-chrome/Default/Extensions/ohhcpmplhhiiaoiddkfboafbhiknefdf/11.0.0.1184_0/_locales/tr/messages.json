@@ -1,0 +1,29 @@
+{
+   "facebookscanner": {
+      "message": "Çevrimiçi gizliliğinizi kontrol edin"
+   },
+   "help": {
+      "message": "Yardım"
+   },
+   "help_page_base_url": {
+      "message": "http://docs.trendmicro.com/TMT/TR-TR/"
+   },
+   "pagerating": {
+      "message": "Web sayfalarındaki bağlantıları derecelendir"
+   },
+   "product_name": {
+      "message": "Trend Micro Gizlilik Tarayıcısı"
+   },
+   "setting": {
+      "message": "Ayarlar"
+   },
+   "toolbar_description": {
+      "message": "Riskli Web Sitelerinin Bağlantılarını Anında Görün. Trend Micro Güvenlik Yazılımı ile Daha İyi Korunun."
+   },
+   "toolbar_name": {
+      "message": "Trend Micro Toolbar"
+   },
+   "umsrating": {
+      "message": "Üzerine fare götürülen bağlantıları derecelendir"
+   }
+}

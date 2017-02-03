@@ -1,0 +1,29 @@
+{
+    "toolbar_name":{
+        "message":"Trend Micro Toolbar"
+    },
+    "toolbar_description":{
+        "message":"See Links to Risky Websites at a Glance. Enhance Your Protection from Trend Micro Security Software."
+    },
+    "pagerating":{
+        "message":"Rate links on web pages"
+    },
+    "umsrating":{
+        "message":"Rate links on mouseover"
+    },
+    "facebookscanner":{
+        "message":"Check your online privacy"
+    },
+    "setting":{
+        "message":"Settings"
+    },
+    "help":{
+        "message": "Help"
+    },
+    "product_name":{
+        "message": "Trend Micro Privacy Scanner"
+    },
+    "help_page_base_url":{
+        "message": "http://docs.trendmicro.com/TMT/EN-US/"
+    }
+}

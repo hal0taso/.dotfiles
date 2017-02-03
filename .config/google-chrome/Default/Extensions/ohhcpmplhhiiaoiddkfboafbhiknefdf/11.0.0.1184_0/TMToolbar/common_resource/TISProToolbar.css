@@ -1,0 +1,555 @@
+﻿div.TSRhide
+{
+    visibility: hidden;
+    display: none;
+}
+
+div.TSRshow
+{
+    visibility: visible;
+    display: inline;
+}
+
+span.TSRSpan
+{
+    cursor: pointer;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    padding: 0 2px 0 0;
+    vertical-align: top;
+}
+
+img.TSRWebRatingIcon
+{
+    border: 0;
+    margin: 0;
+    padding: 0;
+    width: 16px;
+    height: 16px;
+}
+
+/*
+	this rule is also defined in l10n.css. Change this rule should also change related one in that file.
+*/
+#TSRToolTipLayer
+{
+    position:absolute;
+    margin:0;
+    padding:0;
+    border:0;
+    background-color:transparent;
+    left:0;
+    top:0;
+    z-index:2147483647;
+    text-align:left;
+    font-family: "Arial" !important;
+}
+
+#TSRToolTipLayer div
+{
+    position:static;
+    margin:0;
+    padding:0;
+    border:0;
+    width:100%;
+    background-color:transparent;
+    background-repeat:no-repeat;
+}
+
+#TSRToolTipLayer img
+{
+    position:static;
+    border:0;
+    margin:0;
+    padding:0;
+    cursor:default;
+}
+
+#TSRToolTipLayer p, 
+#TSRToolTipLayer span, 
+#TSRToolTipLayer a
+{
+    position:static;
+    margin:0 !important;
+    padding:0;
+    border:0;
+    background-color:transparent;
+    line-height:14px;
+    font-size:13px !important;
+    font-style: normal;
+    font-variant: normal;
+    color:#000;
+    text-align:left;
+    text-decoration:none;
+    cursor:default;
+    letter-spacing:normal;
+}
+
+#TSRToolTipLayer p
+{
+    width:270px;
+    margin-bottom:3px !important;
+}
+
+#TSRToolTipLayer #TSRToolTipTail
+{
+    position:absolute;
+    width:30px;
+    height:60px;
+}
+
+#TSRToolTipLayer #TSRToolTipBody
+{
+    position:absolute;
+    width:296px;
+    min-height:210px;
+    height:expression(this.scrollHeight < 211 ? "210px" : "auto");
+    background:#fff !important;
+    border:solid 2px #ed1c24 !important;
+    box-shadow: 0 15px 25px rgb(0,0,0); /* IE 8 hack */
+    box-shadow: 0 15px 25px rgba(0,0,0,.4);
+}
+
+#TSRToolTipLayer #TSRToolTipBodyContent
+{
+    margin:15px 15px 0 !important;
+    width:270px;
+    z-index:2;
+}
+
+#TSRToolTipLayer #TSRToolTipIcon
+{
+    float:left;
+    height:28px;
+    width:28px;
+    margin:0 8px 0 0;
+}
+
+/*
+	this rule is also defined in l10n.css. Change this rule should also change related one in that file.
+*/
+#TSRToolTipLayer #TSRToolTipRLString
+{
+	font-family: "Arial";
+    float:left;
+    line-height:28px !important;
+    height:28px;
+    font-size:21px !important;
+}
+
+#TSRToolTipLayer #TSRToolTipSiteName
+{
+	margin-top:10px !important;
+	border-top:solid 1px #bbb !important;
+    padding-top:13px !important;
+    font-weight:bold !important;
+    color:#222 !important;
+    line-height: normal !important;
+}
+
+#TSRToolTipLayer #TSRToolTipSiteUrl
+{
+    overflow:hidden;
+    white-space:nowrap;
+    padding-bottom:10px !important;
+    margin-bottom:15px !important;
+	border-bottom:solid 1px #d9d9d9 !important;
+} 
+
+#TSRToolTipLayer #TSRToolTipRLDetailed
+{
+	font-size:11px !important;
+	color:#777 !important;
+	margin-bottom:15px !important;
+}
+
+#TSRToolTipLayer #TSRToolTipRLDetailedShare
+{
+    font-size:11px !important;
+    color:#222 !important;
+    background:#f4f3f2 !important;
+    border:solid 1px #d9d9d9 !important;
+    border-radius: 2px !important;
+    width:258px !important;
+    padding:13px 0px 13px 10px !important;
+    margin-bottom:46px !important;
+}
+
+#TSRToolTipLayer #TSRCheckUrl
+{
+    cursor:pointer;
+    text-decoration:underline;
+    font-size:11px !important;
+    color: #4a8db8;
+}
+
+#TSRToolTipLayer #TSRCheckUrl:hover
+{
+    color: #3399cc;
+}
+
+#TSRToolTipLayer #TSRCheckUrl:active
+{
+    color: #3399cc;
+}
+
+#TSRToolTipLayer #TSRToolTipCloseSpan
+{
+    position:absolute;
+    left:261px;
+    top:0px;
+    width:36px;
+    height:36px;
+    line-height:36px;
+    z-index:1;
+}
+
+#TSRToolTipLayer #TSRToolTipClose
+{
+    width:36px;
+    height:36px;
+    background-position: 0px 0px;
+    border-left:solid 1px #ccc;
+    cursor: pointer;
+}
+
+#TSRToolTipLayer #TSRToolTipClose:hover
+{
+    background-position: 0px -36px;
+}
+
+#TSRToolTipLayer #TSRToolTipClose:active
+{
+    background-position: 0px -72px;
+}
+
+#TSRToolTipLayer #TSRToolTipTitle
+{
+    position:absolute;
+	bottom:0px;
+    height:26px;
+}
+
+#TSRToolTipLayer #TSRToolTipTitle .TSRLogoIcon
+{
+    width:16px;
+    height:16px;
+    margin-left:15px !important;
+    float:left !important;
+    margin-right:5px !important;
+}
+
+#TSRToolTipLayer #TSRToolTipTitle .TSRProductTitle
+{
+	float:left !important;
+	font-size:11px !important;
+	color:#222 !important;
+	line-height:18px !important;
+	height:18px !important;
+	margin-right:15px !important;
+}
+
+/*
+	this rule is also defined in l10n.css. Change this rule should also change related one in that file.
+*/
+.TSRUntestURLWindow {
+	font-family: "Arial" !important;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	/*background: url('overlay_background.png') 0px 0px;*/
+	z-index: 10000;
+	display: block;
+	
+	/*IE7 quirks mode hack margin auto*/
+	text-align: center;
+	
+	/*IE7 quirks mode hack position fixed*/
+	_position:absolute;
+	_top:expression(eval(document.body.scrollTop));
+}
+
+.TSRUntestURLWindow_Wrapper {
+	position: relative !important;
+	background: #FFFFFF !important;
+	width: 610px !important;
+	margin: 80px auto 0px auto !important;
+	border: solid 10px #b8b8b8 !important;
+
+	/*IE7 quirks mode hack margin auto*/
+	text-align: left;
+}
+
+.TSRUntestURLWindow_Wrapper .closeButton {
+	position: absolute !important;
+	top: 0px !important;
+	right: 0px !important;
+	width: 40px !important;
+	height: 40px !important;
+	margin: 5px 5px 0px 0px !important;
+}
+
+.TSRUntestURLWindow_Wrapper .closeButton:hover {
+}
+
+.TSRUntestURLWindow_Wrapper .closeButton:active {
+}
+
+/*
+	this rule is also defined in l10n.css. Change this rule should also change related one in that file.
+*/
+.TSRUntestURLWindow_Wrapper .titleArea {
+	margin: 40px 30px 25px 30px !important;
+	font-size: 25px !important;
+	font-family: "Arial" !important;
+	line-height: 28px !important;
+	letter-spacing: -0.02em !important;
+}
+
+.TSRUntestURLWindow_Wrapper .addressArea {
+	margin: 0px 30px 20px 30px !important;
+	font-size: 13px !important;
+	color: #555 !important;
+}
+
+.TSRUntestURLWindow_Wrapper .addressArea .title {
+	margin: 0px 5px 0px 0px !important;
+}
+
+.TSRUntestURLWindow_Wrapper .addressArea .webURL {	
+	font-weight: bold !important;
+}
+
+.TSRUntestURLWindow_Wrapper .addressBelowSeperator {	
+	height:0px !important;
+	border-top: solid 1px #aaa !important;
+	margin:0px 30px 20px 30px !important;
+}
+
+.TSRUntestURLWindow_Wrapper .siteOwnAndemailArea {
+	margin: 0px 30px 0px 30px !important;
+	overflow: hidden !important;
+	display: block !important;
+	position: relative !important;
+	height: 73px !important;
+}
+
+.TSRUntestURLWindow_Wrapper .siteOwnAndemailArea .siteOwner {
+	height: 20px !important;	
+	margin-bottom: 10px !important;
+	cursor: pointer !important;
+}
+
+/*
+	not checked
+*/
+.TSRUntestURLWindow_Wrapper .siteOwnAndemailArea .siteOwner .siteOwner_input_notChecked {
+	float: left !important;
+	width: 20px;
+	height: 20px;
+	background-position: 0px 0px;
+}
+
+.TSRUntestURLWindow_Wrapper .siteOwnAndemailArea .siteOwner .siteOwner_input_notChecked:hover {
+	background-position: 0px -20px;
+}
+
+/*
+	checked
+*/
+.TSRUntestURLWindow_Wrapper .siteOwnAndemailArea .siteOwner .siteOwner_input_checked {
+	float: left !important;
+	width: 20px;
+	height: 20px;
+	background-position: 0px -40px;
+}
+
+.TSRUntestURLWindow_Wrapper .siteOwnAndemailArea .siteOwner .siteOwner_input_checked:hover {
+	background-position: 0px -60px;
+}
+
+.TSRUntestURLWindow_Wrapper .siteOwnAndemailArea .siteOwner .siteOwner_inputWording {
+	float: left !important;
+	font-size: 13px !important;
+	color: #555 !important;
+	margin: 2px 0px 0px 5px !important;
+}
+
+.TSRUntestURLWindow_Wrapper .siteOwnAndemailArea .emailAddress {
+	line-height:25px;
+	width: 281px !important;
+	font-size: 16px !important;
+	height: 27px;
+	
+	/*IE7 quirks mode hack box model*/
+	_height: 43px;
+	-moz-box-sizing: content-box !important;
+	-webkit-box-sizing: content-box !important;
+	box-sizing: content-box !important;
+	color: #aaaaaa;
+	background-color: white;
+}
+
+.TSRInputDisabled {
+	height: 27px !important;
+	line-height:27px !important;
+	width: 281px !important;
+	border: solid 1px #aaaaaa !important;
+	background: #dddddd !important;
+	padding: 7px 0px 7px 10px !important;
+	*+margin-right:0px !important;
+}
+
+.TSRUntestURLWindow_noPlaceHolder {
+	color: #222222 !important;
+}
+
+.TSRUntestURLWindow_Wrapper .descriptionArea {
+	margin: 30px 30px 20px 30px !important;
+}
+
+/*
+	this rule is also defined in l10n.css. Change this rule should also change related one in that file.
+*/
+.TSRUntestURLWindow_Wrapper .descriptionArea .description {
+	font-family: "Arial" !important;
+	height: 90px !important;
+	width: 459px !important;
+	font-size: 16px !important;
+	color: #aaaaaa;
+	-moz-box-sizing: content-box !important;
+    -webkit-box-sizing: content-box !important;
+    box-sizing: content-box !important;
+	background-color: white !important;
+	border: solid 1px !important;
+}
+
+.TSRUntestURLWindow_Wrapper .textAreaBelowSeperator {	
+	height:0px !important;
+	border-top: solid 1px #aaa !important;
+	margin:0px 30px 30px 30px !important;
+}
+
+.TSRUntestURLWindow_Wrapper .footArea {
+	overflow: hidden !important;
+	height: 45px !important;
+	padding: 0px 30px 0px 30px !important;
+}
+
+.TSRUntestURLWindow_Wrapper .footArea .logo {
+	float: left !important;
+	width: 60px !important;
+	height: 20px !important;
+}
+
+.TSRUntestURLWindow_Wrapper .footArea .send {
+	float: right !important;
+	font-weight: bold !important;
+	padding: 0px 15px !important;
+	font-size: 13px !important;
+	height: 30px !important;
+}
+
+.TSRUntestURLWindow_Wrapper_btn_red {
+	text-align: center;
+	color: #FFFFFF;
+	display: inline-block;
+	*display: inline;
+	zoom: 1;
+	height: auto;
+	border: solid #b32028 1px;
+	
+	/*IE7 hack button border*/
+	*+border: 0;
+	border-radius: 5px;
+
+	text-shadow: 0px -1px rgb(0,0,0); /* IE 8 hack */
+	text-shadow: 0px -1px rgba(0,0,0,.4);
+	letter-spacing: -.02em;
+	cursor: pointer;
+}
+
+
+/*
+	Image Block
+*/
+.TSRImageBlock_Root {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	z-index:2147483647 !important;
+	display: none;
+	text-align: left !important;
+	width: 270px !important;
+}
+
+/*
+	this rule is also defined in l10n.css. Change this rule should also change related one in that file.
+*/
+.TSRImageBlock_Wrapper{
+	font-family: "Arial" !important;
+	min-height: 160px !important;;
+	width: 270px !important;
+	border: solid 2px #ed1c24 !important;
+	padding: 20px 15px 0px 15px !important;
+	background: #FFF !important;
+	box-shadow: 0px 15px 25px rgb(0,0,0) !important; /* IE 8 hack */
+	box-shadow: 0px 15px 25px rgba(0,0,0,.4) !important;
+	margin-left: auto !important;
+	margin-right: auto !important;
+}
+
+.TSRImageBlock_body {
+	
+}
+
+.TSRImageBlock_body_title{
+	font-size: 13px;
+	color: #222;
+	font-weight: bold;
+	padding-bottom: 10px !important;
+	border-bottom: solid 1px #d9d9d9 !important;
+}
+
+.TSRImageBlock_body_desc{
+	font-size: 11px;
+	margin-top: 15px !important;
+	color: #777;
+}
+
+.provide_password{
+	color: #4a8db8 !important;
+	cursor: pointer;
+}
+
+.provide_password:hover{
+	color: #3399cc !important;
+}
+
+.provide_password:active{
+	color: #3399cc !important;
+}
+
+.TSRImageBlock_footer{
+	position: relative;
+	margin-top: 30px !important;
+	margin-bottom: 10px !important;
+	overflow: hidden;
+}
+
+.TSRImageBlock_footer_logo{
+	width: 16px;
+	height: 16px;
+	float: left;
+	margin-right: 2px !important;
+}
+
+.TSRImageBlock_footer_productName{
+	float: left;	
+	font-size: 11px;
+	color: #222;
+	margin-top: 1px !important;
+}

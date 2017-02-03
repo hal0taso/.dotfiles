@@ -1,0 +1,29 @@
+{
+   "facebookscanner": {
+      "message": "Mengecek privasi online Anda"
+   },
+   "help": {
+      "message": "Bantuan"
+   },
+   "help_page_base_url": {
+      "message": "http://docs.trendmicro.com/TMT/ID-ID/"
+   },
+   "pagerating": {
+      "message": "Menilai tautan pada halaman web"
+   },
+   "product_name": {
+      "message": "Pemindai Privasi Trend Micro"
+   },
+   "setting": {
+      "message": "Pengaturan"
+   },
+   "toolbar_description": {
+      "message": "Akses Tautan ke \"Intip Situs Web Berisiko\". Tingkatkan Proteksi Anda dengan Perangkat Lunak Keamanan dari Trend Micro."
+   },
+   "toolbar_name": {
+      "message": "Toolbar Trend Micro"
+   },
+   "umsrating": {
+      "message": "Menilai tautan saat mouse terarahkan"
+   }
+}

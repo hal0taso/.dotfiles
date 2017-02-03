@@ -1,0 +1,29 @@
+{
+   "facebookscanner": {
+      "message": "Überprüfen Sie Ihren Online-Datenschutz"
+   },
+   "help": {
+      "message": "Hilfe"
+   },
+   "help_page_base_url": {
+      "message": "http://docs.trendmicro.com/TMT/DE-DE/"
+   },
+   "pagerating": {
+      "message": "Links auf Webseiten bewerten"
+   },
+   "product_name": {
+      "message": "Datenschutz-Scanner von Trend Micro"
+   },
+   "setting": {
+      "message": "Einstellungen"
+   },
+   "toolbar_description": {
+      "message": "Zeigen Sie Links zu gefährlichen Websites auf einen Blick an. Optimieren Sie den Schutz mit Trend Micro Security Software."
+   },
+   "toolbar_name": {
+      "message": "Trend Micro Toolbar"
+   },
+   "umsrating": {
+      "message": "Links bewerten, wenn mit der Maus darauf gezeigt wird"
+   }
+}

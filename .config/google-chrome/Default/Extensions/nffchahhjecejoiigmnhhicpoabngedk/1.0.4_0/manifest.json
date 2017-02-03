@@ -1,0 +1,19 @@
+{
+   "app": {
+      "launch": {
+         "web_url": "https://onedrive.live.com"
+      },
+      "urls": [ "*://*.onedrive.live.com/" ]
+   },
+   "description": "One place for everything in your life",
+   "icons": {
+      "128": "Onedrive_128x128.png",
+      "16": "Onedrive_16x16.png",
+      "48": "Onedrive_48x48.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCl6o7zEMrqm16uF+auVHQ4gZR4si2nw26DLh63DpEDv62KkDRy2zAHcHI6KRfXSIu1V15OqEi7exh5YbaviJBDFsa73v2FMFJRtUVQKrCPmDjYa/n/ElGP4bsHDbhbn/adKyy1/2KRycqrx2MbtxJnTTBsh8RsbhW9Nd3EdlXxGwIDAQAB",
+   "manifest_version": 2,
+   "name": "OneDrive",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.4"
+}

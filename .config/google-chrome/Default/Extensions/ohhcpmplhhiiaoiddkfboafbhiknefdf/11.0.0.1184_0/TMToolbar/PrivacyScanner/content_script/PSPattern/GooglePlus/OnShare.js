@@ -1,0 +1,1 @@
+(function(){var b=window.TMExt_$;b(document).ready(function(){var d=GetWording();(function(){var a=b("div[g_editable][contenteditable]"),c=a.prev();0!=a.length&&0!=c.length?(c.hide(),a.text(d)):setTimeout(arguments.callee,1E3)})()})})();

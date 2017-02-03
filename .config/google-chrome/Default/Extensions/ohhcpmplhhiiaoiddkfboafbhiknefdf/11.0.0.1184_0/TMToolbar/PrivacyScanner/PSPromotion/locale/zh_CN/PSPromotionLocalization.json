@@ -1,0 +1,33 @@
+﻿{
+  "g_oPrivacyScannerString": {
+    "ScanButtonText": "检查我的隐私",
+    "WelcomeString": {
+      "Head": {
+        "FACEBOOK": "担心有些人看到您在 Facebook 上共享的内容?",
+        "TWITTER": "担心有些人看到您在 Twitter 上共享的内容?",
+        "GOOGLEPLUS": "担心有些人看到您在 Google+ 上共享的内容?",
+        "LINKEDIN": "担心有些人看到您在 LinkedIn 上共享的内容?"
+      },
+      "Content": "运行趋势科技社交网络隐私防护，确保仅与相应人员分享适当内容。",
+      "LearnMore": "了解更多",
+      "AskLater": "不断显示这些警报"
+    }
+  },
+  "g_oPrivacyScannerString_autoScan": {
+    "ScanButtonText": "查看扫描结果",
+    "WelcomeString": {
+      "Head": {
+        "SeveralConcern": "发现 %d 个隐私问题",
+        "OneConcern": "发现 %d 个隐私问题"
+      },
+      "Content": {
+        "FACEBOOK": "请单击下面的按钮开始改进 Facebook 隐私设置。",
+        "TWITTER": "请单击下面的按钮开始改进 Twitter 隐私设置。",
+        "GOOGLEPLUS": "请单击下面的按钮开始改进 Google+ 隐私设置。",
+        "LINKEDIN": "请单击下面的按钮开始改进 LinkedIn 隐私设置。"
+      },
+      "LearnMore": "了解更多",
+      "AskLater": "不断显示这些警报"
+    }
+  }
+}

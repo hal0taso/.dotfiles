@@ -1,0 +1,10 @@
+{
+   "appDesc": {
+      "description": "App description.",
+      "message": "Luo verkkolomakkeita ja -kyselyitä"
+   },
+   "appName": {
+      "description": "App name.",
+      "message": "Google-lomakkeet"
+   }
+}

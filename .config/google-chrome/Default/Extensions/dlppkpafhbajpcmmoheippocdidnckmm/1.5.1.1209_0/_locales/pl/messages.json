@@ -1,0 +1,14 @@
+{
+   "app_copyright": {
+      "message": "Copyright 2011 Google Inc. Wszelkie prawa zastrzeżone."
+   },
+   "app_description": {
+      "message": "Dziel się tym czym chcesz, z kim chcesz."
+   },
+   "app_name": {
+      "message": "Google+"
+   },
+   "share_intent_title": {
+      "message": "Udostępnij w Google+"
+   }
+}

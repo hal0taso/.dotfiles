@@ -1,0 +1,33 @@
+﻿{
+  "g_oPrivacyScannerString": {
+    "ScanButtonText": "Kontrollera min sekretess",
+    "WelcomeString": {
+      "Head": {
+        "FACEBOOK": "Är du orolig över vem som kan se vad du delar på Facebook?",
+        "TWITTER": "Är du orolig över vem som kan se vad du delar på Twitter?",
+        "GOOGLEPLUS": "Är du orolig över vem som kan se vad du delar på Google+?",
+        "LINKEDIN": "Är du orolig över vem som kan se vad du delar på LinkedIn?"
+      },
+      "Content": "Kör Trend Micro sekretesskanner för att se till att du bara delar det du vill med vem du vill.",
+      "LearnMore": "Mer information",
+      "AskLater": "Fortsätt att visa de här alarmen"
+    }
+  },
+  "g_oPrivacyScannerString_autoScan": {
+    "ScanButtonText": "Visa sökresultat",
+    "WelcomeString": {
+      "Head": {
+        "SeveralConcern": "%d sekretessproblem hittades",
+        "OneConcern": "%d sekretessproblem hittades"
+      },
+      "Content": {
+        "FACEBOOK": "Klicka på knappen nedan för att börja förbättra dina sekretessinställningar för Facebook.",
+        "TWITTER": "Klicka på knappen nedan för att börja förbättra dina sekretessinställningar för Twitter.",
+        "GOOGLEPLUS": "Klicka på knappen nedan för att börja förbättra dina sekretessinställningar för Google+.",
+        "LINKEDIN": "Klicka på knappen nedan för att börja förbättra dina sekretessinställningar för LinkedIn."
+      },
+      "LearnMore": "Mer information",
+      "AskLater": "Fortsätt att visa de här alarmen"
+    }
+  }
+}

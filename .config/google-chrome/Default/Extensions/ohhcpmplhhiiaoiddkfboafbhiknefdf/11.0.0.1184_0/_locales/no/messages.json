@@ -1,0 +1,29 @@
+{
+    "toolbar_name":{
+        "message":"Trend Micro Toolbar"
+    },
+    "toolbar_description":{
+        "message":"Se koblinger til utrygge nettsteder med et øyekast. Forbedre beskyttelsen din med Trend Micro sikkerhetsprogramvare."
+    },
+    "pagerating":{
+        "message":"Vurder linker på websider"
+    },
+    "umsrating":{
+        "message":"Vurder linker på musepeker"
+    },
+    "facebookscanner":{
+        "message":"Kontroller personvernet ditt på nettet"
+    },
+    "setting":{
+        "message":"Innstillinger"
+    },
+    "help":{
+        "message": "Hjelp"
+    },
+    "product_name":{
+        "message": "Trend Micro-personvernskanner"
+    },
+    "help_page_base_url":{
+        "message": "http://docs.trendmicro.com/TMT/NB-NO/"
+    }
+}

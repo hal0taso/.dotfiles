@@ -1,0 +1,29 @@
+{
+   "facebookscanner": {
+      "message": "Kontrollera din integritet online"
+   },
+   "help": {
+      "message": "Hjälp"
+   },
+   "help_page_base_url": {
+      "message": "http://docs.trendmicro.com/TMT/SV-SE/"
+   },
+   "pagerating": {
+      "message": "Betygsätt länkar på webbsidor"
+   },
+   "product_name": {
+      "message": "Trend Micros sekretesskanner"
+   },
+   "setting": {
+      "message": "Inställningar"
+   },
+   "toolbar_description": {
+      "message": "Se de lättlästa länkarna till riskfyllda webbplatser. Förbättra ditt skydd från programmet Trend Micro Security."
+   },
+   "toolbar_name": {
+      "message": "Trend Micro Toolbar"
+   },
+   "umsrating": {
+      "message": "Betygsätt länkar med pekaren över dem"
+   }
+}

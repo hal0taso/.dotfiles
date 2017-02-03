@@ -1,0 +1,10 @@
+{
+   "appDesc": {
+      "description": "App description.",
+      "message": "Online űrlapok és felmérések létrehozása"
+   },
+   "appName": {
+      "description": "App name.",
+      "message": "Google Űrlapok"
+   }
+}

@@ -1,0 +1,29 @@
+{
+   "facebookscanner": {
+      "message": "プライバシー設定をチェック"
+   },
+   "help": {
+      "message": "ヘルプ"
+   },
+   "help_page_base_url": {
+      "message": "http://docs.trendmicro.com/TMT/JA-JP/"
+   },
+   "pagerating": {
+      "message": "Webページ内のリンクの安全性を表示"
+   },
+   "product_name": {
+      "message": "プライバシー設定チェッカー"
+   },
+   "setting": {
+      "message": "設定"
+   },
+   "toolbar_description": {
+      "message": "Webサイトの安全性を確認してから、リンクをクリックしてください"
+   },
+   "toolbar_name": {
+      "message": "Trend ツールバー"
+   },
+   "umsrating": {
+      "message": "マウスポインタを合わせたWebページ内のリンクの安全性を表示"
+   }
+}

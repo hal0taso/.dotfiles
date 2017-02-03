@@ -1,0 +1,29 @@
+{
+   "facebookscanner": {
+      "message": "ตรวจสอบความเป็นส่วนตัวของคุณในระบบออนไลน์"
+   },
+   "help": {
+      "message": "วิธีใช้"
+   },
+   "help_page_base_url": {
+      "message": "http://docs.trendmicro.com/TMT/TH-TH/"
+   },
+   "pagerating": {
+      "message": "แสดงอันดับความปลอดภัยลิงก์ในเว็บเพจ"
+   },
+   "product_name": {
+      "message": "ตรวจสอบความเป็นส่วนตัวของ Trend Micro "
+   },
+   "setting": {
+      "message": "การตั้งค่า"
+   },
+   "toolbar_description": {
+      "message": "ดูลิงก์ไปยังเว็บไซต์ที่มีความเสี่ยงในพริบตา ขยายการป้องกันของคุณด้วยซอฟต์แวร์ความปลอดภัยของ Trend Micro "
+   },
+   "toolbar_name": {
+      "message": "แถบเครื่องมือของ Trend Micro"
+   },
+   "umsrating": {
+      "message": "แสดงอันดับความปลอดภัยลิงก์เมื่อชี้เมาส์"
+   }
+}

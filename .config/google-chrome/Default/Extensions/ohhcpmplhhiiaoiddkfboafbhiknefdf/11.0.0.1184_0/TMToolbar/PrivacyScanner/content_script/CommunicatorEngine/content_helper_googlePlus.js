@@ -1,0 +1,1 @@
+(function(){window.Scanner=new GooglePlusPScanner;window.Fixer=new GooglePlusPFixer;var a=function(){"undefined"!=typeof TMExt_$?TMExt_$(document).ready(function(){PSContentEstablishConnection("ContentPage_Background_GOOGLEPLUS");window.SyncPrivacyScannerSettings("ContentPage_Background_GOOGLEPLUS")}):setTimeout(a,500)};a()})();

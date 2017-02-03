@@ -1,0 +1,1 @@
+(function(){window.get_scannerHelper=function(a){if(-1!==TMExt_$.inArray(a,AllSites))return get_siteHelper(a);if(-1!==TMExt_$.inArray(a,AllBrowsers))return get_browserHelper(a)};window.resetAll=function(a){"IE"===a&&(a="INTERNET_EXPLORER");get_scannerHelper(a).resetAllSettingToDangerous()}})();

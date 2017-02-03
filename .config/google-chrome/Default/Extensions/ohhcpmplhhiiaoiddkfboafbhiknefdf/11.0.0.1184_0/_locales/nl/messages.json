@@ -1,0 +1,29 @@
+{
+   "facebookscanner": {
+      "message": "Uw online privacy controleren"
+   },
+   "help": {
+      "message": "Hulp"
+   },
+   "help_page_base_url": {
+      "message": "http://docs.trendmicro.com/TMT/NL-NL/"
+   },
+   "pagerating": {
+      "message": "Koppelingen beoordelen op webpagina's"
+   },
+   "product_name": {
+      "message": "Trend Micro-privacyscanner"
+   },
+   "setting": {
+      "message": "Instellingen"
+   },
+   "toolbar_description": {
+      "message": "Koppelingen naar riskante websites op een rijtje. Verbeter uw bescherming met de Trend Micro-beveiligingssoftware."
+   },
+   "toolbar_name": {
+      "message": "Trend Micro Toolbar"
+   },
+   "umsrating": {
+      "message": "Koppelingen beoordelen door aanwijzen met de muis"
+   }
+}

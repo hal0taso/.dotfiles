@@ -1,0 +1,29 @@
+{
+   "facebookscanner": {
+      "message": "Проверка конфиденциальности в Интернете"
+   },
+   "help": {
+      "message": "Справка"
+   },
+   "help_page_base_url": {
+      "message": "http://docs.trendmicro.com/TMT/RU-RU/"
+   },
+   "pagerating": {
+      "message": "Оценивать ссылки на веб-страницах"
+   },
+   "product_name": {
+      "message": "Сканер конфиденциальности Trend Micro"
+   },
+   "setting": {
+      "message": "Настройки"
+   },
+   "toolbar_description": {
+      "message": "Ознакомьтесь с разделом о ссылках на опасные веб-сайты. Улучшите защиту с ПО Trend Micro Security."
+   },
+   "toolbar_name": {
+      "message": "Trend Micro Toolbar"
+   },
+   "umsrating": {
+      "message": "Оценивать ссылки при наведении курсора"
+   }
+}

@@ -1,0 +1,2 @@
+function TSSRGoogleParseTranslateResult(c){var a=new CreateTSRLocatedObject(null,null,"A",null),b=new CreateTSRLocatedObject(c,a,"TABLE",null);c=new CreateTSRLocatedObject(c,b,"DIV","content");b.appendAttribute("class","^rw$");a.appendAttribute("class","^l$");if(a=c.findElement())for(a=GetAllTSRLocatedNodes(a),b=0;b<a.length;b++)CreateTSRResultObject(a[b],a[b].href)}g_bIsNeedCheckSPan=!0;TSRTagFlowID();
+function TSRParse(){var c=g_oEnv.Parser.iResultNumber;TSSRGoogleParseTranslateResult(document);TrendMicro.TB.ReduceNewNode(c+1);return g_oEnv.Parser.rgobjSearchResult};

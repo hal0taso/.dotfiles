@@ -1,0 +1,20 @@
+{
+   "extDescription": {
+      "message": "はてなからのお知らせを受けとろう"
+   },
+   "extName": {
+      "message": "はてなのお知らせ"
+   },
+   "login": {
+      "message": "すでにユーザー登録がお済みの場合は\u003Ca href='http://www.hatena.ne.jp/login?location=http%3A%2F%2Fwww.hatena.ne.jp%2F'>こちらからログイン\u003C/a>して下さい。"
+   },
+   "not_login": {
+      "message": "ログインしていません"
+   },
+   "notify_for_you": {
+      "message": "あなたへのお知らせ"
+   },
+   "register": {
+      "message": "はてなのお知らせ拡張を使用するには、\u003Ca href='https://www.hatena.ne.jp/register?via=201021&amp;location=http%3A%2F%2Fwww.hatena.ne.jp%2Ftool%2F'>はてなへのユーザ登録(無料)\u003C/a>が必要です。"
+   }
+}
