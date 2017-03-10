@@ -16,7 +16,6 @@ Completion output
 ~~~~~~~~~~~~~~~~~
 
 .. autodata:: case_insensitive_completion
-.. autodata:: add_dot_after_module
 .. autodata:: add_bracket_after_function
 .. autodata:: no_completion_duplicates
 
@@ -84,13 +83,6 @@ import platform
 case_insensitive_completion = True
 """
 The completion is by default case insensitive.
-"""
-
-add_dot_after_module = False
-"""
-Adds a dot after a module, because a module that is not accessed this way is
-definitely not the normal case. However, in VIM this doesn't work, that's why
-it isn't used at the moment.
 """
 
 add_bracket_after_function = False

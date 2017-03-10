@@ -2,9 +2,9 @@
 ;;;load a Cask's configuration file
 
 ;; if you use OSX
-;;(require 'cask)
+(require 'cask)
 ;; if you use linux
-(require 'cask"~/.cask/cask.el")
+;;(require 'cask"~/.cask/cask.el")
 
 ;;; Code:
 (cask-initialize)
@@ -87,5 +87,13 @@
 ;;; init.el ends here
 
 ;; change font size
-(set-frame-font "Monospace 9")
+(set-frame-font "Monospace 12")
 (put 'upcase-region 'disabled nil)
+
+;;; setting for nnreddit
+(require 'nnreddit "~/.emacs.d/inits/99-nnreddit.el")
+(add-to-list 'gnus-secondary-select-methods
+             '(nnreddit ""))
+
+;;; 括弧の補完
+(electric-pair-mode 1)

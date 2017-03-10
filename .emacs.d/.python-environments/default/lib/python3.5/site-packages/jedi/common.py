@@ -127,28 +127,66 @@ def source_to_unicode(source, encoding=None):
             # UTF-8 byte-order mark
             return 'utf-8'
 
-        first_two_lines = re.match(r'(?:[^\n]*\n){0,2}', str(source)).group(0)
-        possible_encoding = re.search(r"coding[=:]\s*([-\w.]+)",
+        first_two_lines = re.match(br'(?:[^\n]*\n){0,2}', source).group(0)
+        possible_encoding = re.search(br"coding[=:]\s*([-\w.]+)",
                                       first_two_lines)
         if possible_encoding:
             return possible_encoding.group(1)
         else:
             # the default if nothing else has been set -> PEP 263
-            return encoding if encoding is not None else 'iso-8859-1'
+            return encoding if encoding is not None else 'utf-8'
 
     if isinstance(source, unicode):
         # only cast str/bytes
         return source
 
+    encoding = detect_encoding()
+    if not isinstance(encoding, unicode):
+        encoding = unicode(encoding, 'utf-8', 'replace')
     # cast to unicode by default
-    return unicode(source, detect_encoding(), 'replace')
+    return unicode(source, encoding, 'replace')
 
 
-def splitlines(string):
+def splitlines(string, keepends=False):
     """
     A splitlines for Python code. In contrast to Python's ``str.splitlines``,
     looks at form feeds and other special characters as normal text. Just
     splits ``\n`` and ``\r\n``.
     Also different: Returns ``['']`` for an empty string input.
+
+    In Python 2.7 form feeds are used as normal characters when using
+    str.splitlines. However in Python 3 somewhere there was a decision to split
+    also on form feeds.
     """
-    return re.split('\n|\r\n', string)
+    if keepends:
+        # If capturing parentheses are used in pattern, then the text of all
+        # groups in the pattern are also returned as part of the resulting
+        # list.
+        lst = re.split('(\n|\r\n)', string)
+
+        # Need to merge the new lines with the actual lines.
+        odd = False
+        lines = []
+        for string in lst:
+            if odd:
+                line += string
+                lines.append(line)
+            else:
+                line = string
+            odd = not odd
+        if odd:
+            lines.append(line)
+        return lines
+    else:
+        return re.split('\n|\r\n', string)
+
+
+def unite(iterable):
+    """Turns a two dimensional array into a one dimensional."""
+    return set(typ for types in iterable for typ in types)
+
+
+def to_list(func):
+    def wrapper(*args, **kwargs):
+        return list(func(*args, **kwargs))
+    return wrapper
