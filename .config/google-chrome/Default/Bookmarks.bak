@@ -1,97 +1,85 @@
 {
-   "checksum": "3f333dd70195bee83e1179468919011f",
+   "checksum": "2cb6679e950e18beb72183ef5797fa59",
    "roots": {
       "bookmark_bar": {
          "children": [ {
-            "children": [ {
-               "date_added": "13127242674280218",
-               "id": "196",
-               "name": "LifeisTech! Unityコース ウーノ君をUnityRunで走らせるまで - Qiita",
-               "sync_transaction_version": "31",
-               "type": "url",
-               "url": "http://qiita.com/tanaka_lit/private/201b30b9cd64fdf7d775"
-            }, {
-               "date_added": "13127237071983723",
-               "id": "195",
-               "name": "[B]1227_4daysXmasCamp2016",
-               "sync_transaction_version": "31",
-               "type": "url",
-               "url": "https://navi.life-is-tech.com/camp_campus/buyiwhrofawefa2016/"
-            }, {
-               "date_added": "13127426426077846",
-               "id": "198",
-               "name": "Blenderを日本語表示にする設定方法 | albatrus.com",
-               "sync_transaction_version": "33",
-               "type": "url",
-               "url": "http://albatrus.com/main/3dmode/4731"
-            }, {
-               "date_added": "13127426444071169",
-               "id": "199",
-               "name": "Mac Book Pro で使う簡単blender — blendstudy 0.01 documentation",
-               "sync_transaction_version": "34",
-               "type": "url",
-               "url": "http://blendstudy.readthedocs.io/en/latest/ap_appendix/blender_in_MBP.html"
-            }, {
-               "date_added": "13127426461434319",
-               "id": "200",
-               "name": "Blenderで3D美少女キャラの作り方。その２（目を作り込む）",
-               "sync_transaction_version": "35",
-               "type": "url",
-               "url": "http://original-game.com/blender-female-character2/"
-            } ],
-            "date_added": "13127242681999599",
-            "date_modified": "13127426461434319",
-            "id": "197",
-            "name": "camp",
-            "sync_transaction_version": "32",
-            "type": "folder"
+            "date_added": "13129704905281898",
+            "id": "206",
+            "meta_info": {
+               "last_visited_desktop": "13132829723913690"
+            },
+            "name": "Hack Forums",
+            "sync_transaction_version": "118",
+            "type": "url",
+            "url": "https://hackforums.net/index.php"
          }, {
             "date_added": "13125125833199236",
             "id": "8",
+            "meta_info": {
+               "last_visited_desktop": "13133596492972739"
+            },
             "name": "TweetDeck",
-            "sync_transaction_version": "1",
+            "sync_transaction_version": "137",
             "type": "url",
             "url": "https://tweetdeck.twitter.com/"
          }, {
             "date_added": "13125512853733404",
             "id": "151",
+            "meta_info": {
+               "last_visited_desktop": "13133416636772343"
+            },
             "name": "github",
-            "sync_transaction_version": "8",
+            "sync_transaction_version": "127",
             "type": "url",
             "url": "https://github.com/hal0taso"
          }, {
             "date_added": "13125255326641578",
             "id": "147",
+            "meta_info": {
+               "last_visited_desktop": "13132829724047345"
+            },
             "name": "CTFtime.org",
-            "sync_transaction_version": "6",
+            "sync_transaction_version": "118",
             "type": "url",
             "url": "https://ctftime.org/#"
          }, {
             "date_added": "13125125372356217",
             "id": "12",
+            "meta_info": {
+               "last_visited_desktop": "13132829725029347"
+            },
             "name": "新生日刊Emacs",
-            "sync_transaction_version": "6",
+            "sync_transaction_version": "118",
             "type": "url",
             "url": "http://emacs.rubikitch.com/"
          }, {
             "date_added": "13125125805830692",
             "id": "13",
+            "meta_info": {
+               "last_visited_desktop": "13132829724037600"
+            },
             "name": "Pwn",
-            "sync_transaction_version": "6",
+            "sync_transaction_version": "118",
             "type": "url",
             "url": "http://pastebin.com/uyifxgPu"
          }, {
             "date_added": "13125252185782849",
             "id": "146",
+            "meta_info": {
+               "last_visited_desktop": "13132829724283869"
+            },
             "name": "Rev",
-            "sync_transaction_version": "6",
+            "sync_transaction_version": "118",
             "type": "url",
             "url": "http://pastebin.com/q7LGi8w5"
          }, {
             "date_added": "13125131107902819",
             "id": "14",
+            "meta_info": {
+               "last_visited_desktop": "13133594066378378"
+            },
             "name": "Blog",
-            "sync_transaction_version": "39",
+            "sync_transaction_version": "136",
             "type": "url",
             "url": "http://blog.hatena.ne.jp/"
          }, {
@@ -524,8 +512,11 @@
                }, {
                   "date_added": "13109327893696033",
                   "id": "95",
+                  "meta_info": {
+                     "last_visited_desktop": "13132064008732860"
+                  },
                   "name": "CTFtime.org / All about CTF (Capture The Flag)",
-                  "sync_transaction_version": "1",
+                  "sync_transaction_version": "95",
                   "type": "url",
                   "url": "https://ctftime.org/"
                }, {
@@ -559,8 +550,11 @@
                }, {
                   "date_added": "13109326349397136",
                   "id": "100",
+                  "meta_info": {
+                     "last_visited_desktop": "13132063997496336"
+                  },
                   "name": "ksnctf",
-                  "sync_transaction_version": "1",
+                  "sync_transaction_version": "95",
                   "type": "url",
                   "url": "http://ksnctf.sweetduet.info/"
                }, {
@@ -580,31 +574,38 @@
                }, {
                   "date_added": "13108991169135676",
                   "id": "103",
+                  "meta_info": {
+                     "last_visited_desktop": "13133149455678568"
+                  },
                   "name": "CpawCTF - Main page",
-                  "sync_transaction_version": "1",
+                  "sync_transaction_version": "121",
                   "type": "url",
                   "url": "https://ctf.cpaw.site/"
                }, {
                   "date_added": "13091601774384272",
                   "id": "104",
                   "meta_info": {
+                     "last_visited_desktop": "13132052050395734",
                      "stars.id": "ssc_0fa68e6939e69610",
                      "stars.version": "sync.server.Chrome46"
                   },
                   "name": "XSS game",
-                  "sync_transaction_version": "1",
+                  "sync_transaction_version": "90",
                   "type": "url",
                   "url": "https://xss-game.appspot.com/"
                }, {
                   "date_added": "13127974260362530",
                   "id": "201",
+                  "meta_info": {
+                     "last_visited_desktop": "13133585917742468"
+                  },
                   "name": "CTF Pwn - A painter and a black cat",
-                  "sync_transaction_version": "36",
+                  "sync_transaction_version": "134",
                   "type": "url",
                   "url": "https://raintrees.net/projects/a-painter-and-a-black-cat/wiki/CTF_Pwn"
                } ],
                "date_added": "13125155650067446",
-               "date_modified": "13127974260362530",
+               "date_modified": "13133279069335001",
                "id": "83",
                "name": "CTF",
                "sync_transaction_version": "1",
@@ -739,18 +740,22 @@
                "date_added": "13088487332630433",
                "id": "50",
                "meta_info": {
+                  "last_visited_desktop": "13130989456542743",
                   "stars.id": "ssc_e6576bfe3464add5",
                   "stars.version": "sync.server.Chrome45"
                },
                "name": "個人ポータル [KOAN]",
-               "sync_transaction_version": "1",
+               "sync_transaction_version": "42",
                "type": "url",
                "url": "https://koan.osaka-u.ac.jp/koan/campus?view=view.login"
             }, {
                "date_added": "13105091200218785",
                "id": "51",
+               "meta_info": {
+                  "last_visited_desktop": "13133584750347439"
+               },
                "name": "Office 365",
-               "sync_transaction_version": "26",
+               "sync_transaction_version": "133",
                "type": "url",
                "url": "https://portal.office.com/Home"
             }, {
@@ -763,8 +768,11 @@
             }, {
                "date_added": "13122133689721605",
                "id": "53",
+               "meta_info": {
+                  "last_visited_desktop": "13131182362913509"
+               },
                "name": "スクール秋季",
-               "sync_transaction_version": "1",
+               "sync_transaction_version": "42",
                "type": "url",
                "url": "https://docs.google.com/spreadsheets/d/1rxzI2ssiIKtybmU2Q1SAa_Uw9cSlLdVMuEkgpuMT5p8/edit?usp=drivesdk"
             }, {
@@ -784,8 +792,11 @@
                   "children": [ {
                      "date_added": "13125817928094834",
                      "id": "165",
+                     "meta_info": {
+                        "last_visited_desktop": "13133068952586230"
+                     },
                      "name": "【全】大阪土曜A_2016秋学期 - Google スプレッドシート",
-                     "sync_transaction_version": "11",
+                     "sync_transaction_version": "121",
                      "type": "url",
                      "url": "https://docs.google.com/spreadsheets/d/1tD3WScMnBfoHFm6PwC4LILCdxP4FdHo1KCI5nd_pB2Q/edit#gid=1645152917"
                   } ],
@@ -955,8 +966,11 @@
                   }, {
                      "date_added": "13114334039863319",
                      "id": "77",
+                     "meta_info": {
+                        "last_visited_desktop": "13133153770770254"
+                     },
                      "name": "Life is Tech ! MEMBERS",
-                     "sync_transaction_version": "1",
+                     "sync_transaction_version": "121",
                      "type": "url",
                      "url": "https://members.life-is-tech.com/textbooks#camp_20"
                   }, {
@@ -982,14 +996,38 @@
                      "url": "https://docs.google.com/spreadsheets/d/1itrTq6xLQCOCKUW3nJCmhCTPj4ApzplWUqJ4PwFT7Sg/edit#gid=0"
                   } ],
                   "date_added": "13125155650066610",
-                  "date_modified": "13128247544301223",
+                  "date_modified": "13133279069332726",
                   "id": "74",
                   "name": "unity",
                   "sync_transaction_version": "1",
                   "type": "folder"
+               }, {
+                  "date_added": "13129450556931783",
+                  "id": "204",
+                  "name": "Adobe CCインストールマニュアル - Google スライド",
+                  "sync_transaction_version": "40",
+                  "type": "url",
+                  "url": "https://docs.google.com/presentation/d/1-qe8EFEX9kc-i4BbWb22JFLFQKsPUznG7NX75RTidvI/edit#slide=id.p"
+               }, {
+                  "date_added": "13127242674280218",
+                  "id": "196",
+                  "name": "LifeisTech! Unityコース ウーノ君をUnityRunで走らせるまで - Qiita",
+                  "sync_transaction_version": "41",
+                  "type": "url",
+                  "url": "http://qiita.com/tanaka_lit/private/201b30b9cd64fdf7d775"
+               }, {
+                  "date_added": "13131600814199860",
+                  "id": "210",
+                  "meta_info": {
+                     "last_visited_desktop": "13133341882251556"
+                  },
+                  "name": "【L4S】2017春_講師確認事項 - Google スプレッドシート",
+                  "sync_transaction_version": "122",
+                  "type": "url",
+                  "url": "https://docs.google.com/spreadsheets/d/1ko-HQwkDn_HoWwpGz7xV2bEvDEp0LV7tmW_nqNxsIcw/edit#gid=1617647182"
                } ],
                "date_added": "13125155650065478",
-               "date_modified": "13128247223876565",
+               "date_modified": "13131600814199860",
                "id": "54",
                "meta_info": {
                   "stars.id": "ssf_53ce6f0a716fad7c",
@@ -998,9 +1036,16 @@
                "name": "LIT",
                "sync_transaction_version": "1",
                "type": "folder"
+            }, {
+               "date_added": "13130000782459044",
+               "id": "207",
+               "name": "Kenkyuu",
+               "sync_transaction_version": "41",
+               "type": "url",
+               "url": "http://hori.k.u-tokyo.ac.jp/staff/hori/essay/kenkyuu.html"
             } ],
             "date_added": "13125155650063561",
-            "date_modified": "13127189565508987",
+            "date_modified": "13133584842743355",
             "id": "18",
             "meta_info": {
                "stars.id": "ssf_677eee03b4cb3eea",
@@ -1022,8 +1067,11 @@
                   "children": [ {
                      "date_added": "13118022871289147",
                      "id": "31",
+                     "meta_info": {
+                        "last_visited_desktop": "13132889320931273"
+                     },
                      "name": "PEGASUS iOS Kernel Vulnerability Explained | SektionEins GmbH",
-                     "sync_transaction_version": "1",
+                     "sync_transaction_version": "121",
                      "type": "url",
                      "url": "https://sektioneins.de/en/blog/16-09-02-pegasus-ios-kernel-vulnerability-explained.html"
                   }, {
@@ -1120,8 +1168,11 @@
                   }, {
                      "date_added": "13118022871354153",
                      "id": "45",
+                     "meta_info": {
+                        "last_visited_desktop": "13132589662999446"
+                     },
                      "name": "NEW GAME! -ニューゲーム-　第10話 Youtubeアニメ無料動画+",
-                     "sync_transaction_version": "1",
+                     "sync_transaction_version": "112",
                      "type": "url",
                      "url": "http://tvanimedouga.blog93.fc2.com/blog-entry-29441.html"
                   }, {
@@ -1140,7 +1191,7 @@
                      "url": "http://d.hatena.ne.jp/daisuke-m/20100414/1271228333"
                   } ],
                   "date_added": "13125155650064130",
-                  "date_modified": "13125155650064130",
+                  "date_modified": "13133279069318279",
                   "id": "30",
                   "name": "IOS_PEGUSUS",
                   "sync_transaction_version": "1",
@@ -1374,8 +1425,11 @@
             }, {
                "date_added": "13126106053753104",
                "id": "169",
+               "meta_info": {
+                  "last_visited_desktop": "13133158618894810"
+               },
                "name": "情報セキュリティ系論文紹介 Advent Calendar 2016 - Adventar",
-               "sync_transaction_version": "20",
+               "sync_transaction_version": "121",
                "type": "url",
                "url": "http://www.adventar.org/calendars/1401"
             } ],
@@ -1459,20 +1513,26 @@
          }, {
             "date_added": "13125824663843360",
             "id": "166",
+            "meta_info": {
+               "last_visited_desktop": "13132829724386195"
+            },
             "name": "SECCON 2016 Online CTF",
-            "sync_transaction_version": "15",
+            "sync_transaction_version": "118",
             "type": "url",
             "url": "https://score-quals.seccon.jp/question/"
          }, {
             "date_added": "13126015559225872",
             "id": "168",
+            "meta_info": {
+               "last_visited_desktop": "13133252826663025"
+            },
             "name": "ctf4u",
-            "sync_transaction_version": "18",
+            "sync_transaction_version": "121",
             "type": "url",
             "url": "http://ctf.katsudon.org/ctf4u/"
          } ],
          "date_added": "13125155551799469",
-         "date_modified": "13128594123427666",
+         "date_modified": "13133596503851519",
          "id": "1",
          "name": "Bookmarks bar",
          "type": "folder"
@@ -1485,7 +1545,7 @@
          "name": "Other bookmarks",
          "type": "folder"
       },
-      "sync_transaction_version": "39",
+      "sync_transaction_version": "137",
       "synced": {
          "children": [ {
             "date_added": "13051143421139294",

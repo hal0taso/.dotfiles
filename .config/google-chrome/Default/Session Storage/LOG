@@ -1,6 +1,15 @@
-2017/01/21-14:39:02.743 28101 Reusing MANIFEST /home/ubuntu/.config/google-chrome/Default/Session Storage/MANIFEST-000001
-2017/01/21-14:39:02.743 28101 Recovering log #858
-2017/01/21-14:39:02.743 28101 Reusing old log /home/ubuntu/.config/google-chrome/Default/Session Storage/000858.log 
-2017/01/21-14:43:00.187 28524 Level-0 table #863: started
-2017/01/21-14:43:00.210 28524 Level-0 table #863: 97041 bytes OK
-2017/01/21-14:43:00.226 28524 Delete type=0 #858
+2017/03/12-20:42:55.606 2318 Reusing MANIFEST /home/ubuntu/.config/google-chrome/Default/Session Storage/MANIFEST-000001
+2017/03/12-20:42:55.606 2318 Recovering log #913
+2017/03/12-20:42:55.607 2318 Reusing old log /home/ubuntu/.config/google-chrome/Default/Session Storage/000913.log 
+2017/03/12-20:52:57.824 2623 Level-0 table #917: started
+2017/03/12-20:52:57.837 2623 Level-0 table #917: 25214 bytes OK
+2017/03/12-20:52:57.842 2623 Delete type=0 #913
+2017/03/12-20:52:57.842 2623 Compacting 4@0 + 1@1 files
+2017/03/12-20:52:57.873 2623 Generated table #918@0: 16637 keys, 484475 bytes
+2017/03/12-20:52:57.873 2623 Compacted 4@0 + 1@1 files => 484475 bytes
+2017/03/12-20:52:57.878 2623 compacted to: files[ 0 1 7 0 0 0 0 ]
+2017/03/12-20:52:57.878 2623 Delete type=2 #908
+2017/03/12-20:52:57.879 2623 Delete type=2 #917
+2017/03/12-20:52:57.880 2623 Delete type=2 #912
+2017/03/12-20:52:57.880 2623 Delete type=2 #910
+2017/03/12-20:52:57.880 2623 Delete type=2 #914

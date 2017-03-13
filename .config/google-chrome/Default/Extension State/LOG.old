@@ -1,3 +1,6 @@
-2016/12/25-01:56:35.713 2365 Reusing MANIFEST /home/ubuntu/.config/google-chrome/Default/Extension State/MANIFEST-000001
-2016/12/25-01:56:35.713 2365 Recovering log #18
-2016/12/25-01:56:35.754 2365 Reusing old log /home/ubuntu/.config/google-chrome/Default/Extension State/000018.log 
+2017/02/17-08:11:20.678 2369 Reusing MANIFEST /home/ubuntu/.config/google-chrome/Default/Extension State/MANIFEST-000001
+2017/02/17-08:11:20.679 2369 Recovering log #22
+2017/02/17-08:11:20.710 2369 Reusing old log /home/ubuntu/.config/google-chrome/Default/Extension State/000022.log 
+2017/02/25-23:37:02.054 3555 Level-0 table #26: started
+2017/02/25-23:37:02.279 3555 Level-0 table #26: 2517411 bytes OK
+2017/02/25-23:37:02.290 3555 Delete type=0 #22

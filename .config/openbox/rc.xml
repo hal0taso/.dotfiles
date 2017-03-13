@@ -205,6 +205,9 @@
     <keybind key="W-b"><action name="Execute"><command>google-chrome</command></action></keybind>
     <keybind key="A-W-b"><action name="Execute"><command>firefox</command></action></keybind>
     <keybind key="W-i"><action name="Execute"><command>~/idademo695/idaq</command></action></keybind>
+    <keybind key="W-f"><action name="Execute"><command>urxvt -e ranger</command></action></keybind>
+    <keybind key="C-S-3"><action name="Execute"><command>gnome-screenshot</command></action></keybind>
+    <keybind key="W-e"><action name="Execute"><command>emacs</command></action></keybind>
     ==============================
     
     <chainQuitKey>C-g</chainQuitKey>
@@ -238,12 +241,9 @@
     <keybind key="W-S-Left"><action name="DirectionalCycleWindows"><direction>left</direction></action></keybind>
     <keybind key="W-S-Up"><action name="DirectionalCycleWindows"><direction>up</direction></action></keybind>
     <keybind key="W-S-Down"><action name="DirectionalCycleWindows"><direction>down</direction></action></keybind>
-    <!-- Keybindings for running applications -->
-    <keybind key="W-e"><action name="Execute"><command>urxvt -e ranger</command></action></keybind>
-    
+    <!-- Keybindings for running applications -->    
     <!-- Launch gnome-screenshot when Print is pressed -->
     <!--keybind key="Print"-->
-    <keybind key="C-S-3"><action name="Execute"><command>gnome-screenshot</command></action></keybind>
   </keyboard>
   <mouse>
     <dragThreshold>1</dragThreshold>
