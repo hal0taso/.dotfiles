@@ -1,0 +1,1 @@
+/Users/hal0taso/.config/fisherman/balias/functions/balias.fish

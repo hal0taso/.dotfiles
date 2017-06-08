@@ -1,0 +1,1 @@
+/Users/hal0taso/.config/fisherman/bobthefish/fish_title.fish

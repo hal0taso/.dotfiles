@@ -1,4 +1,4 @@
-
+source ~/.config/user/.git-prompt.sh
 alias updatedb='/usr/libexec/locate.updatedb'
 
 alias ls='ls -GP'
