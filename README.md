@@ -19,3 +19,25 @@ MacはHomebrewでも導入できます．
 `$ cask install`
 
 Caskファイル参照
+
+## .Xdefaults
+setting for urxvt
+
+## .conkyrc
+setting for conky
+
+## .config
+- tint2
+    + setting for tint2
+- openbox
+    + autostart
+    + menu.xml
+        - main menu
+    + debian-menu.xml
+        - menu of debian-tab
+    + environment
+        - empty
+    + rc.xml
+        - openbox setting( eg. keyboard-shortcut, mouse-bind, window-bar...)
+
+## ranger

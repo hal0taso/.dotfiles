@@ -1,0 +1,12 @@
+open_with emacs -nw
+shell 
+open_with execute
+shell ?
+search 
+open_with r
+open_with eacs
+open_with 
+open_with 11
+open_with emacs
+open_with 0
+open_with 1

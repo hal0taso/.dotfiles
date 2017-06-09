@@ -2,16 +2,20 @@
 ;;;load a Cask's configuration file
 
 ;; if you use OSX
-
+(when (eq system-type 'darwin)
+  (require 'cask)
+  (set-frame-font "Monospace 12"))
+;; if you use linux
+(when (eq system-type 'gnu/linux)
+  (require 'cask"~/.cask/cask.el")
+  (set-frame-font "Monospace 9"))
 ;; Added by Package.el.  This must come before configurations of
 ;; installed packages.  Don't delete this line.  If you don't want it,
 ;; just comment it out by adding a semicolon to the start of the line.
 ;; You may delete these explanatory comments.
 (package-initialize)
 
-(require 'cask)
-;; if you use linux
-;;(require 'cask"~/.cask/cask.el")
+
 
 ;;; Code:
 (cask-initialize)
@@ -68,7 +72,7 @@
 (scroll-bar-mode -1)
 (tool-bar-mode -1)
 (setq inhibit-startup-screen t)
-
+(require 'whitespace)
 ;;; init-loader.el
 
 (require 'init-loader)
@@ -91,7 +95,6 @@
 ;; default window alpha
 (set-frame-parameter nil 'alpha 95)
 
-;;; init.el ends here
 
 ;; change font size
 (set-frame-font "Monospace 12")
