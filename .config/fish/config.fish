@@ -1,4 +1,5 @@
 switch (uname)
+  # For MacOS
   case Darwin
 
     balias updatedb '/usr/libexec/locate.updatedb'  
@@ -7,10 +8,11 @@ switch (uname)
     export LSCOLORS gxfxcxdxbxegedabagacad
     set -x POWERLINE_TMUX (find /usr/local/ -name 'powerline.conf')
 
+  # For Linux
   case Linux
    
    # set POWERLINE path for tmux
-   set -x POWERLINE_TMUX (find .local/ -name 'powerline.conf')
+   set -x POWERLINE_TMUX (find ~/.local/ -name 'powerline.conf')
 end
 
 # function for peco 
