@@ -1,1 +1,1 @@
-/Users/hal0taso/.config/fisherman/bobthefish/fish_greeting.fish
+/home/ukun/.config/fisherman/bobthefish/fish_greeting.fish

@@ -1,1 +1,1 @@
-/Users/hal0taso/.config/fisherman/z/conf.d/z.fish
+/home/ukun/.config/fisherman/z/conf.d/z.fish

@@ -67,8 +67,8 @@ urxvt.background: rgba:28ff/28ff/28ff/dddd
 
 !!urxvt fonts: 
 !
-URxvt*font: xft:Ubuntu Mono:pixelsize=14,style=regular
-URxvt*boldFont:xft:Ubuntu Mono:bold:pixelsize=14,style=regular
+URxvt*font: xft:Ubuntu Mono derivative Powerline:pixelsize=14,style=regular
+URxvt*boldFont:xft:Ubuntu Mono derivative Powerline:bold:pixelsize=14,style=regular
 
 URxvt*scrollBar: false
 

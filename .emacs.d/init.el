@@ -97,7 +97,6 @@
 
 
 ;; change font size
-(set-frame-font "Monospace 12")
 (put 'upcase-region 'disabled nil)
 
 (keyboard-translate ?\C-h ?\C-?)
