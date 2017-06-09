@@ -1,6 +1,6 @@
-#.dotfiles
+# .dotfiles
 
-##.emacs.d
+## .emacs.d
 
 1. Caskのインストール
 `$ curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python

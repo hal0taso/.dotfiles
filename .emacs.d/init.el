@@ -38,7 +38,7 @@
 
 ;; shell の存在を確認
 (defun skt:shell ()
-  (or (executable-find "bash")
+  (or (executable-find "fish")
       (error "can't find 'shell' command in PATH!!")))
 
 ;; Shell 名の設定
