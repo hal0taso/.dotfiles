@@ -2,16 +2,20 @@
 ;;;load a Cask's configuration file
 
 ;; if you use OSX
-;;(require 'cask)
+(when (eq system-type 'darwin)
+  (require 'cask)
+  (set-frame-font "Monospace 12"))
 ;; if you use linux
-
+(when (eq system-type 'gnu/linux)
+  (require 'cask"~/.cask/cask.el")
+  (set-frame-font "Monospace 9"))
 ;; Added by Package.el.  This must come before configurations of
 ;; installed packages.  Don't delete this line.  If you don't want it,
 ;; just comment it out by adding a semicolon to the start of the line.
 ;; You may delete these explanatory comments.
 (package-initialize)
 
-(require 'cask"~/.cask/cask.el")
+
 
 ;;; Code:
 (cask-initialize)
@@ -38,7 +42,7 @@
 
 ;; shell の存在を確認
 (defun skt:shell ()
-  (or (executable-find "bash")
+  (or (executable-find "fish")
       (error "can't find 'shell' command in PATH!!")))
 
 ;; Shell 名の設定
@@ -93,7 +97,7 @@
 
 
 ;; change font size
-(set-frame-font "Monospace 9")
+(set-frame-font "Monospace 12")
 (put 'upcase-region 'disabled nil)
 
 (keyboard-translate ?\C-h ?\C-?)
@@ -111,4 +115,10 @@
 (setq default-input-method "japanese-mozc")
 
 
-;;; init.el ends here
+;;; setting for nnreddit
+(require 'nnreddit "~/.emacs.d/inits/99-nnreddit.el")
+(add-to-list 'gnus-secondary-select-methods
+             '(nnreddit ""))
+
+;;; 括弧の補完
+(electric-pair-mode 1)

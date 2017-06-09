@@ -1,0 +1,1 @@
+/Users/hal0taso/.config/fisherman/z/conf.d/z.fish
