@@ -4,6 +4,13 @@
 ;; if you use OSX
 ;;(require 'cask)
 ;; if you use linux
+
+;; Added by Package.el.  This must come before configurations of
+;; installed packages.  Don't delete this line.  If you don't want it,
+;; just comment it out by adding a semicolon to the start of the line.
+;; You may delete these explanatory comments.
+(package-initialize)
+
 (require 'cask"~/.cask/cask.el")
 
 ;;; Code:
@@ -61,7 +68,7 @@
 (scroll-bar-mode -1)
 (tool-bar-mode -1)
 (setq inhibit-startup-screen t)
-
+(require 'whitespace)
 ;;; init-loader.el
 
 (require 'init-loader)
@@ -84,8 +91,24 @@
 ;; default window alpha
 (set-frame-parameter nil 'alpha 95)
 
-;;; init.el ends here
 
 ;; change font size
 (set-frame-font "Monospace 9")
 (put 'upcase-region 'disabled nil)
+
+(keyboard-translate ?\C-h ?\C-?)
+
+
+;; set cahracter code utf-8
+(prefer-coding-system 'utf-8)
+
+;; enable type nn to japanse
+;; (setq quail-japanese-use-double-n t)
+
+;; eneble to use mozc for ime
+(require 'mozc)
+(set-language-environment "Japanese")
+(setq default-input-method "japanese-mozc")
+
+
+;;; init.el ends here

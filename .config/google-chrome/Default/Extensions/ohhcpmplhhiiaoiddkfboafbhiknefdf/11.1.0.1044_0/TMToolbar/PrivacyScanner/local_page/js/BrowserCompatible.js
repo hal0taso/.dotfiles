@@ -1,1 +1,0 @@
-(function(){"undefined"==typeof Array.prototype.indexOf&&(Array.prototype.indexOf=function(c,d){var b=this.length>>>0,a=Number(d)||0,a=0>a?Math.ceil(a):Math.floor(a);for(0>a&&(a+=b);a<b;a++)if(a in this&&this[a]===c)return a;return-1})})();

@@ -42,7 +42,7 @@
                   'Active' - where the active window is -->
   </placement>
   <theme>
-    <name>Cathexis-edit</name>
+    <name>Bear2</name>
     <titleLayout>IMC</titleLayout>
     <!--
       available characters are NDSLIMC, each can occur at most once.
@@ -197,7 +197,7 @@
     <action name="UnmaximizeFull"/>
     <action name="MoveResizeTo"><x>0</x><y>-0</y><height>50%</height><width>100%</width></action>
     </keybind>
-    <keybind key="W-space"> # MaximizeScreen
+    <keybind key="W-Return"> # MaximizeScreen
      <action name="ToggleMaximize"/>
     </keybind>
     =============================

@@ -1,1 +1,0 @@
-(function(){window.GetWording=function(){var a=document.location.href,b=null;if(-1!=a.indexOf("wording=")){var a=a.substr(a.indexOf("wording=")+8),b=decodeURIComponent(a),c=a.indexOf("&");-1!=c&&(b=decodeURIComponent(a.substr(0,c)));-1!=b.indexOf("+")&&(b=b.replace(RegExp("\\+","g")," "))}return b}})();

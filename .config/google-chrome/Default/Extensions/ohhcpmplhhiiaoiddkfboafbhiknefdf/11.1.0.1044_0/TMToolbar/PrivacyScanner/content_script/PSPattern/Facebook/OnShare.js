@@ -1,2 +1,0 @@
-(function(){var b=window,a=b.TMExt_$;a(document).ready(function(){var c=GetWording(),d=function(b,a){b&&(b[0].value=c);a&&(a.attr("name","message"),a.attr("value",c))};(function(){textarea=a("textarea");inner_input=a("input.mentionsHidden");0!=textarea.length&&0!=inner_input.length?(d(textarea,inner_input),textarea.click(function(){b.FirstClicked||(b.FirstClicked=!0,d(textarea,inner_input))})):setTimeout(arguments.callee,1E3)})();var e=setInterval(function(){if(b.FirstClicked)clearInterval(e);else{var c=
-a("textarea");d(c,null)}},500)})})();

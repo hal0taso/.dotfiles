@@ -1,1 +1,0 @@
-(function(){window.Scanner=new FacebookPScanner;window.Fixer=new FacebookPFixer;var a=function(){"undefined"!=typeof TMExt_$?TMExt_$(document).ready(function(){PSContentEstablishConnection("ContentPage_Background_FACEBOOK");window.SyncPrivacyScannerSettings("ContentPage_Background_FACEBOOK")}):setTimeout(a,500)};a()})();

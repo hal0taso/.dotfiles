@@ -1,10 +1,16 @@
 !URxvt*font: -*-terminus-medium-*-*-*-12-*-*-*-*-*-iso8859-1
 !URxvt*boldFont: -*-terminus-medium-*-*-*-12-*-*-*-*-*-iso8859-1
 
+! icon
+urxvt.iconFile: /usr/share/icons/Humanity/apps/128/gnome-terminal.svg
+
 ! Colors
 
-URxvt*background: #181818
-URxvt*foreground: wheat
+!URxvt*background: #181818
+URxvt*background: #323232
+!URxvt*foreground: wheat
+URxvt*foreground: #f5deb3
+!URxvt*cursorColor: #93a1a1
 URxvt*cursorColor: #93a1a1
 
 !! black dark/light
@@ -39,11 +45,10 @@ URxvt*color14: #98a4a4
 URxvt*color7: #e0e0e0
 URxvtcolor15: #e5e5e5
 
-! Font
-!URxvt.font: xft:Monospace:pixelsize=12
 
 ! Open links in 
-URxvt.perl-ext-common : default,matcher,clipboard-osc,tabbed
+URxvt.perl-ext-common : default
+! ,matcher,clipboard-osc,tabbed
 URxvt.urlLauncher     : google-chrome
 URxvt.matcher.button  : 1
 URxvt.tabbed.tabbar-fg: 2
@@ -51,71 +56,34 @@ URxvt.tabbed.tabbar-bg: 0
 URxvt.tabbed.tab-fg: 3
 URxvt.tabbed.tab-bg: 0
 
-
-!URxvt.keysym.Control-l: echo -ne '\\033c'\n
-
 ! transparent
-!urxvt*depth: 32
-URxvt*transparent: true
-urxvt*shading: 20
-urxvt*blurRadius: 10
+urxvt*depth: 32
+!urxvt.foreground: rgba:fff5/ffde/ffb3/ffff
+urxvt.background: rgba:28ff/28ff/28ff/dddd
+!URxvt*transparent: true
+!urxvt*shading: 20
+!urxvt*blurRadius: 10
 !urxvt*tintColor: #ffffff
-
-! test senntings
-
-!URxvt*font: -*-terminus-medium-*-*-*-12-*-*-*-*-*-iso8859-1
-!URxvt*boldFont: -*-terminus-medium-*-*-*-12-*-*-*-*-*-iso8859-1
-
-!urxvt color scheme:
-!
-!URxvt*background: #2B2B2B
-!URxvt*foreground: #729FCF
-!
-!URxvt*colorUL: #86a2b0
-!
-!! black
-!URxvt*color0 : #2E3436
-!URxvt*color8 : #555753
-!! red
-!URxvt*color1 : #CC0000
-!URxvt*color9 : #EF2929
-!! green
-!URxvt*color2 : #4E9A06
-!URxvt*color10 : #8AE234
-!! yellow
-!URxvt*color3 : #C4A000
-!URxvt*color11 : #FCE94F
-!! blue
-!URxvt*color4 : #3465A4
-!URxvt*color12 : #729FCF
-!! magenta
-!URxvt*color5 : #75507B
-!URxvt*color13 : #AD7FA8
-!! cyan
-!URxvt*color6 : #06989A
-!URxvt*color14 : #34E2E2
-!! white
-!URxvt*color7 : #D3D7CF
-!URxvt*color15 : #EEEEEC
 
 !!urxvt fonts: 
 !
-URxvt*font: xft:Monospace:pixelsize=12
-URxvt*boldFont:xft:Monospace:bold:pixelsize=12
+URxvt*font: xft:Ubuntu Mono:pixelsize=14,style=regular
+URxvt*boldFont:xft:Ubuntu Mono:bold:pixelsize=14,style=regular
 
 URxvt*scrollBar: false
 
 ! Perl extensions
 urxvt.perl-lib:  /home/ubunbu/urxvt/urxvt-perls/deprecated/
-URxvt.perl-ext-common:      default,tabbedex,clipboard
+URxvt.perl-ext-common:      default
+!,tabbedex,clipboard
 URxvt.matcher.button:       1
 URxvt.urlLauncher:          google-chrome
-URxvt.keysym.M-t:           perl:tabbedex:new_tab
-URxvt.keysym.M-n:           perl:tabbedex:next_tab
-URxvt.keysym.M-p:           perl:tabbedex:prev_tab
+!URxvt.keysym.M-t:           perl:tabbedex:new_tab
+!URxvt.keysym.M-n:           perl:tabbedex:next_tab
+!URxvt.keysym.M-p:           perl:tabbedex:prev_tab
 
-URxvt.tabbed.no-tabbedex-keys: true
-URxvt.tabbed.not-consumable-keys: 0xff22, 0xff23, 0xff2a
+!URxvt.tabbed.no-tabbedex-keys: true
+!URxvt.tabbed.not-consumable-keys: 0xff22, 0xff23, 0xff2a
 
 ! disable menu bar
 urxvt*menu:""

@@ -1,1 +1,0 @@
-(function(){window.Scanner=new TwitterPScanner;window.Fixer=new TwitterPFixer;var a=function(){"undefined"!=typeof TMExt_$?TMExt_$(document).ready(function(){PSContentEstablishConnection("ContentPage_Background_TWITTER");window.SyncPrivacyScannerSettings("ContentPage_Background_TWITTER")}):setTimeout(a,500)};a()})();
