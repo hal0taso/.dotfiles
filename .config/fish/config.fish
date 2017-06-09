@@ -1,18 +1,16 @@
 switch (uname)
-case Darwin
-#  echo Mac found
+  case Darwin
 
-  balias updatedb '/usr/libexec/locate.updatedb'  
-  balias ls='ls -GP'
+    balias updatedb '/usr/libexec/locate.updatedb'  
+    balias ls 'ls -GP'
 
-  export LSCOLORS=gxfxcxdxbxegedabagacad
-  # toilet -F border -f mono9 εβ¦εβ§εβ¤ώΎ΅Ψ --filter gay
-  set -x $POWERLINE_TMUX (find /usr/local/ -name 'powerline.conf')
+    export LSCOLORS gxfxcxdxbxegedabagacad
+    set -x POWERLINE_TMUX (find /usr/local/ -name 'powerline.conf')
 
-case Linux
- # echo Linux found
- # set POWERLINE path for tmux
- set -x POWERLINE_TMUX (find .local/ -name 'powerline.conf')
+  case Linux
+   
+   # set POWERLINE path for tmux
+   set -x POWERLINE_TMUX (find .local/ -name 'powerline.conf')
 end
 
 # function for peco 
