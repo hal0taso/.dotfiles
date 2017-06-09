@@ -97,6 +97,21 @@
 (set-frame-font "Monospace 12")
 (put 'upcase-region 'disabled nil)
 
+(keyboard-translate ?\C-h ?\C-?)
+
+
+;; set cahracter code utf-8
+(prefer-coding-system 'utf-8)
+
+;; enable type nn to japanse
+;; (setq quail-japanese-use-double-n t)
+
+;; eneble to use mozc for ime
+(require 'mozc)
+(set-language-environment "Japanese")
+(setq default-input-method "japanese-mozc")
+
+
 ;;; setting for nnreddit
 (require 'nnreddit "~/.emacs.d/inits/99-nnreddit.el")
 (add-to-list 'gnus-secondary-select-methods
