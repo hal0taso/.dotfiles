@@ -1,24 +1,39 @@
 
-;;;load a Cask's configuration file
 
 ;; if you use OSX
 (when (eq system-type 'darwin)
   (require 'cask)
-  (set-frame-font "Monospace 12"))
+  (set-frame-font "Monospace 12")
+  (define-key global-map (kbd "C-c RET") 'set-mark-command)
+  )
 ;; if you use linux
 (when (eq system-type 'gnu/linux)
   (require 'cask"~/.cask/cask.el")
-  (set-frame-font "Monospace 9"))
+  (set-frame-font "Monospace 9")
+  )
+
+;;;load a Cask's configuration file
 ;; Added by Package.el.  This must come before configurations of
 ;; installed packages.  Don't delete this line.  If you don't want it,
 ;; just comment it out by adding a semicolon to the start of the line.
 ;; You may delete these explanatory comments.
 (package-initialize)
 
-
-
 ;;; Code:
 (cask-initialize)
+
+(when (eq system-type 'gnu/linux)
+  ;; eneble to use mozc for ime
+  (require 'mozc)
+  (set-language-environment "Japanese")
+  (setq default-input-method "japanese-mozc")
+  )
+
+
+;;; init-loader.el
+(require 'init-loader)
+(init-loader-load "~/.emacs.d/inits")
+
 
 ;; 参考http://sakito.jp/emacs/emacsshell.html
 ;; より下に記述した物が PATH の先頭に追加されます
@@ -50,6 +65,7 @@
 (setenv "SHELL" shell-file-name)
 (setq explicit-shell-file-name shell-file-name)
 
+;; set coding system utf-8
 (set-language-environment  'utf-8)
 (prefer-coding-system 'utf-8)
 
@@ -58,7 +74,8 @@
   ;; Mac OS X の HFS+ ファイルフォーマットではファイル名は NFD (の様な物)で扱うため以下の設定をする必要がある
   (require 'ucs-normalize)
   (setq file-name-coding-system 'utf-8-hfs)
-  (setq locale-coding-system 'utf-8-hfs)))
+  (setq locale-coding-system 'utf-8-hfs))
+ )
 
 ;; shellのlsなどの色設定してると必要らしい．
 (autoload 'ansi-color-for-comint-mode-on "ansi-color" nil t)
@@ -73,10 +90,6 @@
 (tool-bar-mode -1)
 (setq inhibit-startup-screen t)
 (require 'whitespace)
-;;; init-loader.el
-
-(require 'init-loader)
-(init-loader-load "~/.emacs.d/inits")
 
 ;;; color theme
 
@@ -99,20 +112,13 @@
 ;; change font size
 (put 'upcase-region 'disabled nil)
 
+;; C-h to backspace and C-? to help command
 (keyboard-translate ?\C-h ?\C-?)
+(global-set-key (kbd "C-?") 'help-for-help)
 
-
-;; set cahracter code utf-8
-(prefer-coding-system 'utf-8)
 
 ;; enable type nn to japanse
 ;; (setq quail-japanese-use-double-n t)
-
-;; eneble to use mozc for ime
-(require 'mozc)
-(set-language-environment "Japanese")
-(setq default-input-method "japanese-mozc")
-
 
 ;;; setting for nnreddit
 (require 'nnreddit "~/.emacs.d/inits/99-nnreddit.el")
@@ -121,3 +127,5 @@
 
 ;;; 括弧の補完
 (electric-pair-mode 1)
+
+;;; init.el ends here
