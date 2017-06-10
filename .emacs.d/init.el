@@ -10,6 +10,7 @@
 (when (eq system-type 'gnu/linux)
   (require 'cask"~/.cask/cask.el")
   (set-frame-font "Monospace 9")
+  (setq case-fold-search t)
   )
 
 ;;;load a Cask's configuration file
