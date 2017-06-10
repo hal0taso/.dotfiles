@@ -8,6 +8,7 @@ switch (uname)
     export LSCOLORS gxfxcxdxbxegedabagacad
     set -x POWERLINE_TMUX (find /usr/local/ -name 'powerline.conf')
 
+
   # For Linux
   case Linux
    
@@ -21,11 +22,15 @@ function fish_user_key_bindings
   bind \c] peco_select_ghq_repository
 end
 
+
 # if launch emacs from tmux,
 # launch cli emacs (emacs -nw)
-if test -z $TMUX
-else
+if test -n '$TMUX'
   balias emacs 'emacs -nw'
+end
+
+if test -n '$EMACS'
+  function fish_right_prompt; end  
 end
 
 

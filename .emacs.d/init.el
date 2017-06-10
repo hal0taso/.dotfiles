@@ -56,19 +56,19 @@
 
 (setenv "MANPATH" (concat "/usr/local/man:/usr/share/man:/usr/share/man" (getenv "MANPATH")))
 
-;; shell の存在を確認
-(defun skt:shell ()
-  (or (executable-find "fish")
-      (error "can't find 'shell' command in PATH!!")))
+;; ;; shell の存在を確認
+;; (defun skt:shell ()
+;;   (or (executable-find "fish")
+;;       (error "can't find 'shell' command in PATH!!")))
 
-;; Shell 名の設定
-(setq shell-file-name (skt:shell))
-(setenv "SHELL" shell-file-name)
-(setq explicit-shell-file-name shell-file-name)
+;; ;; Shell 名の設定
+;; (setq shell-file-name (skt:shell))
+;; (setenv "SHELL" shell-file-name)
+;; (setq explicit-shell-file-name shell-file-name)
 
-;; set coding system utf-8
-(set-language-environment  'utf-8)
-(prefer-coding-system 'utf-8)
+;; ;; set coding system utf-8
+;; (set-language-environment  'utf-8)
+;; (prefer-coding-system 'utf-8)
 
 (cond
  ((or (eq window-system 'mac) (eq window-system 'ns))
@@ -78,17 +78,20 @@
   (setq locale-coding-system 'utf-8-hfs))
  )
 
+;; ;; termの呼び出し
+;; (global-set-key (kbd "C-c t") '(lambda ()
+;;                                 (interactive)
+;;                                 (term shell-file-name)))
+
+
 ;; shellのlsなどの色設定してると必要らしい．
 (autoload 'ansi-color-for-comint-mode-on "ansi-color" nil t)
 (add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on)
 
-;; termの呼び出し
-(global-set-key (kbd "C-c t") '(lambda ()
-                                (interactive)
-                                (term shell-file-name)))
 
 (scroll-bar-mode -1)
 (tool-bar-mode -1)
+
 (setq inhibit-startup-screen t)
 (require 'whitespace)
 
