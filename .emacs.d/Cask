@@ -63,3 +63,6 @@
 (depends-on "color-theme-modern")
 (depends-on "abyss-theme")
 (depends-on "darktooth-theme")
+
+;; fish shell mode
+(depends-on "fish-mode")

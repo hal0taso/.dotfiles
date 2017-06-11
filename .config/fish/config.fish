@@ -6,8 +6,26 @@ switch (uname)
     balias ls 'ls -GP'
 
     export LSCOLORS gxfxcxdxbxegedabagacad
+
+    # set environment value for tmux
     set -x POWERLINE_TMUX (find /usr/local/ -name 'powerline.conf')
 
+    # added by Anaconda3 2.5.0 installer
+    set -g PATH /Users/hal0taso/anaconda/bin $PATH
+      
+    set -g PATH /usr/local/Cellar/nmap/7.12/bin/ $PATH
+         
+    set -g PATH /usr/bin /usr/sbin /bin /sbin $PATH
+
+    set PATH /usr/local/bin $PATH
+
+    set -g PATH /usr/local/sbin $PATH
+
+    # node.js
+    set -g PATH /usr/local/nodejs/bin $PATH
+
+    # added by Anaconda2 4.3.1 installer
+    set -g PATH /Users/hal0taso/anaconda/bin $PATH
 
   # For Linux
   case Linux
