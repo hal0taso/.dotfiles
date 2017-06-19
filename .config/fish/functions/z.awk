@@ -1,1 +1,1 @@
-/Users/hal0taso/.config/fisherman/z/functions/z.awk
+/home/ukun/.config/fisherman/z/functions/z.awk
