@@ -1,1 +1,1 @@
-/Users/hal0taso/.config/fisherman/getopts/getopts.fish
+/home/ukun/.config/fisherman/getopts/getopts.fish
