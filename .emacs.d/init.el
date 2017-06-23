@@ -28,6 +28,7 @@
   (require 'mozc)
   (set-language-environment "Japanese")
   (setq default-input-method "japanese-mozc")
+  (set-buffer-file-coding-system 'utf-8)
   )
 
 

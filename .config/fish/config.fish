@@ -32,6 +32,8 @@ switch (uname)
    
     # set POWERLINE path for tmux
     set -x POWERLINE_TMUX (locate -qbql 1 'powerline.conf')
+
+    set -x PATH $HOME/.go/bin/ $PATH
 end
 
 # function for peco 
