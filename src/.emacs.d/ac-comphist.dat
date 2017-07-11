@@ -1,540 +1,540 @@
-((("destroy_tree" .
-   [1 0 0 0 0 0 0 0 0 0 0 0])
-  ("print_tree" .
-   [1 0 0 0 0 1 0 0 0 0])
-  ("delete_tree" .
-   [1 0 0 0 0 0 0 0 0 0 0])
-  ("search_tree" .
-   [1 0 0 0 0 0 0 0 0 0 0])
-  ("make_tree" .
-   [1 0 0 0 0 0 0 0 0])
-  ("make" .
-   [1 0 0 0])
-  ("destroy_node" .
-   [2 0 0 0 0 0 2 1 0 0 0 0])
-  ("destroy" .
-   [1 0 0 0 0 0 0])
-  ("search_node" .
-   [2 0 0 0 0 0 0 0 0 0 0])
-  ("tree" .
-   [29 0 0 0])
-  ("Tree" .
-   [12 0 0 1])
-  ("root" .
-   [10 0 0 0])
-  ("func" .
-   [5 0 0 0])
-  ("foreach_node" .
-   [2 0 0 0 0 1 0 1 0 0 0 0])
-  ("delete_node" .
-   [3 0 0 0 0 0 0 0 0 0 0])
-  ("search_min" .
-   [1 0 0 0 0 0 0 0 0 0])
-  ("search" .
-   [3 0 0 0 0 0])
-  ("free" .
-   [4 0 0 0])
-  ("delete" .
-   [2 0 0 0 0 0])
-  ("delete_min" .
-   [2 0 0 0 0 0 0 0 0 0])
-  ("ndoe" .
-   [4 0 0 0])
-  ("insert_node" .
-   [0 0 0 0 0 0 2 0 0 0 2])
-  ("make_node" .
-   [1 0 0 0 0 0 0 0 0])
-  ("Null" .
-   [2 0 0 0])
-  ("item" .
-   [10 0 0 0])
-  ("right" .
-   [15 0 0 0 0])
-  ("left" .
-   [15 0 0 0])
-  ("malloc" .
-   [3 0 0 0 0 0])
-  ("node" .
-   [59 0 0 0])
-  ("Node" .
-   [15 0 0 0])
-  ("size_t" .
-   [1 0 0 0 0 0])
-  ("stdio" .
-   [1 0 0 0 0])
-  ("p" .
-   [2])
-  ("NULL" .
-   [16 0 0 0])
-  ("set-buffer-file-coding-system" .
-   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("print_raw_data" .
-   [1 0 0 0 0 0 0 0 1 0 0 0 0 0])
-  ("section" .
-   [0 0 0 1 0 0 0])
-  ("section_name" .
-   [1 0 0 0 0 0 0 0 0 0 0 0])
-  ("raw" .
-   [5 0 0])
-  ("args" .
-   [2 0 0 0])
-  ("add_argument" .
-   [1 0 0 0 0 0 0 0 0 0 0 0])
-  ("argc" .
-   [16 0 0 0])
-  ("__class__" .
-   [2 0 0 0 0 0 0 0 0])
-  ("infoOptionalHeader" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0])
-  ("AddressOfEntryPoint" .
-   [0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0])
-  ("ImageBase" .
-   [1 0 0 0 0 0 0 0 0])
-  ("SizeOfUninitializedData" .
-   [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0])
-  ("SizeOfInitializedData" .
-   [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0])
-  ("Size" .
-   [1 0 0 0])
-  ("SizeOfCode" .
-   [0 0 0 0 0 1 0 0 0 0])
-  ("ioh" .
-   [10 0 0])
-  ("size" .
-   [1 0 0 0])
-  ("name" .
-   [6 0 0 0])
-  ("pe_header" .
-   [2 0 0 0 0 0 0 0 0])
-  ("pcszCharacteristics" .
-   [0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("iCharacteristics" .
-   [0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0])
-  ("Characteristics" .
-   [0 0 0 0 0 1 0 0 0 0 0 1 0 0 0])
-  ("IMAGE_SCN_MEM_WRITE" .
+((("HOME/.dotfiles/src/" .
    [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("IMAGE_SCN_MEM_READ" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0])
-  ("IMAGE_SCN_MEM_EXECUTE" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0])
-  ("IMAGE_SCN_MEM_SHARED" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0])
-  ("IMAGE_SCN_MEM_NOT_PAGED" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0])
-  ("IMAGE_SCN_MEM_NOT_CACHED" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
-  ("IMAGE_SCN_MEM_DISCARDABLE" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0])
-  ("IMAGE_SCN_CNT_UNINITIALIZED_DATA" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("IMAGE_SCN_CNT_INITIALIZED_DATA" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("Microsoft" .
-   [1 0 0 0 0 0 0 0 0])
-  ("SizeOfRawData" .
-   [0 0 0 0 0 0 0 0 0 1 0 0 0])
-  ("PointerToRawData" .
-   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0])
-  ("section_header" .
-   [1 0 0 1 0 0 0 0 0 0 0 0 0 0])
-  ("section_table" .
-   [3 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("ish_array" .
-   [5 0 0 2 0 0 0 0 0])
-  ("ifh" .
-   [3 0 0])
-  ("IMAGE_DOS_SIGNATURE" .
-   [0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0])
-  ("NumberOfSections" .
-   [2 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1])
-  ("NumberOfSymbols" .
-   [0 0 0 1 0 0 1 0 0 0 0 0 0 0 0])
-  ("Magic" .
+  ("file" .
+   [6 0 0 0])
+  ("xargs" .
    [1 0 0 0 0])
-  ("OptionalHeader" .
-   [0 0 0 0 0 0 0 0 0 0 1 0 0 0])
-  ("FileHeader" .
-   [0 0 0 0 0 0 1 0 0 0])
-  ("inh" .
-   [8 0 0])
-  ("Banner" .
-   [3 0 0 0 0 0])
-  ("MagicNumberDict" .
+  ("install" .
+   [1 0 0 0 0 0 0])
+  ("symlink" .
+   [1 0 0 0 0 0 0])
+  ("HOME/.tmux.conf" .
    [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("checknum_dict" .
-   [0 0 0 0 0 0 0 0 1 0 0 0 0])
-  ("readinto" .
-   [2 0 0 0 0 0 0 0])
-  ("sizeof" .
-   [8 0 0 0 0 0])
-  ("pe_head" .
-   [2 0 0 1 0 0 0])
-  ("BytesIO" .
-   [2 0 0 0 0 0 0])
-  ("Signature" .
-   [2 0 0 0 0 0 0 0 0])
-  ("iINH" .
-   [4 0 0 0])
-  ("e_lfanew" .
-   [0 0 0 0 0 2 0 0])
-  ("IMAGE_NT_HEADERS32" .
-   [1 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0])
-  ("iIDH" .
-   [5 0 0 0])
-  ("ins" .
-   [3 0 0])
-  ("data" .
-   [3 0 0 0])
-  ("__init__" .
-   [0 0 0 0 0 0 1 0])
-  ("c_uint32" .
-   [1 0 0 0 0 0 0 0])
-  ("LONG" .
+  ("foreach_tree" .
+   [1 0 0 0 0 0 0 0 0 0 0 0])
+  ("print_item" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("rstack" .
+   [2 0 0 0 0 0])
+  ("fork" .
+   [1 0 0 0])
+  ("pid2" .
+   [1 0 0 0])
+  ("pid1" .
    [2 0 0 0])
-  ("read" .
-   [1 0 0 0])
-  ("fd" .
-   [2 0])
-  ("winnt_def" .
-   [1 0 0 0 0 0 0 0 0])
-  ("default-input-method" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
-  ("set-language-environment" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
-  ("mozc" .
-   [1 0 0 0])
-  ("utf-8" .
-   [1 0 0 0 0])
-  ("prefer-coding-system" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("encAlgor" .
-   [1 0 0 0 0 0 0 0])
-  ("require" .
-   [2 0 0 0 0 0 0])
-  ("whitespace-mode" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("whitespace" .
-   [0 0 0 0 0 1 2 0 0 0])
-  ("setq" .
-   [3 0 0 0])
-  ("index" .
-   [1 0 0 0 0])
-  ("init_len" .
-   [0 0 0 0 0 1 0 0])
-  ("buf_addr" .
-   [0 0 0 0 5 0 0 1])
-  ("sec" .
-   [1 0 0])
-  ("payload" .
-   [0 0 0 1 0 0 0])
-  ("0x800" .
-   [1 0 0 0 0])
-  ("shellcode" .
-   [6 0 1 1 0 0 0 0 1])
-  ("buflen" .
-   [1 0 0 0 0 0])
-  ("argv" .
-   [11 0 0 0])
-  ("libc_system_offset" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0])
-  ("libc_binsh_offset" .
-   [0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0])
-  ("addr_retaddr" .
-   [0 0 0 0 0 2 0 0 0 0 0 0])
-  ("index_ebp" .
-   [0 0 0 0 0 1 0 0 0])
-  ("ret_var8" .
-   [1 0 0 0 0 0 0 0])
-  ("ret_addr" .
-   [0 0 0 0 0 1 0 0])
-  ("stdout" .
-   [3 0 0 0 0 0])
-  ("elf_main_addr" .
-   [0 0 0 1 0 0 0 0 0 0 0 0 0])
-  ("0x16c40" .
-   [1 0 0 0 0 0 0])
-  ("0x100000000" .
-   [1 0 0 0 0 0 0 0 0 0 0])
-  ("ret" .
-   [3 0 0])
-  ("lib" .
+  ("ptr" .
    [2 0 0])
-  ("libc_start_main_offset" .
-   [0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("libc_binsh" .
-   [1 0 0 0 0 0 0 0 1 1])
-  ("libc_system" .
-   [2 0 0 1 0 1 0 0 0 0 1])
-  ("libc_base_addr" .
-   [3 0 0 0 0 0 0 0 0 1 0 0 0 0])
-  ("printf" .
-   [11 0 0 0 0 0])
-  ("Message" .
+  ("hello" .
+   [1 0 0 0 0])
+  ("Union" .
+   [1 0 0 0 0])
+  ("MISC" .
+   [2 0 0 0])
+  ("IMAGE_SIZEOF_SHORT_NAME" .
+   [0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("Name" .
+   [1 0 0 1])
+  ("IMAGE_SECTION_HEADER" .
+   [2 0 0 0 0 0 0 0 1 1 0 0 0 2 0 0 0 0 0 0])
+  ("IMAGE_NUMBEROF_DIRECTORY_ENTRIES" .
+   [0 0 0 0 0 0 0 0 0 2 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("IMAGE_DATA_DIRECTORY" .
+   [0 0 0 0 0 0 0 1 1 0 2 0 0 0 0 0 0 0 0 0])
+  ("BYTE" .
+   [3 0 0 0])
+  ("IMAGE_OPTIONAL_HEADER32" .
+   [0 0 0 0 0 0 0 0 3 0 1 0 0 0 1 0 0 0 0 0 0 0 0])
+  ("IMAGE_NT_HEADERS" .
+   [0 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0])
+  ("DWORD" .
+   [18 0 1 2 5])
+  ("_fields_" .
+   [1 0 0 0 3 1 1 0])
+  ("Structure" .
+   [5 0 1 0 0 0 1 3 0])
+  ("IMAGE_FILE_HEADER" .
+   [2 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0])
+  ("WORD" .
+   [14 0 0 1])
+  ("e_magic" .
+   [2 0 0 0 0 0 0])
+  ("IMAGE_DOS_HEADER" .
+   [1 0 0 0 0 0 0 0 0 1 2 0 0 0 0 0])
+  ("im" .
+   [7 0])
+  ("bss_addr" .
+   [2 0 0 0 0 0 0 0])
+  ("recv_addr" .
+   [1 0 0 0 0 0 0 0 0])
+  ("buffer" .
+   [0 0 0 0 1 0])
+  ("except" .
+   [0 0 1 0 0 0])
+  ("buffer_size" .
+   [0 0 0 0 0 0 0 1 0 2 0])
+  ("entry_i" .
    [1 0 0 0 0 0 0])
-  ("offset_binsh" .
-   [0 0 0 1 0 0 0 0 0 0 0 0])
-  ("binsh_addr" .
-   [1 0 0 0 0 1 1 0 0 0])
-  ("offset_system" .
-   [0 0 0 0 0 0 0 0 0 1 0 0 0])
-  ("system_addr" .
-   [2 0 0 0 0 0 1 0 0 0 0])
-  ("offset_setbuf" .
-   [0 0 0 0 0 0 0 1 0 1 0 0 0])
-  ("leaked_addr" .
-   [3 0 0 0 0 0 0 0 0 0 0])
-  ("leaked" .
+  ("user" .
+   [1 0 0 0])
+  ("buf_len" .
+   [1 0 0 1 0 0 0])
+  ("0x100" .
+   [9 0 0 0 0])
+  ("system_offset" .
+   [1 0 0 0 0 0 0 1 0 0 0 0 0])
+  ("p64" .
+   [2 0 0])
+  ("bin_sh" .
+   [2 0 0 0 0 0])
+  ("binsh" .
+   [2 0 0 0 0])
+  ("popret" .
+   [2 0 0 0 0 1])
+  ("pop_rdi_ret" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("binsh_offset" .
+   [0 0 0 0 0 1 0 0 0 0 0 0])
+  ("sh" .
+   [1 0])
+  ("pop_rdi_offset" .
+   [0 0 0 0 0 0 0 1 0 0 0 0 0 0])
+  ("buf1" .
+   [1 0 0 0])
+  ("buf2" .
+   [2 0 0 0])
+  ("saved_ebp" .
+   [1 0 0 0 0 0 0 0 0])
+  ("got_start_main" .
+   [2 0 0 0 0 0 0 0 0 0 1 0 0 0])
+  ("index_input" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("got_start_main_offset" .
+   [0 0 0 0 0 0 0 0 2 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("main_offset" .
+   [1 0 0 0 0 0 1 0 0 0 0])
+  ("0x8b0" .
+   [1 0 0 0 0])
+  ("leaked_ret" .
+   [3 0 0 0 0 0 0 0 0 0])
+  ("elf_base" .
+   [4 0 0 0 0 0 0 0])
+  ("index_ret" .
+   [2 0 0 0 0 0 0 0 1])
+  ("index_libc_start_main" .
+   [0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0])
+  ("0x1fd0" .
+   [1 0 0 0 0 0])
+  ("got_cxafinalize_addr" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0])
+  ("_start_leaked_addr" .
+   [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0])
+  ("0x3af60" .
+   [1 0 0 0 0 0 0])
+  ("remote" .
    [4 0 0 0 0 0])
-  ("leaked_setbuf" .
-   [2 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("0x16084c" .
+  ("BIN" .
+   [1 0 0])
+  ("ELF" .
+   [1 0 0])
+  ("libc" .
+   [2 0 0 0])
+  ("None" .
+   [0 0 0 1])
+  ("elf" .
+   [2 0 0])
+  ("elf_base_addr" .
+   [4 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("got_cxafinalize_offset" .
+   [0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("connect" .
+   [1 0 0 0 0 1 0])
+  ("set-default-font" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
+  ("set-default" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("darktooth" .
+   [1 0 0 0 0 0 0 0 0])
+  ("socket" .
+   [0 0 0 0 0 5])
+  ("mes" .
+   [21 0 0])
+  ("sleep" .
+   [5 0 0 1 0])
+  ("recv" .
+   [25 0 0 0])
+  ("fini_array" .
+   [0 0 0 0 2 0 0 0 0 0])
+  ("struct" .
+   [0 0 0 0 0 3])
+  ("pack" .
+   [4 0 0 1])
+  ("0x8049934" .
+   [0 0 0 0 1 0 0 0 0])
+  ("0x08049aa8" .
+   [0 0 1 0 0 0 0 0 0 0])
+  ("0x0804" .
+   [4 0 0 0 0 0])
+  ("0x6873" .
+   [1 0 0 0 0 0])
+  ("addr" .
+   [9 0 0 0])
+  ("0x12" .
+   [2 0 0 0])
+  ("system" .
+   [10 0 0 0 0 0])
+  ("begining" .
+   [2 0 0 0 0 0 0 0])
+  ("0x8490" .
+   [1 0 0 0 0 0])
+  ("0x9aa8" .
+   [1 0 0 0 0 0])
+  ("send" .
+   [4 0 0 0])
+  ("prin" .
+   [1 0 0 0])
+  ("interact" .
    [1 0 0 0 0 0 0 0])
-  ("0x40310" .
-   [1 0 0 0 0 0 0])
-  ("0x67b20" .
-   [1 0 0 0 0 0 0])
-  ("offset" .
-   [5 0 0 0 0 0])
-  ("setbuf_addr" .
-   [2 0 0 0 0 0 0 0 0 0 0])
-  ("str_addr" .
-   [1 0 0 0 0 0 0 0])
-  ("main" .
-   [10 0 0 0])
-  ("printf_plt" .
+  ("buf" .
+   [19 0 0])
+  ("recvuntil" .
+   [15 0 0 0 4 0 0 0 0])
+  ("sendline" .
+   [19 0 0 0 0 0 0 0])
+  ("msg" .
+   [1 0 0])
+  ("return" .
+   [0 0 0 1 0 0])
+  ("libc_base" .
+   [8 0 0 0 0 0 0 0 1])
+  ("setbuf" .
+   [2 0 0 0 0 0])
+  ("addr_system" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("addr_binsh" .
+   [0 0 0 0 1 1 0 0 0 0])
+  ("interactive" .
+   [4 0 0 0 0 1 0 0 0 0 2])
+  ("p32" .
+   [23 0 0])
+  ("rop" .
+   [12 0 0])
+  ("join" .
+   [5 0 0 0])
+  ("recvline" .
+   [6 0 0 0 2 0 0 0])
+  ("addr_setbuf_got" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("addr_got_setbuf" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("0x08048430" .
+   [2 0 0 0 0 0 0 0 0 0])
+  ("0x080485ca" .
    [1 0 0 0 0 0 0 0 0 0])
   ("0x0804a00c" .
    [1 0 0 0 0 0 0 0 0 0])
-  ("0x080485ca" .
+  ("printf_plt" .
    [1 0 0 0 0 0 0 0 0 0])
-  ("0x08048430" .
-   [2 0 0 0 0 0 0 0 0 0])
-  ("addr_got_setbuf" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("addr_setbuf_got" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("recvline" .
-   [6 0 0 0 2 0 0 0])
-  ("join" .
-   [5 0 0 0])
-  ("rop" .
-   [12 0 0])
-  ("p32" .
-   [23 0 0])
-  ("interactive" .
-   [4 0 0 0 0 1 0 0 0 0 2])
-  ("addr_binsh" .
-   [0 0 0 0 1 1 0 0 0 0])
-  ("addr_system" .
-   [1 0 0 0 0 0 0 0 0 0 0])
-  ("setbuf" .
-   [2 0 0 0 0 0])
-  ("libc_base" .
-   [8 0 0 0 0 0 0 0 1])
-  ("return" .
-   [0 0 0 1 0 0])
-  ("msg" .
-   [1 0 0])
-  ("sendline" .
-   [19 0 0 0 0 0 0 0])
-  ("recvuntil" .
-   [15 0 0 0 4 0 0 0 0])
-  ("buf" .
-   [19 0 0])
-  ("interact" .
+  ("main" .
+   [10 0 0 0])
+  ("str_addr" .
    [1 0 0 0 0 0 0 0])
-  ("prin" .
-   [1 0 0 0])
-  ("send" .
-   [4 0 0 0])
-  ("0x9aa8" .
-   [1 0 0 0 0 0])
-  ("0x8490" .
-   [1 0 0 0 0 0])
-  ("begining" .
-   [2 0 0 0 0 0 0 0])
-  ("system" .
-   [10 0 0 0 0 0])
-  ("0x12" .
-   [2 0 0 0])
-  ("addr" .
-   [9 0 0 0])
-  ("0x6873" .
-   [1 0 0 0 0 0])
-  ("0x0804" .
+  ("setbuf_addr" .
+   [2 0 0 0 0 0 0 0 0 0 0])
+  ("offset" .
+   [5 0 0 0 0 0])
+  ("0x67b20" .
+   [1 0 0 0 0 0 0])
+  ("0x40310" .
+   [1 0 0 0 0 0 0])
+  ("0x16084c" .
+   [1 0 0 0 0 0 0 0])
+  ("leaked_setbuf" .
+   [2 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("leaked" .
    [4 0 0 0 0 0])
-  ("0x08049aa8" .
-   [0 0 1 0 0 0 0 0 0 0])
-  ("0x8049934" .
-   [0 0 0 0 1 0 0 0 0])
-  ("pack" .
-   [4 0 0 1])
-  ("struct" .
-   [0 0 0 0 0 3])
-  ("fini_array" .
-   [0 0 0 0 2 0 0 0 0 0])
-  ("recv" .
-   [25 0 0 0])
-  ("sleep" .
-   [5 0 0 1 0])
-  ("mes" .
-   [21 0 0])
-  ("socket" .
-   [0 0 0 0 0 5])
-  ("darktooth" .
-   [1 0 0 0 0 0 0 0 0])
-  ("set-default" .
-   [1 0 0 0 0 0 0 0 0 0 0])
-  ("set-default-font" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
-  ("connect" .
-   [1 0 0 0 0 1 0])
-  ("got_cxafinalize_offset" .
+  ("leaked_addr" .
+   [3 0 0 0 0 0 0 0 0 0 0])
+  ("offset_setbuf" .
+   [0 0 0 0 0 0 0 1 0 1 0 0 0])
+  ("system_addr" .
+   [2 0 0 0 0 0 1 0 0 0 0])
+  ("offset_system" .
+   [0 0 0 0 0 0 0 0 0 1 0 0 0])
+  ("binsh_addr" .
+   [1 0 0 0 0 1 1 0 0 0])
+  ("offset_binsh" .
+   [0 0 0 1 0 0 0 0 0 0 0 0])
+  ("Message" .
+   [1 0 0 0 0 0 0])
+  ("printf" .
+   [11 0 0 0 0 0])
+  ("libc_base_addr" .
+   [3 0 0 0 0 0 0 0 0 1 0 0 0 0])
+  ("libc_system" .
+   [2 0 0 1 0 1 0 0 0 0 1])
+  ("libc_binsh" .
+   [1 0 0 0 0 0 0 0 1 1])
+  ("libc_start_main_offset" .
    [0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("elf_base_addr" .
-   [4 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("elf" .
+  ("lib" .
    [2 0 0])
-  ("None" .
-   [0 0 0 1])
-  ("libc" .
-   [2 0 0 0])
-  ("ELF" .
-   [1 0 0])
-  ("BIN" .
-   [1 0 0])
-  ("remote" .
-   [4 0 0 0 0 0])
-  ("0x3af60" .
+  ("ret" .
+   [3 0 0])
+  ("0x100000000" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("0x16c40" .
    [1 0 0 0 0 0 0])
-  ("_start_leaked_addr" .
-   [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0])
-  ("got_cxafinalize_addr" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0])
-  ("0x1fd0" .
+  ("elf_main_addr" .
+   [0 0 0 1 0 0 0 0 0 0 0 0 0])
+  ("stdout" .
+   [3 0 0 0 0 0])
+  ("ret_addr" .
+   [0 0 0 0 0 1 0 0])
+  ("ret_var8" .
+   [1 0 0 0 0 0 0 0])
+  ("index_ebp" .
+   [0 0 0 0 0 1 0 0 0])
+  ("addr_retaddr" .
+   [0 0 0 0 0 2 0 0 0 0 0 0])
+  ("libc_binsh_offset" .
+   [0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0])
+  ("libc_system_offset" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0])
+  ("argv" .
+   [11 0 0 0])
+  ("buflen" .
    [1 0 0 0 0 0])
-  ("index_libc_start_main" .
-   [0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0])
-  ("index_ret" .
-   [2 0 0 0 0 0 0 0 1])
-  ("elf_base" .
-   [4 0 0 0 0 0 0 0])
-  ("leaked_ret" .
-   [3 0 0 0 0 0 0 0 0 0])
-  ("0x8b0" .
+  ("shellcode" .
+   [6 0 1 1 0 0 0 0 1])
+  ("0x800" .
    [1 0 0 0 0])
-  ("main_offset" .
-   [1 0 0 0 0 0 1 0 0 0 0])
-  ("got_start_main_offset" .
-   [0 0 0 0 0 0 0 0 2 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("index_input" .
-   [1 0 0 0 0 0 0 0 0 0 0])
-  ("got_start_main" .
-   [2 0 0 0 0 0 0 0 0 0 1 0 0 0])
-  ("saved_ebp" .
-   [1 0 0 0 0 0 0 0 0])
-  ("buf2" .
-   [2 0 0 0])
-  ("buf1" .
-   [1 0 0 0])
-  ("pop_rdi_offset" .
-   [0 0 0 0 0 0 0 1 0 0 0 0 0 0])
-  ("sh" .
-   [1 0])
-  ("binsh_offset" .
-   [0 0 0 0 0 1 0 0 0 0 0 0])
-  ("pop_rdi_ret" .
-   [1 0 0 0 0 0 0 0 0 0 0])
-  ("popret" .
-   [2 0 0 0 0 1])
-  ("binsh" .
-   [2 0 0 0 0])
-  ("bin_sh" .
-   [2 0 0 0 0 0])
-  ("p64" .
-   [2 0 0])
-  ("system_offset" .
-   [1 0 0 0 0 0 0 1 0 0 0 0 0])
-  ("0x100" .
-   [9 0 0 0 0])
-  ("buf_len" .
-   [1 0 0 1 0 0 0])
-  ("user" .
-   [1 0 0 0])
-  ("entry_i" .
-   [1 0 0 0 0 0 0])
-  ("buffer_size" .
-   [0 0 0 0 0 0 0 1 0 2 0])
-  ("except" .
-   [0 0 1 0 0 0])
-  ("buffer" .
-   [0 0 0 0 1 0])
-  ("recv_addr" .
-   [1 0 0 0 0 0 0 0 0])
-  ("bss_addr" .
-   [2 0 0 0 0 0 0 0])
-  ("im" .
-   [7 0])
-  ("IMAGE_DOS_HEADER" .
-   [1 0 0 0 0 0 0 0 0 1 2 0 0 0 0 0])
-  ("e_magic" .
-   [2 0 0 0 0 0 0])
-  ("WORD" .
-   [14 0 0 1])
-  ("IMAGE_FILE_HEADER" .
-   [2 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0])
-  ("Structure" .
-   [5 0 1 0 0 0 1 3 0])
-  ("_fields_" .
-   [1 0 0 0 3 1 1 0])
-  ("DWORD" .
-   [18 0 1 2 5])
-  ("IMAGE_NT_HEADERS" .
-   [0 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0])
-  ("IMAGE_OPTIONAL_HEADER32" .
-   [0 0 0 0 0 0 0 0 3 0 1 0 0 0 1 0 0 0 0 0 0 0 0])
-  ("BYTE" .
+  ("payload" .
+   [0 0 0 1 0 0 0])
+  ("sec" .
+   [1 0 0])
+  ("buf_addr" .
+   [0 0 0 0 5 0 0 1])
+  ("init_len" .
+   [0 0 0 0 0 1 0 0])
+  ("index" .
+   [1 0 0 0 0])
+  ("setq" .
    [3 0 0 0])
-  ("IMAGE_DATA_DIRECTORY" .
-   [0 0 0 0 0 0 0 1 1 0 2 0 0 0 0 0 0 0 0 0])
-  ("IMAGE_NUMBEROF_DIRECTORY_ENTRIES" .
-   [0 0 0 0 0 0 0 0 0 2 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("IMAGE_SECTION_HEADER" .
-   [2 0 0 0 0 0 0 0 1 1 0 0 0 2 0 0 0 0 0 0])
-  ("Name" .
-   [1 0 0 1])
-  ("IMAGE_SIZEOF_SHORT_NAME" .
-   [0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("MISC" .
-   [2 0 0 0])
-  ("Union" .
-   [1 0 0 0 0])
-  ("hello" .
-   [1 0 0 0 0])
-  ("ptr" .
-   [2 0 0])
-  ("pid1" .
-   [2 0 0 0])
-  ("pid2" .
-   [1 0 0 0])
-  ("fork" .
-   [1 0 0 0])
-  ("rstack" .
-   [2 0 0 0 0 0])
-  ("print_item" .
-   [1 0 0 0 0 0 0 0 0 0])
-  ("foreach_tree" .
-   [1 0 0 0 0 0 0 0 0 0 0 0])
-  ("HOME/.tmux.conf" .
+  ("whitespace" .
+   [0 0 0 0 0 1 2 0 0 0])
+  ("whitespace-mode" .
    [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("symlink" .
-   [1 0 0 0 0 0 0])
-  ("install" .
-   [1 0 0 0 0 0 0])
-  ("xargs" .
+  ("require" .
+   [2 0 0 0 0 0 0])
+  ("encAlgor" .
+   [1 0 0 0 0 0 0 0])
+  ("prefer-coding-system" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("utf-8" .
    [1 0 0 0 0])
-  ("file" .
+  ("mozc" .
+   [1 0 0 0])
+  ("set-language-environment" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("default-input-method" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("winnt_def" .
+   [1 0 0 0 0 0 0 0 0])
+  ("fd" .
+   [2 0])
+  ("read" .
+   [1 0 0 0])
+  ("LONG" .
+   [2 0 0 0])
+  ("c_uint32" .
+   [1 0 0 0 0 0 0 0])
+  ("__init__" .
+   [0 0 0 0 0 0 1 0])
+  ("data" .
+   [3 0 0 0])
+  ("ins" .
+   [3 0 0])
+  ("iIDH" .
+   [5 0 0 0])
+  ("IMAGE_NT_HEADERS32" .
+   [1 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0])
+  ("e_lfanew" .
+   [0 0 0 0 0 2 0 0])
+  ("iINH" .
+   [4 0 0 0])
+  ("Signature" .
+   [2 0 0 0 0 0 0 0 0])
+  ("BytesIO" .
+   [2 0 0 0 0 0 0])
+  ("pe_head" .
+   [2 0 0 1 0 0 0])
+  ("sizeof" .
+   [8 0 0 0 0 0])
+  ("readinto" .
+   [2 0 0 0 0 0 0 0])
+  ("checknum_dict" .
+   [0 0 0 0 0 0 0 0 1 0 0 0 0])
+  ("MagicNumberDict" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("Banner" .
+   [3 0 0 0 0 0])
+  ("inh" .
+   [8 0 0])
+  ("FileHeader" .
+   [0 0 0 0 0 0 1 0 0 0])
+  ("OptionalHeader" .
+   [0 0 0 0 0 0 0 0 0 0 1 0 0 0])
+  ("Magic" .
+   [1 0 0 0 0])
+  ("NumberOfSymbols" .
+   [0 0 0 1 0 0 1 0 0 0 0 0 0 0 0])
+  ("NumberOfSections" .
+   [2 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1])
+  ("IMAGE_DOS_SIGNATURE" .
+   [0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0])
+  ("ifh" .
+   [3 0 0])
+  ("ish_array" .
+   [5 0 0 2 0 0 0 0 0])
+  ("section_table" .
+   [3 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("section_header" .
+   [1 0 0 1 0 0 0 0 0 0 0 0 0 0])
+  ("PointerToRawData" .
+   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0])
+  ("SizeOfRawData" .
+   [0 0 0 0 0 0 0 0 0 1 0 0 0])
+  ("Microsoft" .
+   [1 0 0 0 0 0 0 0 0])
+  ("IMAGE_SCN_CNT_INITIALIZED_DATA" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("IMAGE_SCN_CNT_UNINITIALIZED_DATA" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("IMAGE_SCN_MEM_DISCARDABLE" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0])
+  ("IMAGE_SCN_MEM_NOT_CACHED" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
+  ("IMAGE_SCN_MEM_NOT_PAGED" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0])
+  ("IMAGE_SCN_MEM_SHARED" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0])
+  ("IMAGE_SCN_MEM_EXECUTE" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0])
+  ("IMAGE_SCN_MEM_READ" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0])
+  ("IMAGE_SCN_MEM_WRITE" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("Characteristics" .
+   [0 0 0 0 0 1 0 0 0 0 0 1 0 0 0])
+  ("iCharacteristics" .
+   [0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0])
+  ("pcszCharacteristics" .
+   [0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("pe_header" .
+   [2 0 0 0 0 0 0 0 0])
+  ("name" .
    [6 0 0 0])
-  ("HOME/.dotfiles/src/" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])))
+  ("size" .
+   [1 0 0 0])
+  ("ioh" .
+   [10 0 0])
+  ("SizeOfCode" .
+   [0 0 0 0 0 1 0 0 0 0])
+  ("Size" .
+   [1 0 0 0])
+  ("SizeOfInitializedData" .
+   [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0])
+  ("SizeOfUninitializedData" .
+   [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0])
+  ("ImageBase" .
+   [1 0 0 0 0 0 0 0 0])
+  ("AddressOfEntryPoint" .
+   [0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0])
+  ("infoOptionalHeader" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0])
+  ("__class__" .
+   [2 0 0 0 0 0 0 0 0])
+  ("argc" .
+   [16 0 0 0])
+  ("add_argument" .
+   [1 0 0 0 0 0 0 0 0 0 0 0])
+  ("args" .
+   [2 0 0 0])
+  ("raw" .
+   [5 0 0])
+  ("section_name" .
+   [1 0 0 0 0 0 0 0 0 0 0 0])
+  ("section" .
+   [0 0 0 1 0 0 0])
+  ("print_raw_data" .
+   [1 0 0 0 0 0 0 0 1 0 0 0 0 0])
+  ("set-buffer-file-coding-system" .
+   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("NULL" .
+   [16 0 0 0])
+  ("p" .
+   [2])
+  ("stdio" .
+   [1 0 0 0 0])
+  ("size_t" .
+   [1 0 0 0 0 0])
+  ("Node" .
+   [15 0 0 0])
+  ("node" .
+   [59 0 0 0])
+  ("malloc" .
+   [3 0 0 0 0 0])
+  ("left" .
+   [15 0 0 0])
+  ("right" .
+   [15 0 0 0 0])
+  ("item" .
+   [10 0 0 0])
+  ("Null" .
+   [2 0 0 0])
+  ("make_node" .
+   [1 0 0 0 0 0 0 0 0])
+  ("insert_node" .
+   [0 0 0 0 0 0 2 0 0 0 2])
+  ("ndoe" .
+   [4 0 0 0])
+  ("delete_min" .
+   [2 0 0 0 0 0 0 0 0 0])
+  ("delete" .
+   [2 0 0 0 0 0])
+  ("free" .
+   [4 0 0 0])
+  ("search" .
+   [3 0 0 0 0 0])
+  ("search_min" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("delete_node" .
+   [3 0 0 0 0 0 0 0 0 0 0])
+  ("foreach_node" .
+   [2 0 0 0 0 1 0 1 0 0 0 0])
+  ("func" .
+   [5 0 0 0])
+  ("root" .
+   [10 0 0 0])
+  ("Tree" .
+   [12 0 0 1])
+  ("tree" .
+   [29 0 0 0])
+  ("search_node" .
+   [2 0 0 0 0 0 0 0 0 0 0])
+  ("destroy" .
+   [1 0 0 0 0 0 0])
+  ("destroy_node" .
+   [2 0 0 0 0 0 2 1 0 0 0 0])
+  ("make" .
+   [1 0 0 0])
+  ("make_tree" .
+   [1 0 0 0 0 0 0 0 0])
+  ("search_tree" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("delete_tree" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("print_tree" .
+   [1 0 0 0 0 1 0 0 0 0])
+  ("destroy_tree" .
+   [1 0 0 0 0 0 0 0 0 0 0 0])))
