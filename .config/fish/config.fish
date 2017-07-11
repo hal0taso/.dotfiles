@@ -34,6 +34,8 @@ switch (uname)
     set -x POWERLINE_TMUX (locate -qbql 1 'powerline.conf')
 
     set -x PATH $HOME/.go/bin/ $PATH
+
+    set -x PATH $HOME/.cask/bin $PATH
 end
 
 # function for peco 
