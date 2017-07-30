@@ -1,0 +1,1 @@
+/home/ukun/.config/fisherman/bd/functions/bd.fish

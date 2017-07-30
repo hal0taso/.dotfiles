@@ -36,6 +36,8 @@ switch (uname)
         set -x PATH $HOME/.go/bin/ $PATH
 
         set -x PATH $HOME/.cask/bin $PATH
+
+        set -x PATH $HOME/.local/bin/ $PATH
 end
 
 # function for peco 
