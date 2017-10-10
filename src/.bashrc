@@ -1,8 +1,6 @@
-source ~/.config/user/.git-prompt.sh
 alias updatedb='/usr/libexec/locate.updatedb'
 
-alias ls='ls -GP'
+alias ls='ls -G --color=auto'
 
 
 export LSCOLORS=gxfxcxdxbxegedabagacad
-toilet -F border -f mono9 ウェイ！w --filter gay
