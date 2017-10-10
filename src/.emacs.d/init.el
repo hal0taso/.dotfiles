@@ -134,3 +134,23 @@
 (electric-pair-mode 1)
 
 ;;; init.el ends here
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(flycheck-display-errors-function (function flycheck-pos-tip-error-messages))
+ '(global-linum-mode t)
+ '(helm-gtags-auto-update t)
+ '(helm-gtags-ignore-case t)
+ '(helm-gtags-path-style (quote relative))
+ '(helm-gtags-suggested-key-mapping t)
+ '(package-selected-packages
+   (quote
+    (dired-subtree yatex yasnippet web-mode use-package smex smartparens slack py-autopep8 projectile prodigy popwin pallet nyan-mode multiple-cursors markdown-mode+ magit jedi init-loader idle-highlight-mode htmlize hlinum helm-gtags flycheck-pos-tip flycheck-cask fish-mode expand-region exec-path-from-shell drag-stuff direx dired-ranger darktooth-theme color-theme-modern ac-math abyss-theme))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(linum-highlight-face ((t (:foreground "black" :background "green")))))
