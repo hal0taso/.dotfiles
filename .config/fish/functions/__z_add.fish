@@ -1,1 +1,1 @@
-/home/ukun/.config/fisherman/z/functions/__z_add.fish
+/Users/hal0taso/.config/fisherman/z/functions/__z_add.fish

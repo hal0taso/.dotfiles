@@ -4,13 +4,45 @@ switch (uname)
 
         balias updatedb '/usr/libexec/locate.updatedb'  
         balias ls 'ls -GP'
+<<<<<<< HEAD
+        
+        export LSCOLORS gxfxcxdxbxegedabagacad
+        
+=======
 
         export LSCOLORS gxfxcxdxbxegedabagacad
 
+>>>>>>> master
         # set environment value for tmux
         set -x POWERLINE_TMUX (mdfind -onlyin /usr/local/ -name 'powerline.conf')
 
         # added by Anaconda3 2.5.0 installer
+<<<<<<< HEAD
+        set -x PATH /Users/hal0taso/anaconda/bin $PATH        
+        set -x PATH /usr/local/Cellar/nmap/7.12/bin/ $PATH        
+        set -x PATH /usr/bin /usr/sbin /bin /sbin $PATH        
+        set -x PATH /usr/local/bin $PATH
+        set -x PATH /usr/local/sbin $PATH
+        # node.js
+        set -x PATH /usr/local/nodejs/bin $PATH
+        # added by Anaconda2 4.3.1 installer
+        set -x PATH /Users/hal0taso/anaconda/bin $PATH
+
+        # Load rbenv automatically by appending
+        # the following to ~/.config/fish/config.fish:
+        status --is-interactive; and source (rbenv init -|psub)
+
+        # for sagemath
+        set -x PATH /Users/hal0taso/sage_source/SageMath $PATH
+
+    # For Linux
+    case Linux
+        
+        # set POWERLINE path for tmux
+        set -x POWERLINE_TMUX (locate -qbql 1 'powerline.conf')
+        
+        set -x PATH $HOME/.go/bin/ $PATH
+=======
         set -x PATH /Users/hal0taso/anaconda/bin $PATH
         
         set -x PATH /usr/local/Cellar/nmap/7.12/bin/ $PATH
@@ -38,6 +70,7 @@ switch (uname)
         set -x PATH $HOME/.cask/bin $PATH
 
         set -x PATH $HOME/.local/bin/ $PATH
+>>>>>>> master
 end
 
 # function for peco 
@@ -55,11 +88,15 @@ else
 end
 
 if test -n '$EMACS'
+<<<<<<< HEAD
+    function fish_right_prompt; end  
+=======
     function fish_right_prompt; end
 
     function fish_title
         true
     end
+>>>>>>> master
 end
 
 
