@@ -31,6 +31,7 @@
 (depends-on "init-loader")
 
 ;; Python
+(depends-on "epc")
 (depends-on "py-autopep8")
 (depends-on "jedi")
 ;; for jedi
@@ -40,6 +41,7 @@
 ;; ファイラ
 (depends-on "direx")
 (depends-on "dired-ranger")
+(depends-on "ranger")
 
 ;; YaTeX
 (depends-on "yatex")
