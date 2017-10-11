@@ -55,7 +55,11 @@ else
 end
 
 if test -n '$EMACS'
-    function fish_right_prompt; end  
+    function fish_right_prompt; end
+
+    function fish_title
+        true
+    end
 end
 
 
