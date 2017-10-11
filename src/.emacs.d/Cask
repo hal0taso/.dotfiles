@@ -1,8 +1,8 @@
-;; パッケージリポジトリの追加
+;; add package repository
 (source gnu)
 (source melpa)
 
-;; Cask導入時に入ってたやつ
+;; Cask initialized package
 ;; http://posaune.hatenablog.com/entry/2014/06/17/221041
 (depends-on "bind-key")
 (depends-on "cask")
@@ -38,7 +38,7 @@
 (depends-on "auto-complete")
 (depends-on "jedi-core")
 
-;; ファイラ
+;; filer
 (depends-on "direx")
 (depends-on "dired-ranger")
 (depends-on "ranger")
@@ -68,3 +68,9 @@
 
 ;; fish shell mode
 (depends-on "fish-mode")
+
+;; heml
+(depends-on "helm")
+
+;; heml-gtags
+(depends-on "helm-gtags")

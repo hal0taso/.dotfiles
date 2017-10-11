@@ -1,4 +1,2 @@
-sh ~/.fehbg &
-(sleep 1s && xcompmgr &)
-(sleep 2s && tint2 -c ~/.config/tint2/tint2rc &)
-(sleep 3s && conky -c ~/.conky/conkyrc_grey &)
+xcompmgr &
+

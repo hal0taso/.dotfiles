@@ -48,8 +48,8 @@
   <theme>
     <!--  Lubuntu specific : Theme = Lubuntu and font = Ubuntu
   -->
-    <name>TropicBombBay-Pink</name>
-    <titleLayout>NLIMC</titleLayout>
+    <name>Syscrash</name>
+    <titleLayout>IMC</titleLayout>
     <!--
     available characters are NDSLIMC, each can occur at most once.
     N: window icon

@@ -5,12 +5,62 @@
   (require 'cask)
   (set-frame-font "Monospace 12")
   (define-key global-map (kbd "C-c RET") 'set-mark-command)
+  (package-initialize)
   )
 ;; if you use linux
 (when (eq system-type 'gnu/linux)
   (require 'cask"~/.cask/cask.el")
   (set-frame-font "Monospace 9")
   (setq case-fold-search t)
+
+  (require 'package)
+  (add-to-list 'package-archives
+               '("melpa" . "http://melpa.org/packages/") t)
+
+  (package-initialize)
+  
+  (when (not package-archive-contents)
+    (package-refresh-contents))
+
+  (unless (package-installed-p 'use-package)
+    (package-install 'use-package))
+
+  (require 'use-package)
+  (setq use-package-always-ensure t)
+
+  (add-to-list 'load-path "~/.emacs.d/custom")
+
+  (require 'setup-general)
+  (if (version< emacs-version "24.4")
+      (require 'setup-ivy-counsel)
+    (require 'setup-helm)
+    (require 'setup-helm-gtags))
+  ;; (require 'setup-ggtags)
+  (require 'setup-cedet)
+  (require 'setup-editing)
+
+
+
+  ;; function-args
+  ;; (require 'function-args)
+  ;; (fa-config-default)
+  ;; (define-key c-mode-map  [(tab)] 'company-complete)
+  ;; (define-key c++-mode-map  [(tab)] 'company-complete)
+  (custom-set-variables
+   ;; custom-set-variables was added by Custom.
+   ;; If you edit it by hand, you could mess it up, so be careful.
+   ;; Your init file should contain only one such instance.
+   ;; If there is more than one, they won't work right.
+   '(package-selected-packages
+     (quote
+      (zygospore helm-gtags helm yasnippet ws-butler volatile-highlights use-package undo-tree iedit dtrt-indent counsel-projectile company clean-aindent-mode anzu))))
+  (custom-set-faces
+   ;; custom-set-faces was added by Custom.
+   ;; If you edit it by hand, you could mess it up, so be careful.
+   ;; Your init file should contain only one such instance.
+   ;; If there is more than one, they won't work right.
+   )
+
   )
 
 ;;;load a Cask's configuration file
@@ -18,7 +68,7 @@
 ;; installed packages.  Don't delete this line.  If you don't want it,
 ;; just comment it out by adding a semicolon to the start of the line.
 ;; You may delete these explanatory comments.
-(package-initialize)
+
 
 ;;; Code:
 (cask-initialize)
@@ -134,3 +184,42 @@
 (electric-pair-mode 1)
 
 ;;; init.el ends here
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(ede-project-directories
+   (quote
+    ("/home/ukun/.ghq/github.com/hal0taso/cpp_samples/chap01")))
+ '(flycheck-display-errors-function (function flycheck-pos-tip-error-messages))
+ '(global-linum-mode t)
+ '(helm-gtags-auto-update t)
+ '(helm-gtags-ignore-case t)
+ '(helm-gtags-path-style (quote relative))
+ '(helm-gtags-suggested-key-mapping t)
+ '(package-selected-packages
+   (quote
+    (dired-subtree yatex yasnippet web-mode use-package smex smartparens slack py-autopep8 projectile prodigy popwin pallet nyan-mode multiple-cursors markdown-mode+ magit jedi init-loader idle-highlight-mode htmlize hlinum helm-gtags flycheck-pos-tip flycheck-cask fish-mode expand-region exec-path-from-shell drag-stuff direx dired-ranger darktooth-theme color-theme-modern ac-math abyss-theme))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(linum-highlight-face ((t (:foreground "black" :background "green")))))
+
+
+;; you can move buffer using arrow-key
+(defun ignore-error-wrapper (fn)
+  "Funtion return new function that ignore errors.
+   The function wraps a function with `ignore-errors' macro."
+  (lexical-let ((fn fn))
+    (lambda ()
+      (interactive)
+      (ignore-errors
+        (funcall fn)))))
+
+(global-set-key [s-left] (ignore-error-wrapper 'windmove-left))
+(global-set-key [s-right] (ignore-error-wrapper 'windmove-right))
+(global-set-key [s-up] (ignore-error-wrapper 'windmove-up))
+(global-set-key [s-down] (ignore-error-wrapper 'windmove-down))
