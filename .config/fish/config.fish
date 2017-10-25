@@ -81,6 +81,7 @@ if test -n '$EMACS'
     end
 end
 
+set -x RUST_SRC_PATH (rustc --print sysroot)/lib/rustlib/src/rust/src
 
 set -g theme_color_scheme terminal
 source /Users/hal0taso/.cargo/env
