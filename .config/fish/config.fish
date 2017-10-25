@@ -55,6 +55,8 @@ switch (uname)
         set -x PATH $HOME/.cask/bin $PATH
 
         set -x PATH $HOME/.local/bin/ $PATH
+
+        set -x PATH $HOME/.cargo/bin/ $PATH
 end
 
 # function for peco
