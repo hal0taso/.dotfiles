@@ -83,3 +83,4 @@ end
 
 
 set -g theme_color_scheme terminal
+source /Users/hal0taso/.cargo/env
