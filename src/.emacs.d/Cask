@@ -74,3 +74,8 @@
 
 ;; heml-gtags
 (depends-on "helm-gtags")
+
+;; Rust
+(depends-on "rust-mode")
+(depends-on "racer")
+(depends-on "flycheck-rust")
