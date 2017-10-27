@@ -1,1 +1,1 @@
-/home/ukun/.config/fisherman/peco/functions/peco_kill.fish
+/Users/hal0taso/.config/fisherman/peco/functions/peco_kill.fish

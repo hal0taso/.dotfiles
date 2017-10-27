@@ -1,1 +1,1 @@
-/home/ukun/.config/fisherman/spin/completions/spin.fish
+/Users/hal0taso/.config/fisherman/spin/completions/spin.fish
