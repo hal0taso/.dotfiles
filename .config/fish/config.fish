@@ -43,6 +43,10 @@ switch (uname)
         # added by Anaconda2 4.3.1 installer
         set -x PATH /Users/hal0taso/anaconda/bin $PATH
 
+        # rbenv
+        set -x PATH /Users/hal0taso/.rbenv/shims $PATH
+        eval (rbenv init - | source)
+
         # For Linux
     case Linux
         # set POWERLINE path for tmux
@@ -81,7 +85,7 @@ if test -n '$EMACS'
     end
 end
 
-set -x RUST_SRC_PATH (rustc --print sysroot)/lib/rustlib/src/rust/src
 
 set -g theme_color_scheme terminal
-source /Users/hal0taso/.cargo/env
+
+set -x RUST_SRC_PATH (rustc --print sysroot)/lib/rustlib/src/rust/src
