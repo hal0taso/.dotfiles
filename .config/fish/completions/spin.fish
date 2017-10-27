@@ -1,0 +1,1 @@
+/home/ukun/.config/fisherman/spin/completions/spin.fish
