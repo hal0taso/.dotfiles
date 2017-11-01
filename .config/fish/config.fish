@@ -9,26 +9,24 @@ switch (uname)
         # set environment value for tmux
         set -x POWERLINE_TMUX (mdfind -onlyin /usr/local/ -name 'powerline.conf')
 
-        # added by Anaconda3 2.5.0 installer
-        set -x PATH /Users/hal0taso/anaconda/bin $PATH
-        set -x PATH /usr/local/Cellar/nmap/7.12/bin/ $PATH
-        set -x PATH /usr/bin /usr/sbin /bin /sbin $PATH
-        set -x PATH /usr/local/bin $PATH
-        set -x PATH /usr/local/sbin $PATH
+        ## added by Anaconda3 2.5.0 installer
+        # set -x PATH /Users/hal0taso/anaconda/bin $PATH
+        ## added by Anaconda2 4.3.1 installer
+        # set -x PATH /Users/hal0taso/anaconda/bin $PATH
+
         # node.js
         set -x PATH /usr/local/nodejs/bin $PATH
-        # added by Anaconda2 4.3.1 installer
-        set -x PATH /Users/hal0taso/anaconda/bin $PATH
-
+ 
         # Load rbenv automatically by appending
         # the following to ~/.config/fish/config.fish:
         status --is-interactive; and source (rbenv init -|psub)
+        # rbenv
+        set -x PATH /Users/hal0taso/.rbenv/shims $PATH
+        eval (rbenv init - | source)
 
         # for sagemath
         set -x PATH /Users/hal0taso/sage_source/SageMath $PATH
 
-        set -x PATH /Users/hal0taso/anaconda/bin $PATH
-
         set -x PATH /usr/local/Cellar/nmap/7.12/bin/ $PATH
 
         set -x PATH /usr/bin /usr/sbin /bin /sbin $PATH
@@ -37,15 +35,8 @@ switch (uname)
 
         set -x PATH /usr/local/sbin $PATH
 
-        # node.js
-        set -x PATH /usr/local/nodejs/bin $PATH
 
-        # added by Anaconda2 4.3.1 installer
-        set -x PATH /Users/hal0taso/anaconda/bin $PATH
-
-        # rbenv
-        set -x PATH /Users/hal0taso/.rbenv/shims $PATH
-        eval (rbenv init - | source)
+        set -x PATH $HOME/.cargo/bin/ $PATH
 
         # For Linux
     case Linux
