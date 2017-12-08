@@ -46,7 +46,7 @@ switch (uname)
         # For Linux
     case Linux
         # set POWERLINE path for tmux
-        set -x POWERLINE_TMUX (locate -qbql 1 'powerline.conf')
+        set -x POWERLINE_TMUX (locate 'powerline.conf' | grep tmux)
 
         set -x PATH $HOME/.go/bin/ $PATH
 

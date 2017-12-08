@@ -2,9 +2,6 @@
 ;;; LaTeX Setting
 ;;;
 
-;; PATH
-(setenv "PATH"
-        (concat (getenv "PATH") ":/Library/TeX/texbin"))
 
 ;; YaTeX
 (autoload 'yatex-mode "yatex" "Yet Another LaTeX mode" t)
@@ -14,7 +11,9 @@
                 ("\\.cls$" . yatex-mode)
                 ("\\.sty$" . yatex-mode)
                 ("\\.clo$" . yatex-mode)
-                ("\\.bbl$" . yatex-mode)) auto-mode-alist))
+                ("\\.bbl$" . yatex-mode))
+              auto-mode-alist))
+
 (setq YaTeX-inhibit-prefix-letter t)
 (setq YaTeX-kanji-code nil)
 (setq YaTeX-latex-message-code 'utf-8)
@@ -23,10 +22,22 @@
 
 (setq YaTeX-dvi2-command-ext-alist
       '(("TeXworks\\|texworks\\|texstudio\\|mupdf\\|SumatraPDF\\|Preview\\|Skim\\|TeXShop\\|evince\\|okular\\|zathura\\|qpdfview\\|Firefox\\|firefox\\|chrome\\|chromium\\|Adobe\\|Acrobat\\|AcroRd32\\|acroread\\|pdfopen\\|xdg-open\\|open\\|start" . ".pdf")))
-(setq tex-command "/Library/TeX/texbin/latexmk -pvc")
-(setq dvi2-command "/usr/bin/open -a Skim")
-(setq tex-pdfview-command "/usr/bin/open -a Skim")
-(setq dviprint-command-format "/usr/bin/open -a \"Adobe Acrobat Reader DC\" `echo %s | gsed -e \"s/\\.[^.]*$/\\.pdf/\"`")
+
+
+(setq dvi2-command "evince")
+(setq tex-pdfview-command "evince")
+(setq dviprint-command-format "open")
+(setq tex-command "latexmk -pvc")
+
+(when (equal system-type 'darwin) ;; For Mac
+  ;; PATH
+  (setenv "PATH"
+          (concat (getenv "PATH") ":/Library/TeX/texbin"))
+  (setq dvi2-command "/usr/bin/open -a Skim")
+  (setq tex-pdfview-command "/usr/bin/open -a Skim")
+  (setq dviprint-command-format "/usr/bin/open -a \"Adobe Acrobat Reader DC\" `echo %s | gsed -e \"s/\\.[^.]*$/\\.pdf/\"`")
+
+)
 
 (add-hook 'yatex-mode-hook
           '(lambda ()

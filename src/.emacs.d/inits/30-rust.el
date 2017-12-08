@@ -1,4 +1,5 @@
 ;;; racerやrustfmt、コンパイラにパスを通す
+(require 'cl)
 (add-to-list 'exec-path (expand-file-name "~/.cargo/bin/"))
 ;;; rust-modeでrust-format-on-saveをtにすると自動でrustfmtが走る
 (eval-after-load "rust-mode"
