@@ -1,0 +1,22 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [1 20])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [22 42])
+            ("main" function (:type "int") nil [44 190]))          
+      :file "step01.cpp"
+      :pointmax 191
+      :fsize 190
+      :lastmodtime '(23006 52069 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!hal0taso!.ghq!github.com!hal0taso!cpp_samples!chap01!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

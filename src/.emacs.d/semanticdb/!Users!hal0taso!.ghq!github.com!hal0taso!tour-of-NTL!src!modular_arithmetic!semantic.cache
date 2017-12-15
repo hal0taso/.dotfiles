@@ -1,0 +1,82 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("NTL/ZZ_p.h" include (:system-flag t) nil [1 22])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [24 44])
+            ("NTL" using (:type ("NTL" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [45 65])
+            ("add" function
+               (:arguments 
+                  ( ("x" variable
+                       (:reference 1
+                        :type ("Vec" type
+                             (:template-specifier 
+                                ( ("ZZ_p" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [76 89])
+                    ("a" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Vec" type
+                             (:template-specifier 
+                                ( ("ZZ_p" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [90 109])
+                    ("b" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Vec" type
+                             (:template-specifier 
+                                ( ("ZZ_p" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [110 129]))                  
+                :type "void")
+                nil [67 304])
+            ("InnerProduct" function
+               (:arguments 
+                  ( ("x" variable
+                       (:reference 1
+                        :type ("ZZ_p" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [324 332])
+                    ("a" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Vec" type
+                             (:template-specifier 
+                                ( ("ZZ_p" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [333 352])
+                    ("b" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Vec" type
+                             (:template-specifier 
+                                ( ("ZZ_p" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [353 372]))                  
+                :type "void")
+                nil [306 570])
+            ("main" function (:type "int") nil [572 1230]))          
+      :file "vec_mod.cpp"
+      :pointmax 1231
+      :fsize 1230
+      :lastmodtime '(23068 20205 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!hal0taso!.ghq!github.com!hal0taso!tour-of-NTL!src!modular_arithmetic!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,57 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("NTL/ZZ.h" include (:system-flag t) nil [1 20])
+            ("NTL/matrix.h" include (:system-flag t) nil [21 44])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [46 66])
+            ("NTL" using (:type ("NTL" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [67 87])
+            ("mul" function
+               (:arguments 
+                  ( ("X" variable
+                       (:reference 1
+                        :type ("Mat" type
+                             (:template-specifier 
+                                ( ("ZZ" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [98 109])
+                    ("A" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Mat" type
+                             (:template-specifier 
+                                ( ("ZZ" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [110 127])
+                    ("B" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Mat" type
+                             (:template-specifier 
+                                ( ("ZZ" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [128 145]))                  
+                :type "void")
+                nil [89 594])
+            ("main" function (:type "int") nil [596 826]))          
+      :file "mul_matrix_exp2.cpp"
+      :pointmax 827
+      :fsize 826
+      :lastmodtime '(23068 20205 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!hal0taso!.ghq!github.com!hal0taso!tour-of-NTL!src!vectors_and_matrices!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,2032 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("\"\"\"
+(Ring-)LWE oracle generators
+
+The Learning with Errors problem (LWE) is solving linear systems of equations
+where the right hand side has been disturbed 'slightly' where 'slightly' is made
+precise by a noise distribution - typically a discrete Gaussian
+distribution. See [Reg09]_ for details.
+
+The Ring Learning with Errors problem (LWE) is solving a set of univariate
+polynomial equations - typically in a cyclotomic field - where the right hand
+side was disturbed 'slightly'. See [LPR2010]_ for details.
+
+This module implements generators of LWE samples where parameters are chosen
+following proposals in the cryptographic literature.
+
+EXAMPLES:
+
+We get 30 samples from an LWE oracle parameterised by security parameter
+``n=20`` and where the modulus and the standard deviation of the noise are
+chosen as in [Reg09]_::
+
+    sage: from sage.crypto.lwe import samples
+    sage: samples(30, 20, 'Regev')
+    [((360, 264, 123, 368, 398, 392, 41, 84, 25, 389, 311, 68, 322, 41, 161, 372, 222, 153, 243, 381), 122),
+    ...
+    ((155, 22, 357, 312, 87, 298, 182, 163, 296, 181, 219, 135, 164, 308, 248, 320, 64, 166, 214, 104), 152)]
+
+We may also pass classes to the samples function, which is useful for users
+implementing their own oracles::
+
+    sage: from sage.crypto.lwe import samples, LindnerPeikert
+    sage: samples(30, 20, LindnerPeikert)
+    [((1275, 168, 1529, 2024, 1874, 1309, 16, 1869, 1114, 1696, 1645, 618, 1372, 1273, 683, 237, 1526, 879, 1305, 1355), 950),
+    ...
+    ((1787, 2033, 1677, 331, 1562, 49, 796, 1002, 627, 98, 91, 711, 1712, 418, 2024, 163, 1773, 184, 1548, 3), 1815)]
+
+Finally, :func:`samples` also accepts instances of classes::
+
+    sage: from sage.crypto.lwe import LindnerPeikert
+    sage: lwe = LindnerPeikert(20)
+    sage: samples(30, 20, lwe)
+    [((465, 180, 440, 706, 1367, 106, 1380, 614, 1162, 1354, 1098, 2036, 1974, 1417, 1502, 1431, 863, 1894, 1368, 1771), 618),
+    ...
+    ((1050, 1017, 1314, 1310, 1941, 2041, 484, 104, 1199, 1744, 161, 1905, 679, 1663, 531, 1630, 168, 1559, 1040, 1719), 1006)]
+
+Note that Ring-LWE samples are returned as vectors::
+
+    sage: from sage.crypto.lwe import RingLWE
+    sage: from sage.stats.distributions.discrete_gaussian_polynomial import DiscreteGaussianDistributionPolynomialSampler
+    sage: D = DiscreteGaussianDistributionPolynomialSampler(ZZ['x'], euler_phi(16), 5)
+    sage: ringlwe = RingLWE(16, 257, D, secret_dist='uniform')
+    sage: samples(30, euler_phi(16), ringlwe)
+    [((41, 78, 232, 79, 223, 85, 26, 68), (195, 99, 106, 57, 93, 113, 23, 68)),
+    ...
+    ((185, 89, 244, 122, 249, 140, 173, 142), (98, 196, 70, 49, 55, 8, 158, 57))]
+
+One technical issue when working with these generators is that by default they
+return vectors and scalars over/in rings modulo some `q`. These are represented
+as elements in `(0,q-1)` by Sage. However, it usually is more natural to think
+of these entries as integers in `(-q//2,q//2)`. To allow for this, this module
+provides the option to balance the representation. In this case vectors and
+scalars over/in the integers are returned::
+
+    sage: from sage.crypto.lwe import samples
+    sage: samples(30, 20, 'Regev', balanced=True)
+    [((-105, 43, -25, -16, 57, 141, -108, 92, -173, 4, 179, -191, 164, 101, -16, -175, 172, 10, 147, 1), 114),
+    ...
+    ((-166, -147, 120, -56, 130, 163, 83, 17, -125, -159, -124, 19, 198, -181, -124, -155, 84, -15, -113, 113), 39)]
+
+AUTHORS:
+
+- Martin Albrecht
+- Robert Fitzpatrick
+- Daniel Cabracas
+- Florian Göpfert
+- Michael Schneider
+
+REFERENCES:
+
+- [Reg09]_
+
+- [LP2011]_
+
+- [LPR2010]_
+
+- [CGW2013]_
+\"\"\"" code nil nil [25 3607])
+            ("six.moves" include nil nil [3608 3635])
+            ("sage.functions.log" include nil nil [3637 3676])
+            ("sage.functions.other" include nil nil [3677 3727])
+            ("sage.misc.functional" include nil nil [3728 3782])
+            ("sage.misc.randstate" include nil nil [3783 3830])
+            ("sage.misc.prandom" include nil nil [3831 3868])
+            ("sage.misc.misc" include nil nil [3869 3907])
+            ("sage.modules.free_module" include nil nil [3908 3955])
+            ("sage.modules.free_module_element" include nil nil [3956 4022])
+            ("sage.numerical.optimize" include nil nil [4023 4068])
+            ("sage.rings.all" include nil nil [4069 4129])
+            ("sage.arith.all" include nil nil [4130 4178])
+            ("sage.structure.element" include nil nil [4179 4220])
+            ("sage.structure.sage_object" include nil nil [4221 4270])
+            ("sage.symbolic.constants" include nil nil [4271 4309])
+            ("sage.symbolic.ring" include nil nil [4310 4343])
+            ("sage.stats.distributions.discrete_gaussian_integer" include nil nil [4344 4449])
+            ("sage.stats.distributions.discrete_gaussian_polynomial" include nil nil [4450 4561])
+            ("UniformSampler" type
+               (:documentation "
+    Uniform sampling in a range of integers.
+
+    EXAMPLES::
+
+        sage: from sage.crypto.lwe import UniformSampler
+        sage: sampler = UniformSampler(-2, 2); sampler
+        UniformSampler(-2, 2)
+        sage: sampler()
+        -2
+
+    .. automethod:: __init__
+    .. automethod:: __call__
+    "
+                :superclasses ("SageObject")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+        Construct a uniform sampler with bounds ``lower_bound`` and
+        ``upper_bound`` (both endpoints inclusive).
+
+        INPUT:
+
+        - ``lower_bound`` - integer
+        - ``upper_bound`` - integer
+
+        EXAMPLES::
+
+            sage: from sage.crypto.lwe import UniformSampler
+            sage: UniformSampler(-2, 2)
+            UniformSampler(-2, 2)
+        \"\"\"" code nil (reparse-symbol indented_block_body) [4969 5349])
+                            ("if" code nil (reparse-symbol indented_block_body) [5358 5455])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5463 5497])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5506 5540]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4928 4932])
+                            ("lower_bound" variable nil (reparse-symbol function_parameters) [4934 4945])
+                            ("upper_bound" variable nil (reparse-symbol function_parameters) [4947 4958]))                          
+                        :documentation "
+        Construct a uniform sampler with bounds ``lower_bound`` and
+        ``upper_bound`` (both endpoints inclusive).
+
+        INPUT:
+
+        - ``lower_bound`` - integer
+        - ``upper_bound`` - integer
+
+        EXAMPLES::
+
+            sage: from sage.crypto.lwe import UniformSampler
+            sage: UniformSampler(-2, 2)
+            UniformSampler(-2, 2)
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [4915 5541])
+                    ("__call__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5559 5563]))                          
+                        :documentation "
+        Return a new sample.
+
+        EXAMPLES::
+
+            sage: from sage.crypto.lwe import UniformSampler
+            sage: sampler = UniformSampler(-12, 12)
+            sage: sampler()
+            -10
+        ")
+                        (reparse-symbol indented_block_body) [5546 5856])
+                    ("_repr_" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5872 5876]))                          
+                        :documentation "
+        EXAMPLES::
+
+            sage: from sage.crypto.lwe import UniformSampler
+            sage: UniformSampler(-2, 2)
+            UniformSampler(-2, 2)
+        ")
+                        (reparse-symbol indented_block_body) [5861 6135]))                  
+                :type "class")
+                nil [4563 6135])
+            ("UniformPolynomialSampler" type
+               (:documentation "
+    Uniform sampler for polynomials.
+
+    EXAMPLES::
+
+        sage: from sage.crypto.lwe import UniformPolynomialSampler
+        sage: UniformPolynomialSampler(ZZ['x'], 8, -2, 2)()
+        -2*x^7 + x^6 - 2*x^5 - x^3 - 2*x^2 - 2
+
+    .. automethod:: __init__
+    .. automethod:: __call__
+    "
+                :superclasses ("SageObject")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+        Construct a sampler for univariate polynomials of degree ``n-1`` where
+        coefficients are drawn uniformly at random between ``lower_bound`` and
+        ``upper_bound`` (both endpoints inclusive).
+
+        INPUT:
+
+        - ``P`` - a univariate polynomial ring over the Integers
+        - ``n`` - number of coefficients to be sampled
+        - ``lower_bound`` - integer
+        - ``upper_bound`` - integer
+
+        EXAMPLES::
+
+            sage: from sage.crypto.lwe import UniformPolynomialSampler
+            sage: UniformPolynomialSampler(ZZ['x'], 10, -10, 10)
+            UniformPolynomialSampler(10, -10, 10)
+        \"\"\"" code nil (reparse-symbol indented_block_body) [6548 7189])
+                            ("self" variable nil (reparse-symbol indented_block_body) [7198 7212])
+                            ("self" variable nil (reparse-symbol indented_block_body) [7221 7231])
+                            ("if" code nil (reparse-symbol indented_block_body) [7240 7337])
+                            ("self" variable nil (reparse-symbol indented_block_body) [7345 7379])
+                            ("self" variable nil (reparse-symbol indented_block_body) [7388 7422])
+                            ("self" variable nil (reparse-symbol indented_block_body) [7431 7490]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6501 6505])
+                            ("P" variable nil (reparse-symbol function_parameters) [6507 6508])
+                            ("n" variable nil (reparse-symbol function_parameters) [6510 6511])
+                            ("lower_bound" variable nil (reparse-symbol function_parameters) [6513 6524])
+                            ("upper_bound" variable nil (reparse-symbol function_parameters) [6526 6537]))                          
+                        :documentation "
+        Construct a sampler for univariate polynomials of degree ``n-1`` where
+        coefficients are drawn uniformly at random between ``lower_bound`` and
+        ``upper_bound`` (both endpoints inclusive).
+
+        INPUT:
+
+        - ``P`` - a univariate polynomial ring over the Integers
+        - ``n`` - number of coefficients to be sampled
+        - ``lower_bound`` - integer
+        - ``upper_bound`` - integer
+
+        EXAMPLES::
+
+            sage: from sage.crypto.lwe import UniformPolynomialSampler
+            sage: UniformPolynomialSampler(ZZ['x'], 10, -10, 10)
+            UniformPolynomialSampler(10, -10, 10)
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [6488 7491])
+                    ("__call__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7509 7513]))                          
+                        :documentation "
+        Return a new sample.
+
+        EXAMPLES::
+
+            sage: from sage.crypto.lwe import UniformPolynomialSampler
+            sage: sampler = UniformPolynomialSampler(ZZ['x'], 8, -12, 12)
+            sage: sampler()
+            -10*x^7 + 5*x^6 - 8*x^5 + x^4 - 4*x^3 - 11*x^2 - 10
+        ")
+                        (reparse-symbol indented_block_body) [7496 7920])
+                    ("_repr_" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7936 7940]))                          
+                        :documentation "
+        EXAMPLES::
+
+            sage: from sage.crypto.lwe import UniformPolynomialSampler
+            sage: UniformPolynomialSampler(ZZ['x'], 8, -3, 3)
+            UniformPolynomialSampler(8, -3, 3)
+        ")
+                        (reparse-symbol indented_block_body) [7925 8266]))                  
+                :type "class")
+                nil [6137 8266])
+            ("LWE" type
+               (:documentation "
+    Learning with Errors (LWE) oracle.
+
+    .. automethod:: __init__
+    .. automethod:: __call__
+    "
+                :superclasses ("SageObject")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+        Construct an LWE oracle in dimension ``n`` over a ring of order
+        ``q`` with noise distribution ``D``.
+
+        INPUT:
+
+        - ``n`` - dimension (integer > 0)
+        - ``q`` - modulus typically > n (integer > 0)
+        - ``D`` - an error distribution such as an instance of
+          :class:`DiscreteGaussianDistributionIntegerSampler` or :class:`UniformSampler`
+        - ``secret_dist`` - distribution of the secret (default: 'uniform'); one of
+
+          - \"uniform\" - secret follows the uniform distribution in `\\Zmod{q}`
+          - \"noise\" - secret follows the noise distribution
+          - ``(lb,ub)`` - the secret is chosen uniformly from ``[lb,...,ub]`` including both endpoints
+
+        - ``m`` - number of allowed samples or ``None`` if no such limit exists
+          (default: ``None``)
+
+        EXAMPLES:
+
+        First, we construct a noise distribution with standard deviation 3.0::
+
+            sage: from sage.stats.distributions.discrete_gaussian_integer import DiscreteGaussianDistributionIntegerSampler
+            sage: D = DiscreteGaussianDistributionIntegerSampler(3.0)
+
+        Next, we construct our oracle::
+
+            sage: from sage.crypto.lwe import LWE
+            sage: lwe = LWE(n=20, q=next_prime(400), D=D); lwe
+            LWE(20, 401, Discrete Gaussian sampler over the Integers with sigma = 3.000000 and c = 0, 'uniform', None)
+
+        and sample 1000 samples::
+
+            sage: L = [lwe() for _ in range(1000)]
+
+        To test the oracle, we use the internal secret to evaluate the samples
+        in the secret::
+
+            sage: S = [ZZ(a.dot_product(lwe._LWE__s) - c) for (a,c) in L]
+
+        However, while Sage represents finite field elements between 0 and q-1
+        we rely on a balanced representation of those elements here. Hence, we
+        fix the representation and recover the correct standard deviation of the
+        noise::
+
+            sage: sqrt(variance([e if e <= 200 else e-401 for e in S]).n())
+            3.0...
+
+        If ``m`` is not ``None`` the number of available samples is restricted::
+
+            sage: from sage.crypto.lwe import LWE
+            sage: lwe = LWE(n=20, q=next_prime(400), D=D, m=30)
+            sage: _ = [lwe() for _ in range(30)]
+            sage: lwe() # 31
+            Traceback (most recent call last):
+            ...
+            IndexError: Number of available samples exhausted.
+        \"\"\"" code nil (reparse-symbol indented_block_body) [8477 10898])
+                            ("self" variable nil (reparse-symbol indented_block_body) [10907 10922])
+                            ("self" variable nil (reparse-symbol indented_block_body) [10931 10942])
+                            ("self" variable nil (reparse-symbol indented_block_body) [10951 10963])
+                            ("self" variable nil (reparse-symbol indented_block_body) [10972 10999])
+                            ("self" variable nil (reparse-symbol indented_block_body) [11008 11039])
+                            ("self" variable nil (reparse-symbol indented_block_body) [11048 11058])
+                            ("self" variable nil (reparse-symbol indented_block_body) [11068 11098])
+                            ("if" code nil (reparse-symbol indented_block_body) [11107 11598]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8422 8426])
+                            ("n" variable nil (reparse-symbol function_parameters) [8428 8429])
+                            ("q" variable nil (reparse-symbol function_parameters) [8431 8432])
+                            ("D" variable nil (reparse-symbol function_parameters) [8434 8435])
+                            ("secret_dist" variable nil (reparse-symbol function_parameters) [8437 8448])
+                            ("m" variable nil (reparse-symbol function_parameters) [8460 8461]))                          
+                        :documentation "
+        Construct an LWE oracle in dimension ``n`` over a ring of order
+        ``q`` with noise distribution ``D``.
+
+        INPUT:
+
+        - ``n`` - dimension (integer > 0)
+        - ``q`` - modulus typically > n (integer > 0)
+        - ``D`` - an error distribution such as an instance of
+          :class:`DiscreteGaussianDistributionIntegerSampler` or :class:`UniformSampler`
+        - ``secret_dist`` - distribution of the secret (default: 'uniform'); one of
+
+          - \"uniform\" - secret follows the uniform distribution in `\\Zmod{q}`
+          - \"noise\" - secret follows the noise distribution
+          - ``(lb,ub)`` - the secret is chosen uniformly from ``[lb,...,ub]`` including both endpoints
+
+        - ``m`` - number of allowed samples or ``None`` if no such limit exists
+          (default: ``None``)
+
+        EXAMPLES:
+
+        First, we construct a noise distribution with standard deviation 3.0::
+
+            sage: from sage.stats.distributions.discrete_gaussian_integer import DiscreteGaussianDistributionIntegerSampler
+            sage: D = DiscreteGaussianDistributionIntegerSampler(3.0)
+
+        Next, we construct our oracle::
+
+            sage: from sage.crypto.lwe import LWE
+            sage: lwe = LWE(n=20, q=next_prime(400), D=D); lwe
+            LWE(20, 401, Discrete Gaussian sampler over the Integers with sigma = 3.000000 and c = 0, 'uniform', None)
+
+        and sample 1000 samples::
+
+            sage: L = [lwe() for _ in range(1000)]
+
+        To test the oracle, we use the internal secret to evaluate the samples
+        in the secret::
+
+            sage: S = [ZZ(a.dot_product(lwe._LWE__s) - c) for (a,c) in L]
+
+        However, while Sage represents finite field elements between 0 and q-1
+        we rely on a balanced representation of those elements here. Hence, we
+        fix the representation and recover the correct standard deviation of the
+        noise::
+
+            sage: sqrt(variance([e if e <= 200 else e-401 for e in S]).n())
+            3.0...
+
+        If ``m`` is not ``None`` the number of available samples is restricted::
+
+            sage: from sage.crypto.lwe import LWE
+            sage: lwe = LWE(n=20, q=next_prime(400), D=D, m=30)
+            sage: _ = [lwe() for _ in range(30)]
+            sage: lwe() # 31
+            Traceback (most recent call last):
+            ...
+            IndexError: Number of available samples exhausted.
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [8409 11598])
+                    ("_repr_" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11614 11618]))                          
+                        :documentation "
+        EXAMPLES::
+
+            sage: from sage.stats.distributions.discrete_gaussian_integer import DiscreteGaussianDistributionIntegerSampler
+            sage: from sage.crypto.lwe import LWE
+            sage: D = DiscreteGaussianDistributionIntegerSampler(3.0)
+            sage: lwe = LWE(n=20, q=next_prime(400), D=D); lwe
+            LWE(20, 401, Discrete Gaussian sampler over the Integers with sigma = 3.000000 and c = 0, 'uniform', None)
+
+            sage: lwe = LWE(n=20, q=next_prime(400), D=D, secret_dist=(-3, 3)); lwe
+            LWE(20, 401, Discrete Gaussian sampler over the Integers with sigma = 3.000000 and c = 0, (-3, 3), None)
+        ")
+                        (reparse-symbol indented_block_body) [11603 12557])
+                    ("__call__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12576 12580]))                          
+                        :documentation "
+        EXAMPLES::
+
+            sage: from sage.crypto.lwe import DiscreteGaussianDistributionIntegerSampler, LWE
+            sage: LWE(10, 401, DiscreteGaussianDistributionIntegerSampler(3))()
+            ((309, 347, 198, 194, 336, 360, 264, 123, 368, 398), 198)
+        ")
+                        (reparse-symbol indented_block_body) [12563 13130]))                  
+                :type "class")
+                nil [8268 13130])
+            ("Regev" type
+               (:documentation "
+    LWE oracle with parameters as in [Reg09]_.
+
+    .. automethod:: __init__
+    "
+                :superclasses ("LWE")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+        Construct LWE instance parameterised by security parameter ``n`` where
+        the modulus ``q`` and the ``stddev`` of the noise are chosen as in
+        [Reg09]_.
+
+        INPUT:
+
+        - ``n`` - security parameter (integer > 0)
+        - ``secret_dist`` - distribution of the secret. See documentation of :class:`LWE`
+          for details (default='uniform')
+        - ``m`` - number of allowed samples or ``None`` if no such limit exists
+          (default: ``None``)
+
+        EXAMPLES::
+
+            sage: from sage.crypto.lwe import Regev
+            sage: Regev(n=20)
+            LWE(20, 401, Discrete Gaussian sampler over the Integers with sigma = 1.915069 and c = 401, 'uniform', None)
+        \"\"\"" code nil (reparse-symbol indented_block_body) [13309 14030])
+                            ("q" variable nil (reparse-symbol indented_block_body) [14039 14063])
+                            ("s" variable nil (reparse-symbol indented_block_body) [14072 14115])
+                            ("D" variable nil (reparse-symbol indented_block_body) [14124 14191])
+                            ("LWE" code nil (reparse-symbol indented_block_body) [14200 14263]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [13260 13264])
+                            ("n" variable nil (reparse-symbol function_parameters) [13266 13267])
+                            ("secret_dist" variable nil (reparse-symbol function_parameters) [13269 13280])
+                            ("m" variable nil (reparse-symbol function_parameters) [13292 13293]))                          
+                        :documentation "
+        Construct LWE instance parameterised by security parameter ``n`` where
+        the modulus ``q`` and the ``stddev`` of the noise are chosen as in
+        [Reg09]_.
+
+        INPUT:
+
+        - ``n`` - security parameter (integer > 0)
+        - ``secret_dist`` - distribution of the secret. See documentation of :class:`LWE`
+          for details (default='uniform')
+        - ``m`` - number of allowed samples or ``None`` if no such limit exists
+          (default: ``None``)
+
+        EXAMPLES::
+
+            sage: from sage.crypto.lwe import Regev
+            sage: Regev(n=20)
+            LWE(20, 401, Discrete Gaussian sampler over the Integers with sigma = 1.915069 and c = 401, 'uniform', None)
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [13247 14264]))                  
+                :type "class")
+                nil [13132 14264])
+            ("LindnerPeikert" type
+               (:documentation "
+    LWE oracle with parameters as in [LP2011]_.
+
+    .. automethod:: __init__
+    "
+                :superclasses ("LWE")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+        Construct LWE instance parameterised by security parameter ``n`` where
+        the modulus ``q`` and the ``stddev`` of the noise is chosen as in
+        [LP2011]_.
+
+        INPUT:
+
+        - ``n`` - security parameter (integer > 0)
+        - ``delta`` - error probability per symbol (default: 0.01)
+        - ``m`` - number of allowed samples or ``None`` in which case ``m=2*n +
+          128`` as in [LP2011]_ (default: ``None``)
+
+        EXAMPLES::
+
+            sage: from sage.crypto.lwe import LindnerPeikert
+            sage: LindnerPeikert(n=20)
+            LWE(20, 2053, Discrete Gaussian sampler over the Integers with sigma = 3.600954 and c = 0, 'noise', 168)
+        \"\"\"" code nil (reparse-symbol indented_block_body) [14441 15133])
+                            ("if" code nil (reparse-symbol indented_block_body) [15142 15182])
+                            ("c" variable nil (reparse-symbol indented_block_body) [15656 15671])
+                            ("c" variable nil (reparse-symbol indented_block_body) [15680 15740])
+                            ("s_t_bound" variable nil (reparse-symbol indented_block_body) [15781 15840])
+                            ("q" variable nil (reparse-symbol indented_block_body) [15958 16014])
+                            ("s" variable nil (reparse-symbol indented_block_body) [16076 16106])
+                            ("stddev" code nil (reparse-symbol indented_block_body) [16149 16174])
+                            ("D" variable nil (reparse-symbol indented_block_body) [16183 16239])
+                            ("LWE" code nil (reparse-symbol indented_block_body) [16248 16307]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [14403 14407])
+                            ("n" variable nil (reparse-symbol function_parameters) [14409 14410])
+                            ("delta" variable nil (reparse-symbol function_parameters) [14412 14417])
+                            ("m" variable nil (reparse-symbol function_parameters) [14424 14425]))                          
+                        :documentation "
+        Construct LWE instance parameterised by security parameter ``n`` where
+        the modulus ``q`` and the ``stddev`` of the noise is chosen as in
+        [LP2011]_.
+
+        INPUT:
+
+        - ``n`` - security parameter (integer > 0)
+        - ``delta`` - error probability per symbol (default: 0.01)
+        - ``m`` - number of allowed samples or ``None`` in which case ``m=2*n +
+          128`` as in [LP2011]_ (default: ``None``)
+
+        EXAMPLES::
+
+            sage: from sage.crypto.lwe import LindnerPeikert
+            sage: LindnerPeikert(n=20)
+            LWE(20, 2053, Discrete Gaussian sampler over the Integers with sigma = 3.600954 and c = 0, 'noise', 168)
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [14390 16308]))                  
+                :type "class")
+                nil [14265 16308])
+            ("UniformNoiseLWE" type
+               (:documentation "
+    LWE oracle with uniform secret with parameters as in [CGW2013]_.
+
+    .. automethod:: __init__
+    "
+                :superclasses ("LWE")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+        Construct LWE instance parameterised by security parameter ``n`` where
+        all other parameters are chosen as in [CGW2013]_.
+
+        INPUT:
+
+        - ``n`` - security parameter (integer >= 89)
+        - ``instance`` - one of
+
+          - \"key\" - the LWE-instance that hides the secret key is generated
+          - \"encrypt\" - the LWE-instance that hides the message is generated
+            (default: ``key``)
+
+        - ``m`` - number of allowed samples or ``None`` in which case ``m`` is
+          chosen as in [CGW2013]_.  (default: ``None``)
+
+        EXAMPLES::
+
+            sage: from sage.crypto.lwe import UniformNoiseLWE
+            sage: UniformNoiseLWE(89)
+            LWE(89, 154262477, UniformSampler(0, 351), 'noise', 131)
+
+            sage: UniformNoiseLWE(89, instance='encrypt')
+            LWE(131, 154262477, UniformSampler(0, 497), 'noise', 181)
+        \"\"\"" code nil (reparse-symbol indented_block_body) [16512 17406])
+                            ("if" code nil (reparse-symbol indented_block_body) [17416 17476])
+                            ("n2" variable nil (reparse-symbol indented_block_body) [17485 17491])
+                            ("C" code nil (reparse-symbol indented_block_body) [17500 17517])
+                            ("kk" variable nil (reparse-symbol indented_block_body) [17526 17560])
+                            ("n1" variable nil (reparse-symbol indented_block_body) [17569 17594])
+                            ("ke" variable nil (reparse-symbol indented_block_body) [17603 17637])
+                            ("l" code nil (reparse-symbol indented_block_body) [17646 17674])
+                            ("sk" variable nil (reparse-symbol indented_block_body) [17683 17712])
+                            ("se" variable nil (reparse-symbol indented_block_body) [17721 17752])
+                            ("q" variable nil (reparse-symbol indented_block_body) [17761 17872])
+                            ("if" code nil (reparse-symbol indented_block_body) [17882 17943])
+                            ("if" code nil (reparse-symbol indented_block_body) [17952 18433]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [16470 16474])
+                            ("n" variable nil (reparse-symbol function_parameters) [16476 16477])
+                            ("instance" variable nil (reparse-symbol function_parameters) [16479 16487])
+                            ("m" variable nil (reparse-symbol function_parameters) [16495 16496]))                          
+                        :documentation "
+        Construct LWE instance parameterised by security parameter ``n`` where
+        all other parameters are chosen as in [CGW2013]_.
+
+        INPUT:
+
+        - ``n`` - security parameter (integer >= 89)
+        - ``instance`` - one of
+
+          - \"key\" - the LWE-instance that hides the secret key is generated
+          - \"encrypt\" - the LWE-instance that hides the message is generated
+            (default: ``key``)
+
+        - ``m`` - number of allowed samples or ``None`` in which case ``m`` is
+          chosen as in [CGW2013]_.  (default: ``None``)
+
+        EXAMPLES::
+
+            sage: from sage.crypto.lwe import UniformNoiseLWE
+            sage: UniformNoiseLWE(89)
+            LWE(89, 154262477, UniformSampler(0, 351), 'noise', 131)
+
+            sage: UniformNoiseLWE(89, instance='encrypt')
+            LWE(131, 154262477, UniformSampler(0, 497), 'noise', 181)
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [16457 18433]))                  
+                :type "class")
+                nil [16310 18433])
+            ("RingLWE" type
+               (:documentation "
+    Ring Learning with Errors oracle.
+
+    .. automethod:: __init__
+    .. automethod:: __call__
+    "
+                :superclasses ("SageObject")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+        Construct a Ring-LWE oracle in dimension ``n=phi(N)`` over a ring of order
+        ``q`` with noise distribution ``D``.
+
+        INPUT:
+
+        - ``N`` - index of cyclotomic polynomial (integer > 0, must be power of 2)
+        - ``q`` - modulus typically > N (integer > 0)
+        - ``D`` - an error distribution such as an instance of
+          :class:`DiscreteGaussianDistributionPolynomialSampler` or :class:`UniformSampler`
+        - ``poly`` - a polynomial of degree ``phi(N)``. If ``None`` the
+          cyclotomic polynomial used (default: ``None``).
+        - ``secret_dist`` - distribution of the secret. See documentation of
+          :class:`LWE` for details (default='uniform')
+        - ``m`` - number of allowed samples or ``None`` if no such limit exists
+          (default: ``None``)
+
+        EXAMPLES::
+
+            sage: from sage.crypto.lwe import RingLWE
+            sage: from sage.stats.distributions.discrete_gaussian_polynomial import DiscreteGaussianDistributionPolynomialSampler
+            sage: D = DiscreteGaussianDistributionPolynomialSampler(ZZ['x'], n=euler_phi(20), sigma=3.0)
+            sage: RingLWE(N=20, q=next_prime(800), D=D);
+            RingLWE(20, 809, Discrete Gaussian sampler for polynomials of degree < 8 with σ=3.000000 in each component, x^8 - x^6 + x^4 - x^2 + 1, 'uniform', None)
+        \"\"\"" code nil (reparse-symbol indented_block_body) [18657 20012])
+                            ("self" variable nil (reparse-symbol indented_block_body) [20021 20036])
+                            ("self" variable nil (reparse-symbol indented_block_body) [20045 20066])
+                            ("self" variable nil (reparse-symbol indented_block_body) [20075 20086])
+                            ("self" variable nil (reparse-symbol indented_block_body) [20095 20107])
+                            ("self" variable nil (reparse-symbol indented_block_body) [20116 20143])
+                            ("if" code nil (reparse-symbol indented_block_body) [20153 20260])
+                            ("self" variable nil (reparse-symbol indented_block_body) [20269 20279])
+                            ("self" variable nil (reparse-symbol indented_block_body) [20288 20298])
+                            ("if" code nil (reparse-symbol indented_block_body) [20307 20430])
+                            ("self" variable nil (reparse-symbol indented_block_body) [20439 20486])
+                            ("self" variable nil (reparse-symbol indented_block_body) [20496 20526])
+                            ("if" code nil (reparse-symbol indented_block_body) [20535 20812]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [18591 18595])
+                            ("N" variable nil (reparse-symbol function_parameters) [18597 18598])
+                            ("q" variable nil (reparse-symbol function_parameters) [18600 18601])
+                            ("D" variable nil (reparse-symbol function_parameters) [18603 18604])
+                            ("poly" variable nil (reparse-symbol function_parameters) [18606 18610])
+                            ("secret_dist" variable nil (reparse-symbol function_parameters) [18617 18628])
+                            ("m" variable nil (reparse-symbol function_parameters) [18640 18641]))                          
+                        :documentation "
+        Construct a Ring-LWE oracle in dimension ``n=phi(N)`` over a ring of order
+        ``q`` with noise distribution ``D``.
+
+        INPUT:
+
+        - ``N`` - index of cyclotomic polynomial (integer > 0, must be power of 2)
+        - ``q`` - modulus typically > N (integer > 0)
+        - ``D`` - an error distribution such as an instance of
+          :class:`DiscreteGaussianDistributionPolynomialSampler` or :class:`UniformSampler`
+        - ``poly`` - a polynomial of degree ``phi(N)``. If ``None`` the
+          cyclotomic polynomial used (default: ``None``).
+        - ``secret_dist`` - distribution of the secret. See documentation of
+          :class:`LWE` for details (default='uniform')
+        - ``m`` - number of allowed samples or ``None`` if no such limit exists
+          (default: ``None``)
+
+        EXAMPLES::
+
+            sage: from sage.crypto.lwe import RingLWE
+            sage: from sage.stats.distributions.discrete_gaussian_polynomial import DiscreteGaussianDistributionPolynomialSampler
+            sage: D = DiscreteGaussianDistributionPolynomialSampler(ZZ['x'], n=euler_phi(20), sigma=3.0)
+            sage: RingLWE(N=20, q=next_prime(800), D=D);
+            RingLWE(20, 809, Discrete Gaussian sampler for polynomials of degree < 8 with σ=3.000000 in each component, x^8 - x^6 + x^4 - x^2 + 1, 'uniform', None)
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [18578 20812])
+                    ("_repr_" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [20828 20832]))                          
+                        :documentation "
+        EXAMPLES::
+
+            sage: from sage.crypto.lwe import DiscreteGaussianDistributionPolynomialSampler, RingLWE
+            sage: D = DiscreteGaussianDistributionPolynomialSampler(ZZ['x'], n=8, sigma=3.0)
+            sage: RingLWE(N=16, q=next_prime(400), D=D);
+            RingLWE(16, 401, Discrete Gaussian sampler for polynomials of degree < 8 with σ=3.000000 in each component, x^8 + 1, 'uniform', None)
+        ")
+                        (reparse-symbol indented_block_body) [20817 21584])
+                    ("__call__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [21603 21607]))                          
+                        :documentation "
+        EXAMPLES::
+
+            sage: from sage.crypto.lwe import DiscreteGaussianDistributionPolynomialSampler, RingLWE
+            sage: N = 16
+            sage: n = euler_phi(N)
+            sage: D = DiscreteGaussianDistributionPolynomialSampler(ZZ['x'], n, 5)
+            sage: ringlwe = RingLWE(N, 257, D, secret_dist='uniform')
+            sage: ringlwe()
+            ((228, 149, 226, 198, 38, 222, 222, 127), (178, 132, 72, 147, 77, 159, 187, 250))
+        ")
+                        (reparse-symbol indented_block_body) [21590 22349]))                  
+                :type "class")
+                nil [18434 22349])
+            ("RingLindnerPeikert" type
+               (:documentation "
+    Ring-LWE oracle with parameters as in [LP2011]_.
+
+    .. automethod:: __init__
+    "
+                :superclasses ("RingLWE")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+        Construct a Ring-LWE oracle in dimension ``n=phi(N)`` where
+        the modulus ``q`` and the ``stddev`` of the noise is chosen as in
+        [LP2011]_.
+
+        INPUT:
+
+        - ``N`` - index of cyclotomic polynomial (integer > 0, must be power of 2)
+        - ``delta`` - error probability per symbol (default: 0.01)
+        - ``m`` - number of allowed samples or ``None`` in which case ``3*n`` is
+          used (default: ``None``)
+
+        EXAMPLES::
+
+            sage: from sage.crypto.lwe import RingLindnerPeikert
+            sage: RingLindnerPeikert(N=16)
+            RingLWE(16, 1031, Discrete Gaussian sampler for polynomials of degree < 8 with σ=2.803372 in each component, x^8 + 1, 'noise', 24)
+        \"\"\"" code nil (reparse-symbol indented_block_body) [22539 23270])
+                            ("n" variable nil (reparse-symbol indented_block_body) [23279 23295])
+                            ("if" code nil (reparse-symbol indented_block_body) [23304 23338])
+                            ("c" variable nil (reparse-symbol indented_block_body) [23481 23496])
+                            ("c" variable nil (reparse-symbol indented_block_body) [23505 23565])
+                            ("s_t_bound" variable nil (reparse-symbol indented_block_body) [23606 23665])
+                            ("q" variable nil (reparse-symbol indented_block_body) [23783 23839])
+                            ("s" variable nil (reparse-symbol indented_block_body) [23901 23931])
+                            ("stddev" code nil (reparse-symbol indented_block_body) [23974 23999])
+                            ("D" variable nil (reparse-symbol indented_block_body) [24008 24077])
+                            ("RingLWE" code nil (reparse-symbol indented_block_body) [24086 24160]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [22501 22505])
+                            ("N" variable nil (reparse-symbol function_parameters) [22507 22508])
+                            ("delta" variable nil (reparse-symbol function_parameters) [22510 22515])
+                            ("m" variable nil (reparse-symbol function_parameters) [22522 22523]))                          
+                        :documentation "
+        Construct a Ring-LWE oracle in dimension ``n=phi(N)`` where
+        the modulus ``q`` and the ``stddev`` of the noise is chosen as in
+        [LP2011]_.
+
+        INPUT:
+
+        - ``N`` - index of cyclotomic polynomial (integer > 0, must be power of 2)
+        - ``delta`` - error probability per symbol (default: 0.01)
+        - ``m`` - number of allowed samples or ``None`` in which case ``3*n`` is
+          used (default: ``None``)
+
+        EXAMPLES::
+
+            sage: from sage.crypto.lwe import RingLindnerPeikert
+            sage: RingLindnerPeikert(N=16)
+            RingLWE(16, 1031, Discrete Gaussian sampler for polynomials of degree < 8 with σ=2.803372 in each component, x^8 + 1, 'noise', 24)
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [22488 24161]))                  
+                :type "class")
+                nil [22350 24161])
+            ("RingLWEConverter" type
+               (:documentation "
+    Wrapper callable to convert Ring-LWE oracles into LWE oracles by
+    disregarding the additional structure.
+
+    .. automethod:: __init__
+    .. automethod:: __call__
+    "
+                :superclasses ("SageObject")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+        INPUT:
+
+        - ``ringlwe`` - an instance of a :class:`RingLWE`
+
+        EXAMPLES::
+
+            sage: from sage.crypto.lwe import DiscreteGaussianDistributionPolynomialSampler, RingLWE, RingLWEConverter
+            sage: D = DiscreteGaussianDistributionPolynomialSampler(ZZ['x'], euler_phi(16), 5)
+            sage: lwe = RingLWEConverter(RingLWE(16, 257, D, secret_dist='uniform'))
+            sage: set_random_seed(1337)
+            sage: lwe()
+            ((130, 32, 216, 3, 125, 58, 197, 171), 189)
+        \"\"\"" code nil (reparse-symbol indented_block_body) [24426 24955])
+                            ("self" variable nil (reparse-symbol indented_block_body) [24964 24986])
+                            ("self" variable nil (reparse-symbol indented_block_body) [24995 25006])
+                            ("self" variable nil (reparse-symbol indented_block_body) [25015 25030])
+                            ("self" variable nil (reparse-symbol indented_block_body) [25039 25062]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [24402 24406])
+                            ("ringlwe" variable nil (reparse-symbol function_parameters) [24408 24415]))                          
+                        :documentation "
+        INPUT:
+
+        - ``ringlwe`` - an instance of a :class:`RingLWE`
+
+        EXAMPLES::
+
+            sage: from sage.crypto.lwe import DiscreteGaussianDistributionPolynomialSampler, RingLWE, RingLWEConverter
+            sage: D = DiscreteGaussianDistributionPolynomialSampler(ZZ['x'], euler_phi(16), 5)
+            sage: lwe = RingLWEConverter(RingLWE(16, 257, D, secret_dist='uniform'))
+            sage: set_random_seed(1337)
+            sage: lwe()
+            ((130, 32, 216, 3, 125, 58, 197, 171), 189)
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [24389 25063])
+                    ("__call__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [25081 25085]))                          
+                        :documentation "
+        EXAMPLES::
+
+            sage: from sage.crypto.lwe import DiscreteGaussianDistributionPolynomialSampler, RingLWE, RingLWEConverter
+            sage: D = DiscreteGaussianDistributionPolynomialSampler(ZZ['x'], euler_phi(16), 5)
+            sage: lwe = RingLWEConverter(RingLWE(16, 257, D, secret_dist='uniform'))
+            sage: set_random_seed(1337)
+            sage: lwe()
+            ((130, 32, 216, 3, 125, 58, 197, 171), 189)
+        ")
+                        (reparse-symbol indented_block_body) [25068 25829])
+                    ("_repr_" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [25845 25849]))                          
+                        :documentation "
+        EXAMPLES::
+
+            sage: from sage.crypto.lwe import DiscreteGaussianDistributionPolynomialSampler, RingLWE, RingLWEConverter
+            sage: D = DiscreteGaussianDistributionPolynomialSampler(ZZ['x'], euler_phi(20), 5)
+            sage: rlwe = RingLWE(20, 257, D)
+            sage: lwe = RingLWEConverter(rlwe)
+            sage: lwe
+            RingLWEConverter(RingLWE(20, 257, Discrete Gaussian sampler for polynomials of degree < 8 with σ=5.000000 in each component, x^8 - x^6 + x^4 - x^2 + 1, 'uniform', None))
+
+        ")
+                        (reparse-symbol indented_block_body) [25834 26463]))                  
+                :type "class")
+                nil [24162 26463])
+            ("samples" function
+               (:documentation "
+    Return ``m`` LWE samples.
+
+    INPUT:
+
+    - ``m`` - the number of samples (integer > 0)
+    - ``n`` - the security parameter (integer > 0)
+    - ``lwe`` - either
+
+      - a subclass of :class:`LWE` such as :class:`Regev` or :class:`LindnerPeikert`
+      - an instance of :class:`LWE` or any subclass
+      - the name of any such class (e.g., \"Regev\", \"LindnerPeikert\")
+
+    - ``seed`` - seed to be used for generation or ``None`` if no specific seed
+      shall be set (default: ``None``)
+    - ``balanced`` - use function :func:`balance_sample` to return balanced
+      representations of finite field elements (default: ``False``)
+    - ``**kwds`` - passed through to LWE constructor
+
+    EXAMPLES::
+
+        sage: from sage.crypto.lwe import samples, Regev
+        sage: samples(2, 20, Regev, seed=1337)
+        [((199, 388, 337, 53, 200, 284, 336, 215, 75, 14, 274, 234, 97, 255, 246, 153, 268, 218, 396, 351), 15),
+         ((365, 227, 333, 165, 76, 328, 288, 206, 286, 42, 175, 155, 190, 275, 114, 280, 45, 218, 304, 386), 143)]
+
+        sage: from sage.crypto.lwe import samples, Regev
+        sage: samples(2, 20, Regev, balanced=True, seed=1337)
+        [((199, -13, -64, 53, 200, -117, -65, -186, 75, 14, -127, -167, 97, -146, -155, 153, -133, -183, -5, -50), 15),
+         ((-36, -174, -68, 165, 76, -73, -113, -195, -115, 42, 175, 155, 190, -126, 114, -121, 45, -183, -97, -15), 143)]
+
+        sage: from sage.crypto.lwe import samples
+        sage: samples(2, 20, 'LindnerPeikert')
+        [((506, 1205, 398, 0, 337, 106, 836, 75, 1242, 642, 840, 262, 1823, 1798, 1831, 1658, 1084, 915, 1994, 163), 1447),
+         ((463, 250, 1226, 1906, 330, 933, 1014, 1061, 1322, 2035, 1849, 285, 1993, 1975, 864, 1341, 41, 1955, 1818, 1357), 312)]
+
+    "
+                :arguments 
+                  ( ("m" variable nil (reparse-symbol function_parameters) [26476 26477])
+                    ("n" variable nil (reparse-symbol function_parameters) [26479 26480])
+                    ("lwe" variable nil (reparse-symbol function_parameters) [26482 26485])
+                    ("seed" variable nil (reparse-symbol function_parameters) [26487 26491])
+                    ("balanced" variable nil (reparse-symbol function_parameters) [26498 26506])
+                    ("kwds" variable nil (reparse-symbol function_parameters) [26514 26520]))                  )
+                nil [26464 28762])
+            ("balance_sample" function (:arguments 
+              ( ("s" variable nil (reparse-symbol function_parameters) [28782 28783])
+                ("q" variable nil (reparse-symbol function_parameters) [28785 28786]))              ) nil [28763 30967]))          
+      :file "lwe.py"
+      :pointmax 30967
+      :fsize 30971
+      :lastmodtime '(23088 54844 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("__future__" include nil nil [1 39])
+            ("sage.crypto.sbox" include nil nil [40 63])
+            ("sage.structure.sage_object" include nil nil [64 129])
+            ("register_unpickle_override" code nil nil [130 210])
+            ("sage.misc.lazy_import" include nil nil [212 257])
+            ("lazy_import" code nil nil [259 670])
+            ("lazy_import" code nil nil [672 832])
+            ("lazy_import" code nil nil [834 1038]))          
+      :file "all.py"
+      :pointmax 1039
+      :fsize 1038
+      :lastmodtime '(22898 27909 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("r\"\"\"
+S-Boxes and Their Algebraic Representations
+\"\"\"" code nil nil [1 53])
+            ("__future__" include nil nil [54 101])
+            ("six.moves" include nil nil [102 129])
+            ("six" include nil nil [130 159])
+            ("sage.combinat.integer_vector" include nil nil [161 216])
+            ("sage.crypto.boolean_function" include nil nil [217 273])
+            ("sage.matrix.constructor" include nil nil [274 316])
+            ("sage.misc.cachefunc" include nil nil [317 362])
+            ("sage.misc.functional" include nil nil [363 403])
+            ("sage.misc.misc_c" include nil nil [404 444])
+            ("sage.modules.free_module_element" include nil nil [445 496])
+            ("sage.rings.finite_rings.element_base" include nil nil [497 567])
+            ("sage.rings.finite_rings.finite_field_constructor" include nil nil [568 646])
+            ("sage.rings.ideal" include nil nil [647 693])
+            ("sage.rings.integer_ring" include nil nil [694 732])
+            ("sage.rings.integer" include nil nil [733 771])
+            ("sage.rings.polynomial.polynomial_ring_constructor" include nil nil [772 848])
+            ("sage.structure.sage_object" include nil nil [849 898])
+            ("SBox" type
+               (:superclasses ("SageObject")
+                :members 
+                  ( ("r\"\"\"
+    A substitution box or S-box is one of the basic components of
+    symmetric key cryptography. In general, an S-box takes ``m`` input
+    bits and transforms them into ``n`` output bits. This is called an
+    ``mxn`` S-box and is often implemented as a lookup table. These
+    S-boxes are carefully chosen to resist linear and differential
+    cryptanalysis [He2002]_.
+
+    This module implements an S-box class which allows an algebraic
+    treatment and determine various cryptographic properties.
+
+    EXAMPLES:
+
+    We consider the S-box of the block cipher PRESENT [PRESENT07]_::
+
+        sage: from sage.crypto.sbox import SBox
+        sage: S = SBox(12,5,6,11,9,0,10,13,3,14,15,8,4,7,1,2); S
+        (12, 5, 6, 11, 9, 0, 10, 13, 3, 14, 15, 8, 4, 7, 1, 2)
+        sage: S(1)
+        5
+
+    Note that by default bits are interpreted in big endian
+    order. This is not consistent with the rest of Sage, which has a
+    strong bias towards little endian, but is consistent with most
+    cryptographic literature::
+
+        sage: S([0,0,0,1])
+        [0, 1, 0, 1]
+
+        sage: S = SBox(12,5,6,11,9,0,10,13,3,14,15,8,4,7,1,2, big_endian=False)
+        sage: S(1)
+        5
+        sage: S([0,0,0,1])
+        [1, 1, 0, 0]
+
+
+    Now we construct an ``SBox`` object for the 4-bit small scale AES
+    S-Box (cf. :mod:`sage.crypto.mq.sr`)::
+
+        sage: sr = mq.SR(1,1,1,4, allow_zero_inversions=True)
+        sage: S = SBox([sr.sub_byte(e) for e in list(sr.k)])
+        sage: S
+        (6, 5, 2, 9, 4, 7, 3, 12, 14, 15, 10, 0, 8, 1, 13, 11)
+
+    AUTHORS:
+
+    - Rusydi H. Makarim (2016-03-31) : added more functions to determine related cryptographic properties
+    - Yann Laigle-Chapuy (2009-07-01): improve linear and difference matrix computation
+    - Martin R. Albrecht (2008-03-12): initial implementation
+
+    REFERENCES:
+
+    - [He2002]_
+
+    - [PRESENT07]_
+
+    - [CDL2015]_
+    \"\"\"" code nil (reparse-symbol indented_block_body) [928 2830])
+                    ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+        Construct a substitution box (S-box) for a given lookup table
+        `S`.
+
+        INPUT:
+
+        - ``S`` - a finite iterable defining the S-box with integer or
+          finite field elements
+
+        - ``big_endian`` - controls whether bits shall be ordered in
+          big endian order (default: ``True``)
+
+        EXAMPLES:
+
+        We construct a 3-bit S-box where e.g. the bits (0,0,1) are
+        mapped to (1,1,1).::
+
+            sage: from sage.crypto.sbox import SBox
+            sage: S = SBox(7,6,0,4,2,5,1,3); S
+            (7, 6, 0, 4, 2, 5, 1, 3)
+
+            sage: S(0)
+            7
+
+        TESTS::
+
+            sage: from sage.crypto.sbox import SBox
+            sage: S = SBox()
+            Traceback (most recent call last):
+            ...
+            TypeError: No lookup table provided.
+            sage: S = SBox(1, 2, 3)
+            Traceback (most recent call last):
+            ...
+            TypeError: Lookup table length is not a power of 2.
+            sage: S = SBox(5, 6, 0, 3, 4, 2, 1, 2)
+            sage: S.n
+            3
+        \"\"\"" code nil (reparse-symbol indented_block_body) [2882 3969])
+                            ("if" code nil (reparse-symbol indented_block_body) [3978 4197])
+                            ("_S" variable nil (reparse-symbol indented_block_body) [4206 4213])
+                            ("for" code nil (reparse-symbol indented_block_body) [4222 4387])
+                            ("S" variable nil (reparse-symbol indented_block_body) [4395 4401])
+                            ("if" code nil (reparse-symbol indented_block_body) [4411 4517])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4525 4536])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4546 4578])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4587 4614])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4623 4638])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4647 4695])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4705 4780]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2849 2853])
+                            ("args" variable nil (reparse-symbol function_parameters) [2855 2860])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [2863 2871]))                          
+                        :documentation "
+        Construct a substitution box (S-box) for a given lookup table
+        `S`.
+
+        INPUT:
+
+        - ``S`` - a finite iterable defining the S-box with integer or
+          finite field elements
+
+        - ``big_endian`` - controls whether bits shall be ordered in
+          big endian order (default: ``True``)
+
+        EXAMPLES:
+
+        We construct a 3-bit S-box where e.g. the bits (0,0,1) are
+        mapped to (1,1,1).::
+
+            sage: from sage.crypto.sbox import SBox
+            sage: S = SBox(7,6,0,4,2,5,1,3); S
+            (7, 6, 0, 4, 2, 5, 1, 3)
+
+            sage: S(0)
+            7
+
+        TESTS::
+
+            sage: from sage.crypto.sbox import SBox
+            sage: S = SBox()
+            Traceback (most recent call last):
+            ...
+            TypeError: No lookup table provided.
+            sage: S = SBox(1, 2, 3)
+            Traceback (most recent call last):
+            ...
+            TypeError: Lookup table length is not a power of 2.
+            sage: S = SBox(5, 6, 0, 3, 4, 2, 1, 2)
+            sage: S.n
+            3
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [2836 4781])
+                    ("_repr_" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4797 4801]))                          
+                        :documentation "
+        EXAMPLES::
+
+            sage: from sage.crypto.sbox import SBox
+            sage: SBox(7,6,0,4,2,5,1,3) #indirect doctest
+            (7, 6, 0, 4, 2, 5, 1, 3)
+        ")
+                        (reparse-symbol indented_block_body) [4786 5053])
+                    ("__len__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5070 5074]))                          
+                        :documentation "
+        Return the length of input bit strings.
+
+        EXAMPLES::
+
+            sage: from sage.crypto.sbox import SBox
+            sage: len(SBox(7,6,0,4,2,5,1,3))
+            3
+        ")
+                        (reparse-symbol indented_block_body) [5058 5303])
+                    ("__eq__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5319 5323])
+                            ("other" variable nil (reparse-symbol function_parameters) [5325 5330]))                          
+                        :documentation "
+        S-boxes are considered to be equal if all construction
+        parameters match.
+
+        EXAMPLES::
+
+            sage: from sage.crypto.sbox import SBox
+            sage: S = SBox(7,6,0,4,2,5,1,3)
+            sage: loads(dumps(S)) == S
+            True
+        ")
+                        (reparse-symbol indented_block_body) [5308 5694])
+                    ("__ne__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5710 5714])
+                            ("other" variable nil (reparse-symbol function_parameters) [5716 5721]))                          
+                        :documentation "
+        S-boxes are considered to be equal if all construction
+        parameters match.
+
+        EXAMPLES::
+
+            sage: from sage.crypto.sbox import SBox
+            sage: S = SBox(7,6,0,4,2,5,1,3)
+            sage: S != S
+            False
+        ")
+                        (reparse-symbol indented_block_body) [5699 6035])
+                    ("to_bits" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6052 6056])
+                            ("x" variable nil (reparse-symbol function_parameters) [6058 6059])
+                            ("n" variable nil (reparse-symbol function_parameters) [6061 6062]))                          
+                        :documentation "
+        Return bitstring of length ``n`` for integer ``x``. The
+        returned bitstring is guaranteed to have length ``n``.
+
+        INPUT:
+
+        - ``x`` - an integer
+
+        - ``n`` - bit length (optional)
+
+        EXAMPLES::
+
+            sage: from sage.crypto.sbox import SBox
+            sage: S = SBox(7,6,0,4,2,5,1,3)
+            sage: S.to_bits(6)
+            [1, 1, 0]
+
+            sage: S.to_bits( S(6) )
+            [0, 0, 1]
+
+            sage: S( S.to_bits( 6 ) )
+            [0, 0, 1]
+        ")
+                        (reparse-symbol indented_block_body) [6040 6857])
+                    ("from_bits" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6876 6880])
+                            ("x" variable nil (reparse-symbol function_parameters) [6882 6883])
+                            ("n" variable nil (reparse-symbol function_parameters) [6885 6886]))                          
+                        :documentation "
+        Return integer for bitstring ``x`` of length ``n``.
+
+        INPUT:
+
+        - ``x`` - a bitstring
+
+        - ``n`` - bit length (optional)
+
+        EXAMPLES::
+
+            sage: from sage.crypto.sbox import SBox
+            sage: S = SBox(7,6,0,4,2,5,1,3)
+            sage: S.from_bits( [1,1,0])
+            6
+
+            sage: S( S.from_bits( [1,1,0] ) )
+            1
+            sage: S.from_bits( S( [1,1,0] ) )
+            1
+        ")
+                        (reparse-symbol indented_block_body) [6862 7607])
+                    ("_rpad" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7622 7626])
+                            ("x" variable nil (reparse-symbol function_parameters) [7627 7628])
+                            ("n" variable nil (reparse-symbol function_parameters) [7630 7631]))                          
+                        :documentation "
+        Right pads ``x`` such that ``len(x) == n``.
+
+        EXAMPLES::
+
+            sage: from sage.crypto.sbox import SBox
+            sage: S = SBox(7,6,0,4,2,5,1,3)
+            sage: S._rpad([1,1])
+            [1, 1, 0]
+        ")
+                        (reparse-symbol indented_block_body) [7612 7997])
+                    ("__call__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8015 8019])
+                            ("X" variable nil (reparse-symbol function_parameters) [8021 8022]))                          
+                        :documentation "
+        Apply substitution to ``X``.
+
+        If ``X`` is a list, it is interpreted as a sequence of bits
+        depending on the bit order of this S-box.
+
+        INPUT:
+
+        - ``X`` - either an integer, a tuple of `\\GF{2}` elements of
+          length ``len(self)`` or a finite field element in
+          `\\GF{2^n}`. As a last resort this function tries to convert
+          ``X`` to an integer.
+
+        EXAMPLES::
+
+            sage: from sage.crypto.sbox import SBox
+            sage: S = SBox([7,6,0,4,2,5,1,3])
+            sage: S(7)
+            3
+
+            sage: S((0,2,3))
+            [0, 1, 1]
+
+            sage: S[0]
+            7
+
+            sage: S[(0,0,1)]
+            [1, 1, 0]
+
+            sage: k.<a> = GF(2^3)
+            sage: S(a^2)
+            a
+
+            sage: S(QQ(3))
+            4
+
+            sage: S([1]*10^6)
+            Traceback (most recent call last):
+            ...
+            TypeError: Cannot apply SBox to provided element.
+
+            sage: S(1/2)
+            Traceback (most recent call last):
+            ...
+            TypeError: Cannot apply SBox to 1/2.
+
+            sage: S = SBox(3, 0, 1, 3, 1, 0, 2, 2)
+            sage: S(0)
+            3
+            sage: S([0,0,0])
+            [1, 1]
+        ")
+                        (reparse-symbol indented_block_body) [8002 10563])
+                    ("__getitem__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10584 10588])
+                            ("X" variable nil (reparse-symbol function_parameters) [10590 10591]))                          
+                        :documentation "
+        See  :meth:`SBox.__call__`.
+
+        EXAMPLES::
+
+            sage: from sage.crypto.sbox import SBox
+            sage: S = SBox([7,6,0,4,2,5,1,3])
+            sage: S[7]
+            3
+        ")
+                        (reparse-symbol indented_block_body) [10568 10833])
+                    ("is_permutation" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10857 10861]))                          )
+                        (reparse-symbol indented_block_body) [10838 11344])
+                    ("__iter__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11362 11366]))                          
+                        :documentation "
+        EXAMPLES::
+
+            sage: from sage.crypto.sbox import SBox
+            sage: S = SBox(7,6,0,4,2,5,1,3)
+            sage: [e for e in S]
+            [7, 6, 0, 4, 2, 5, 1, 3]
+        ")
+                        (reparse-symbol indented_block_body) [11349 11640])
+                    ("difference_distribution_matrix" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11680 11684]))                          
+                        :documentation "
+        Return difference distribution matrix ``A`` for this S-box.
+
+        The rows of ``A`` encode the differences ``Delta I`` of the
+        input and the columns encode the difference ``Delta O`` for
+        the output. The bits are ordered according to the endianess of
+        this S-box. The value at ``A[Delta I,Delta O]`` encodes how
+        often ``Delta O`` is the actual output difference given
+        ``Delta I`` as input difference.
+
+        See [He2002]_ for an introduction to differential
+        cryptanalysis.
+
+        EXAMPLES::
+
+            sage: from sage.crypto.sbox import SBox
+            sage: S = SBox(7,6,0,4,2,5,1,3)
+            sage: S.difference_distribution_matrix()
+            [8 0 0 0 0 0 0 0]
+            [0 2 2 0 2 0 0 2]
+            [0 0 2 2 0 0 2 2]
+            [0 2 0 2 2 0 2 0]
+            [0 2 0 2 0 2 0 2]
+            [0 0 2 2 2 2 0 0]
+            [0 2 2 0 0 2 2 0]
+            [0 0 0 0 2 2 2 2]
+        ")
+                        (reparse-symbol indented_block_body) [11645 12925])
+                    ("maximal_difference_probability_absolute" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12974 12978]))                          
+                        :documentation "
+        Return the difference probability of the difference with the
+        highest probability in absolute terms, i.e. how often it
+        occurs in total.
+
+        Equivalently, this is equal to the differential uniformity
+        of this S-Box.
+
+        EXAMPLES::
+
+            sage: from sage.crypto.sbox import SBox
+            sage: S = SBox(7,6,0,4,2,5,1,3)
+            sage: S.maximal_difference_probability_absolute()
+            2
+
+        .. note::
+
+          This code is mainly called internally.
+        ")
+                        (reparse-symbol indented_block_body) [12930 13636])
+                    ("maximal_difference_probability" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [13676 13680]))                          )
+                        (reparse-symbol indented_block_body) [13641 14147])
+                    ("linear_approximation_matrix" function
+                       (:parent "dummy"
+                        :decorators 
+                          ( ("cached_method" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [14203 14207]))                          
+                        :documentation "
+        Return linear approximation matrix ``A`` for this S-box.
+
+        Let ``i_b`` be the ``b``-th bit of ``i`` and ``o_b`` the
+        ``b``-th bit of ``o``. Then ``v = A[i,o]`` encodes the bias of
+        the equation ``sum( i_b * x_i ) = sum( o_b * y_i )`` if
+        ``x_i`` and ``y_i`` represent the input and output variables
+        of the S-box.
+
+        See [He2002]_ for an introduction to linear cryptanalysis.
+
+        EXAMPLES::
+
+            sage: from sage.crypto.sbox import SBox
+            sage: S = SBox(7,6,0,4,2,5,1,3)
+            sage: S.linear_approximation_matrix()
+            [ 4  0  0  0  0  0  0  0]
+            [ 0  0  0  0  2  2  2 -2]
+            [ 0  0 -2 -2 -2  2  0  0]
+            [ 0  0 -2  2  0  0 -2 -2]
+            [ 0  2  0  2 -2  0  2  0]
+            [ 0 -2  0  2  0  2  0  2]
+            [ 0 -2 -2  0  0 -2  2  0]
+            [ 0 -2  2  0 -2  0  0 -2]
+
+        According to this matrix the first bit of the input is equal
+        to the third bit of the output 6 out of 8 times::
+
+            sage: for i in srange(8): print(S.to_bits(i)[0] == S.to_bits(S(i))[2])
+            False
+            True
+            True
+            True
+            False
+            True
+            True
+            True
+        ")
+                        (reparse-symbol indented_block_body) [14152 15892])
+                    ("maximal_linear_bias_absolute" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [15930 15934]))                          
+                        :documentation "
+        Return maximal linear bias, i.e. how often the linear
+        approximation with the highest bias is true or false minus
+        `2^{n-1}`.
+
+        EXAMPLES::
+
+            sage: from sage.crypto.sbox import SBox
+            sage: S = SBox(7,6,0,4,2,5,1,3)
+            sage: S.maximal_linear_bias_absolute()
+            2
+        ")
+                        (reparse-symbol indented_block_body) [15897 16407])
+                    ("maximal_linear_bias_relative" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [16445 16449]))                          
+                        :documentation "
+        Return maximal bias of all linear approximations of this
+        S-box.
+
+        EXAMPLES::
+
+            sage: from sage.crypto.sbox import SBox
+            sage: S = SBox(7,6,0,4,2,5,1,3)
+            sage: S.maximal_linear_bias_relative()
+            0.25
+        ")
+                        (reparse-symbol indented_block_body) [16412 16806])
+                    ("ring" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [16820 16824]))                          
+                        :documentation "
+        Create, return and cache a polynomial ring for S-box
+        polynomials.
+
+        EXAMPLES::
+
+            sage: from sage.crypto.sbox import SBox
+            sage: S = SBox(7,6,0,4,2,5,1,3)
+            sage: S.ring()
+            Multivariate Polynomial Ring in x0, x1, x2, y0, y1, y2 over Finite Field of size 2
+        ")
+                        (reparse-symbol indented_block_body) [16811 17466])
+                    ("solutions" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [17485 17489])
+                            ("X" variable nil (reparse-symbol function_parameters) [17491 17492])
+                            ("Y" variable nil (reparse-symbol function_parameters) [17499 17500]))                          
+                        :documentation "
+        Return a dictionary of solutions to this S-box.
+
+        INPUT:
+
+        - ``X`` - input variables (default: ``None``)
+
+        - ``Y`` - output variables (default: ``None``)
+
+        EXAMPLES::
+
+            sage: from sage.crypto.sbox import SBox
+            sage: S = SBox([7,6,0,4,2,5,1,3])
+            sage: F = S.polynomials()
+            sage: s = S.solutions()
+            sage: any(f.subs(_s) for f in F for _s in s)
+            False
+        ")
+                        (reparse-symbol indented_block_body) [17471 18390])
+                    ("polynomials" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [18411 18415])
+                            ("X" variable nil (reparse-symbol function_parameters) [18417 18418])
+                            ("Y" variable nil (reparse-symbol function_parameters) [18425 18426])
+                            ("degree" variable nil (reparse-symbol function_parameters) [18433 18439])
+                            ("groebner" variable nil (reparse-symbol function_parameters) [18443 18451]))                          
+                        :documentation "
+        Return a list of polynomials satisfying this S-box.
+
+        First, a simple linear fitting is performed for the given
+        ``degree`` (cf. for example [BC2003]_). If ``groebner=True`` a
+        Groebner basis is also computed for the result of that
+        process.
+
+        INPUT:
+
+        - ``X`` - input variables
+
+        - ``Y`` - output variables
+
+        - ``degree`` - integer > 0 (default: ``2``)
+
+        - ``groebner`` - calculate a reduced Groebner basis of the
+          spanning polynomials to obtain more polynomials (default:
+          ``False``)
+
+        EXAMPLES::
+
+            sage: from sage.crypto.sbox import SBox
+            sage: S = SBox(7,6,0,4,2,5,1,3)
+            sage: P = S.ring()
+
+        By default, this method returns an indirect representation::
+
+            sage: S.polynomials()
+            [x0*x2 + x1 + y1 + 1,
+             x0*x1 + x1 + x2 + y0 + y1 + y2 + 1,
+             x0*y1 + x0 + x2 + y0 + y2,
+             x0*y0 + x0*y2 + x1 + x2 + y0 + y1 + y2 + 1,
+             x1*x2 + x0 + x1 + x2 + y2 + 1,
+             x0*y0 + x1*y0 + x0 + x2 + y1 + y2,
+             x0*y0 + x1*y1 + x1 + y1 + 1,
+             x1*y2 + x1 + x2 + y0 + y1 + y2 + 1,
+             x0*y0 + x2*y0 + x1 + x2 + y1 + 1,
+             x2*y1 + x0 + y1 + y2,
+             x2*y2 + x1 + y1 + 1,
+             y0*y1 + x0 + x2 + y0 + y1 + y2,
+             y0*y2 + x1 + x2 + y0 + y1 + 1,
+             y1*y2 + x2 + y0]
+
+        We can get a direct representation by computing a
+        lexicographical Groebner basis with respect to the right
+        variable ordering, i.e. a variable ordering where the output
+        bits are greater than the input bits::
+
+            sage: P.<y0,y1,y2,x0,x1,x2> = PolynomialRing(GF(2),6,order='lex')
+            sage: S.polynomials([x0,x1,x2],[y0,y1,y2], groebner=True)
+            [y0 + x0*x1 + x0*x2 + x0 + x1*x2 + x1 + 1,
+             y1 + x0*x2 + x1 + 1,
+             y2 + x0 + x1*x2 + x1 + x2 + 1]
+        ")
+                        (reparse-symbol indented_block_body) [18395 22530])
+                    ("interpolation_polynomial" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [22564 22568])
+                            ("k" variable nil (reparse-symbol function_parameters) [22570 22571]))                          )
+                        (reparse-symbol indented_block_body) [22535 23968])
+                    ("cnf" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [23981 23985])
+                            ("xi" variable nil (reparse-symbol function_parameters) [23987 23989])
+                            ("yi" variable nil (reparse-symbol function_parameters) [23996 23998])
+                            ("format" variable nil (reparse-symbol function_parameters) [24005 24011]))                          
+                        :documentation "
+        Return a representation of this S-Box in conjunctive normal
+        form.
+
+        This function examines the truth tables for each output bit of
+        the S-Box and thus has complexity `n * 2^m` for an ``m x n``
+        S-Box.
+
+        INPUT:
+
+        - ``xi`` - indices for the input variables (default: ``1...m``)
+
+        - ``yi`` - indices for the output variables (default: ``m+1 ... m+n``)
+
+        - ``format`` - output format, see below (default: ``None``)
+
+        FORMATS:
+
+        - ``None`` - return a list of tuples of integers where each
+          tuple represents a clause, the absolute value of an integer
+          represents a variable and the sign of an integer indicates
+          inversion.
+
+        - ``symbolic`` - a string that can be parsed by the
+          ``SymbolicLogic`` package.
+
+        - ``dimacs`` - a string in DIMACS format which is the gold
+          standard for SAT-solver input (cf. http://www.satlib.org/).
+
+        - ``dimacs_headless`` - a string in DIMACS format, but without
+          the header. This is useful for concatenation of outputs.
+
+        EXAMPLES:
+
+        We give a very small example to explain the output format::
+
+            sage: from sage.crypto.sbox import SBox
+            sage: S = SBox(1,2,0,3); S
+            (1, 2, 0, 3)
+            sage: cnf = S.cnf(); cnf
+            [(1, 2, -3),  (1, 2, 4),
+             (1, -2, 3),  (1, -2, -4),
+             (-1, 2, -3), (-1, 2, -4),
+             (-1, -2, 3), (-1, -2, 4)]
+
+        This output completely describes the S-Box. For instance, we
+        can check that ``S([0,1]) -> [1,0]`` satisfies every clause if
+        the first input bit corresponds to the index ``1`` and the
+        last output bit corresponds to the index ``3`` in the
+        output.
+
+        We can convert this representation to the DIMACS format::
+
+            sage: print(S.cnf(format='dimacs'))
+            p cnf 4 8
+            1 2 -3 0
+            1 2 4 0
+            1 -2 3 0
+            1 -2 -4 0
+            -1 2 -3 0
+            -1 2 -4 0
+            -1 -2 3 0
+            -1 -2 4 0
+
+        For concatenation we can strip the header::
+
+            sage: print(S.cnf(format='dimacs_headless'))
+            1 2 -3 0
+            1 2 4 0
+            1 -2 3 0
+            1 -2 -4 0
+            -1 2 -3 0
+            -1 2 -4 0
+            -1 -2 3 0
+            -1 -2 4 0
+
+        This might be helpful in combination with the ``xi`` and
+        ``yi`` parameter to assign indices manually::
+
+            sage: print(S.cnf(xi=[10,20],yi=[30,40], format='dimacs_headless'))
+            10 20 -30 0
+            10 20 40 0
+            10 -20 30 0
+            10 -20 -40 0
+            -10 20 -30 0
+            -10 20 -40 0
+            -10 -20 30 0
+            -10 -20 40 0
+
+        We can also return a string which is parse-able by the
+        ``SymbolicLogic`` package::
+
+            sage: log = SymbolicLogic()
+            sage: s = log.statement(S.cnf(format='symbolic'))
+            sage: log.truthtable(s)[1:]
+            [['False', 'False', 'False', 'False', 'False'],
+             ['False', 'False', 'False', 'True', 'False'],
+             ['False', 'False', 'True', 'False', 'False'],
+             ['False', 'False', 'True', 'True', 'True'],
+             ['False', 'True', 'False', 'False', 'True'],
+             ['False', 'True', 'False', 'True', 'True'],
+             ['False', 'True', 'True', 'False', 'True'],
+             ['False', 'True', 'True', 'True', 'True'],
+             ['True', 'False', 'False', 'False', 'True'],
+             ['True', 'False', 'False', 'True', 'True'],
+             ['True', 'False', 'True', 'False', 'True'],
+             ['True', 'False', 'True', 'True', 'True'],
+             ['True', 'True', 'False', 'False', 'True'],
+             ['True', 'True', 'False', 'True', 'True'],
+             ['True', 'True', 'True', 'False', 'True'],
+             ['True', 'True', 'True', 'True', 'True']]
+
+
+        This function respects endianness of the S-Box::
+
+            sage: S = SBox(1,2,0,3, big_endian=False); S
+            (1, 2, 0, 3)
+            sage: cnf = S.cnf(); cnf
+            [(1, 2, -4), (1, 2, 3),
+             (-1, 2, 4), (-1, 2, -3),
+             (1, -2, -4), (1, -2, -3),
+             (-1, -2, 4), (-1, -2, 3)]
+
+        S-Boxes with m!=n also work:
+
+            sage: o = list(range(8)) + list(range(8))
+            sage: shuffle(o)
+            sage: S = SBox(o)
+            sage: S.is_permutation()
+            False
+
+            sage: len(S.cnf()) == 3*2^4
+            True
+
+
+        TESTS:
+
+            sage: from sage.crypto.sbox import SBox
+            sage: S = SBox(1,2,0,3, big_endian=False)
+            sage: S.cnf([1000,1001,1002], [2000,2001,2002])
+            Traceback (most recent call last):
+            ...
+            TypeError: first arg required to have length 2, got 3 instead.
+        ")
+                        (reparse-symbol indented_block_body) [23973 30546])
+                    ("component_function" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [30574 30578])
+                            ("b" variable nil (reparse-symbol function_parameters) [30580 30581]))                          )
+                        (reparse-symbol indented_block_body) [30551 31793])
+                    ("nonlinearity" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [31815 31819]))                          
+                        :documentation "
+        Return the nonlinearity of this S-Box.
+
+        The nonlinearity of an S-Box is defined as the minimum nonlinearity
+        of all its component functions.
+
+        EXAMPLES::
+
+            sage: from sage.crypto.sbox import SBox
+            sage: S = mq.SR(1,4,4,8).sbox()
+            sage: S.nonlinearity()
+            112
+        ")
+                        (reparse-symbol indented_block_body) [31798 32263])
+                    ("linearity" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [32282 32286]))                          
+                        :documentation "
+        Return the linearity of this S-Box.
+
+        EXAMPLES::
+
+            sage: from sage.crypto.sbox import SBox
+            sage: S = mq.SR(1, 4, 4, 8).sbox()
+            sage: S.linearity()
+            32
+        ")
+                        (reparse-symbol indented_block_body) [32268 32580])
+                    ("is_apn" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [32596 32600]))                          )
+                        (reparse-symbol indented_block_body) [32585 33424])
+                    ("differential_branch_number" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [33460 33464]))                          )
+                        (reparse-symbol indented_block_body) [33429 34387])
+                    ("linear_branch_number" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [34417 34421]))                          )
+                        (reparse-symbol indented_block_body) [34392 35518])
+                    ("autocorrelation_matrix" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [35569 35573]))                          
+                        :decorators 
+                          ( ("cached_method" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [35523 36800])
+                    ("linear_structures" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [36827 36831]))                          )
+                        (reparse-symbol indented_block_body) [36805 38365])
+                    ("has_linear_structure" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [38395 38399]))                          
+                        :documentation "
+        Return ``True`` if there exists a nonzero component function of this
+        S-Box that has a linear structure.
+
+        .. SEEALSO::
+
+            :meth:`is_linear_structure`,
+            :meth:`linear_structures`.
+
+        EXAMPLES::
+
+            sage: from sage.crypto.sbox import SBox
+            sage: S = SBox(12,5,6,11,9,0,10,13,3,14,15,8,4,7,1,2)
+            sage: S.has_linear_structure()
+            True
+        ")
+                        (reparse-symbol indented_block_body) [38370 38947])
+                    ("is_linear_structure" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [38976 38980])
+                            ("a" variable nil (reparse-symbol function_parameters) [38982 38983])
+                            ("b" variable nil (reparse-symbol function_parameters) [38985 38986]))                          )
+                        (reparse-symbol indented_block_body) [38952 40070])
+                    ("max_degree" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [40090 40094]))                          
+                        :documentation "
+        Return the maximal algebraic degree of all its component functions.
+
+        EXAMPLES::
+
+            sage: from sage.crypto.sbox import SBox
+            sage: S = SBox([12,5,6,11,9,0,10,13,3,14,15,8,4,7,1,2])
+            sage: S.max_degree()
+            3
+        ")
+                        (reparse-symbol indented_block_body) [40075 40609])
+                    ("min_degree" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [40629 40633]))                          
+                        :documentation "
+        Return the minimal algebraic degree of all its component functions.
+
+        EXAMPLES::
+
+            sage: from sage.crypto.sbox import SBox
+            sage: S = SBox([12,5,6,11,9,0,10,13,3,14,15,8,4,7,1,2])
+            sage: S.min_degree()
+            2
+        ")
+                        (reparse-symbol indented_block_body) [40614 41156])
+                    ("is_balanced" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [41177 41181]))                          )
+                        (reparse-symbol indented_block_body) [41161 41710])
+                    ("is_almost_bent" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [41734 41738]))                          )
+                        (reparse-symbol indented_block_body) [41715 42393])
+                    ("fixed_points" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [42415 42419]))                          
+                        :documentation "
+        Return a list of all fixed points of this S-Box.
+
+        EXAMPLES::
+
+            sage: from sage.crypto.sbox import SBox
+            sage: S = SBox([0,1,3,6,7,4,5,2])
+            sage: S.fixed_points()
+            [0, 1]
+        ")
+                        (reparse-symbol indented_block_body) [42398 42751])
+                    ("inverse" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [42768 42772]))                          
+                        :documentation "
+        Return the inverse of this S-Box.
+
+        Note that the S-Box must be invertible, otherwise it will raise
+        a ``TypeError``.
+
+        EXAMPLES::
+
+            sage: from sage.crypto.sbox import SBox
+            sage: S = SBox([0, 1, 3, 6, 7, 4, 5, 2])
+            sage: Sinv = S.inverse()
+            sage: [Sinv(S(i)) for i in range(8)]
+            [0, 1, 2, 3, 4, 5, 6, 7]
+        ")
+                        (reparse-symbol indented_block_body) [42756 43432])
+                    ("is_monomial_function" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [43462 43466]))                          )
+                        (reparse-symbol indented_block_body) [43437 44078])
+                    ("is_plateaued" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [44100 44104]))                          )
+                        (reparse-symbol indented_block_body) [44083 44654])
+                    ("is_bent" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [44671 44675]))                          )
+                        (reparse-symbol indented_block_body) [44659 45905])
+                    ("is_involution" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [45928 45932]))                          )
+                        (reparse-symbol indented_block_body) [45910 46291]))                  
+                :type "class")
+                nil [900 46291])
+            ("feistel_construction" function (:arguments 
+              ( ("args" variable nil (reparse-symbol function_parameters) [46317 46322]))              ) nil [46292 47958])
+            ("misty_construction" function (:arguments 
+              ( ("args" variable nil (reparse-symbol function_parameters) [47982 47987]))              ) nil [47959 49735]))          
+      :file "sbox.py"
+      :pointmax 49735
+      :fsize 49734
+      :lastmodtime '(22898 27909 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!hal0taso!.ghq!sage_source!SageMath!src!sage!crypto!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

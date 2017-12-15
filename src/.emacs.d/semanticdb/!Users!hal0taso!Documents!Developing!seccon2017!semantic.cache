@@ -1,0 +1,26 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("sys" include nil nil [1 11])
+            ("_l" function (:arguments 
+              ( ("idx" variable nil (reparse-symbol function_parameters) [19 22])
+                ("s" variable nil (reparse-symbol function_parameters) [24 25]))              ) nil [12 57])
+            ("main" function (:arguments 
+              ( ("p" variable nil (reparse-symbol function_parameters) [66 67])
+                ("k1" variable nil (reparse-symbol function_parameters) [69 71])
+                ("k2" variable nil (reparse-symbol function_parameters) [73 75]))              ) nil [57 418])
+            ("solve" function nil nil [478 1022])
+            ("if" code nil nil [1023 1063]))          
+      :file "vigenere3rd.py"
+      :pointmax 1063
+      :fsize 1062
+      :lastmodtime '(23084 3700 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!hal0taso!Documents!Developing!seccon2017!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

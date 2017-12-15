@@ -1,0 +1,118 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("stack" include (:system-flag t) nil [1 17])
+            ("cstdio" include (:system-flag t) nil [18 35])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [37 57])
+            ("main" function (:type "int") nil [59 220]))          
+      :file "stack.cpp"
+      :pointmax 221
+      :fsize 220
+      :lastmodtime '(23016 42092 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("queue" include (:system-flag t) nil [1 17])
+            ("cstdio" include (:system-flag t) nil [18 35])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [37 57])
+            ("main" function (:type "int") nil [59 234]))          
+      :file "queue.cpp"
+      :pointmax 235
+      :fsize 234
+      :lastmodtime '(23016 42593 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("cstdio" include (:system-flag t) nil [1 18])
+            ("vector" include (:system-flag t) nil [19 36])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [38 58])
+            ("n" variable
+               (:default-value "4"
+                :type "int")
+                nil [60 70])
+            ("a" variable
+               (:dereference 1
+                :default-value "{1, 2, 4, 7}"
+                :type "int")
+                nil [71 94])
+            ("k" variable
+               (:default-value "13"
+                :type "int")
+                nil [95 106])
+            ("dfs" function
+               (:arguments 
+                  ( ("i" variable (:type "int") (reparse-symbol arg-sub-list) [117 123])
+                    ("sum" variable (:type "int") (reparse-symbol arg-sub-list) [124 132]))                  
+                :type "bool")
+                nil [108 265])
+            ("main" function (:type "int") nil [267 350]))          
+      :file "dfs.cpp"
+      :pointmax 351
+      :fsize 350
+      :lastmodtime '(23016 46795 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("cstdio" include (:system-flag t) nil [1 18])
+            ("vector" include (:system-flag t) nil [19 36])
+            ("MAXN" variable (:constant-flag t) nil [46 50])
+            ("MAXM" variable (:constant-flag t) nil [65 69])
+            ("N" variable
+               (:default-value "10"
+                :type "int")
+                nil [77 88])
+            ("M" variable
+               (:default-value "12"
+                :type "int")
+                nil [89 100])
+            ("field" variable
+               (:dereference 2
+                :default-value "{\"W........WW.\",
+                              \".WWW.....WWW\",
+                              \"....WW...WW.\",
+                              \".........WW.\",
+                              \".........W..\",
+                              \"..W......W..\",
+                              \".W.W.....WW.\",
+                              \"W.W.W.....W.\",
+                              \".W.W......W.\",
+                              \"..W.......W.\"}"
+                :type "char")
+                nil [102 562])
+            ("dfs" function
+               (:arguments 
+                  ( ("x" variable (:type "int") (reparse-symbol arg-sub-list) [574 580])
+                    ("y" variable (:type "int") (reparse-symbol arg-sub-list) [581 587]))                  
+                :type "void")
+                nil [565 840])
+            ("main" function (:type "int") nil [843 1057]))          
+      :file "LakeCounting.cpp"
+      :pointmax 1060
+      :fsize 1059
+      :lastmodtime '(23016 50936 0 0)
+      :unmatched-syntax '((number 70 . 75) (number 51 . 56))
+      :lexical-table 
+        '(("MAXM" . ((number "10000" 70 . 75)))
+          ("MAXN" . ((number "10000" 51 . 56)))
+          )
+))
+  :file "!Users!hal0taso!.ghq!github.com!hal0taso!cpp_samples!books!antbooks!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

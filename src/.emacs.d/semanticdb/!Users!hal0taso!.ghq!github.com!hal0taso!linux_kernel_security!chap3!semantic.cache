@@ -1,0 +1,33 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("stdio.h" include (:system-flag t) nil [974 992])
+            ("stdlib.h" include (:system-flag t) nil [993 1012])
+            ("string.h" include (:system-flag t) nil [1013 1032])
+            ("unistd.h" include (:system-flag t) nil [1033 1052])
+            ("sys/types.h" include (:system-flag t) nil [1053 1075])
+            ("sys/stat.h" include (:system-flag t) nil [1076 1097])
+            ("fcntl.h" include (:system-flag t) nil [1098 1116])
+            ("clamav.h" include (:system-flag t) nil [1117 1136])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [1212 1221])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1222 1234]))                  
+                :type "int")
+                nil [1203 3458]))          
+      :file "ex2.c"
+      :pointmax 3459
+      :fsize 3458
+      :lastmodtime '(23012 53990 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!hal0taso!.ghq!github.com!hal0taso!linux_kernel_security!chap3!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")
