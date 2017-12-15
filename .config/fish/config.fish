@@ -10,13 +10,15 @@ switch (uname)
         set -x POWERLINE_TMUX (mdfind -onlyin /usr/local/ -name 'powerline.conf')
 
         ## added by Anaconda3 2.5.0 installer
-        # set -x PATH /Users/hal0taso/anaconda/bin $PATH
+        set -x PATH /Users/hal0taso/anaconda/bin $PATH
         ## added by Anaconda2 4.3.1 installer
         # set -x PATH /Users/hal0taso/anaconda/bin $PATH
 
         # node.js
         set -x PATH /usr/local/nodejs/bin $PATH
- 
+
+        set -x PAHT /usr/local/opt/python/libexec/bin $PATH
+
         # Load rbenv automatically by appending
         # the following to ~/.config/fish/config.fish:
         status --is-interactive; and source (rbenv init -|psub)
@@ -25,7 +27,7 @@ switch (uname)
         eval (rbenv init - | source)
 
         # for sagemath
-        set -x PATH /Users/hal0taso/sage_source/SageMath $PATH
+        set -x PATH /Users/hal0taso/.ghq/sage_source/SageMath $PATH
 
         set -x PATH /usr/local/Cellar/nmap/7.12/bin/ $PATH
 
@@ -35,8 +37,11 @@ switch (uname)
 
         set -x PATH /usr/local/sbin $PATH
 
+        set -x PATH /Users/hal0taso/.ghq/sage_source/sage-8.1 $PATH
 
         set -x PATH $HOME/.cargo/bin/ $PATH
+
+        set -x PYTHONPATH "~/anaconda/pkgs/"
 
         # For Linux
     case Linux
