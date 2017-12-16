@@ -27,7 +27,7 @@ switch (uname)
         eval (rbenv init - | source)
 
         # for sagemath
-        set -x PATH /Users/hal0taso/.ghq/sage_source/SageMath $PATH
+        set -x PATH /Users/hal0taso/.ghq/sage_source/sage-8.1/ $PATH
 
         set -x PATH /usr/local/Cellar/nmap/7.12/bin/ $PATH
 
