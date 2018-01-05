@@ -1,1 +1,0 @@
-/Users/hal0taso/.config/fisherman/peco/functions/peco_select_history.fish

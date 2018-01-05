@@ -1,1 +1,0 @@
-/Users/hal0taso/.config/fisherman/gitignore/gitignore.fish
