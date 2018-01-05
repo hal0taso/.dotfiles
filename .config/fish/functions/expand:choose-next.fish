@@ -1,1 +1,0 @@
-/home/ukun/.config/fisherman/expand/functions/expand:choose-next.fish
