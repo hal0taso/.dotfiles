@@ -1,1 +1,1 @@
-/home/ukun/.config/fisherman/bd/completions/bd.fish
+/Users/hal0taso/.config/fisherman/bd/completions/bd.fish

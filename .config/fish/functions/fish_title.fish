@@ -1,1 +1,1 @@
-/home/ukun/.config/fisherman/bobthefish/fish_title.fish
+/Users/hal0taso/.config/fisherman/bobthefish/fish_title.fish
