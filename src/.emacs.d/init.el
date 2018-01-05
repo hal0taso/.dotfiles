@@ -161,7 +161,7 @@
  '(helm-gtags-suggested-key-mapping t)
  '(package-selected-packages
    (quote
-    (iedit anzu ws-butler dtrt-indent clean-aindent-mode undo-tree volatile-highlights helm-projectile helm-swoop zygospore company dired-subtree yatex yasnippet web-mode use-package smex smartparens slack py-autopep8 projectile prodigy popwin pallet nyan-mode multiple-cursors markdown-mode+ magit jedi init-loader idle-highlight-mode htmlize hlinum helm-gtags flycheck-pos-tip flycheck-cask fish-mode expand-region exec-path-from-shell drag-stuff direx dired-ranger darktooth-theme color-theme-modern ac-math abyss-theme))))
+    (sage-shell-mode iedit anzu ws-butler dtrt-indent clean-aindent-mode undo-tree volatile-highlights helm-projectile helm-swoop zygospore company dired-subtree yatex yasnippet web-mode use-package smex smartparens slack py-autopep8 projectile prodigy popwin pallet nyan-mode multiple-cursors markdown-mode+ magit jedi init-loader idle-highlight-mode htmlize hlinum helm-gtags flycheck-pos-tip flycheck-cask fish-mode expand-region exec-path-from-shell drag-stuff direx dired-ranger darktooth-theme color-theme-modern ac-math abyss-theme))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
