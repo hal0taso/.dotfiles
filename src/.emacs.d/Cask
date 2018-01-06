@@ -35,6 +35,8 @@
 (depends-on "py-autopep8")
 (depends-on "jedi")
 ;; for jedi
+(depends-on "deferred")
+(depends-on "python-environment")
 (depends-on "auto-complete")
 (depends-on "jedi-core")
 ;; for sagemath
