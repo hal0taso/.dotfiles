@@ -38,7 +38,7 @@
 (depends-on "auto-complete")
 (depends-on "jedi-core")
 ;; for sagemath
-(depends-on "sage-shell-mode"
+(depends-on "sage-shell-mode")
 
 ;; filer
 (depends-on "direx")
