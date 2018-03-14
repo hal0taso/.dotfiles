@@ -1,1 +1,0 @@
-/home/ukun/.config/fisherman/gitignore/completions/gitignore.fish

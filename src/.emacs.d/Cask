@@ -35,8 +35,12 @@
 (depends-on "py-autopep8")
 (depends-on "jedi")
 ;; for jedi
+(depends-on "deferred")
+(depends-on "python-environment")
 (depends-on "auto-complete")
 (depends-on "jedi-core")
+;; for sagemath
+(depends-on "sage-shell-mode")
 
 ;; filer
 (depends-on "direx")
@@ -69,7 +73,7 @@
 ;; fish shell mode
 (depends-on "fish-mode")
 
-;; heml
+;; helm
 (depends-on "helm")
 
 ;; heml-gtags
@@ -79,3 +83,14 @@
 (depends-on "rust-mode")
 (depends-on "racer")
 (depends-on "flycheck-rust")
+
+;; C++
+(depends-on "zygospore")
+(depends-on "ws-butler")
+(depends-on "volatile-highlights")
+(depends-on "undo-tree")
+(depends-on "iedit")
+(depends-on "dtrt-indent")
+(depends-on "counsel-projectile")
+(depends-on "clean-aindent-mode")
+(depends-on "anzu")
