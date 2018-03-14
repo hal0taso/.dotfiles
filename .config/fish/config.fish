@@ -81,7 +81,8 @@ if test -n '$EMACS'
     end
 end
 
-
 set -g theme_color_scheme terminal
 
 set -x RUST_SRC_PATH (rustc --print sysroot)/lib/rustlib/src/rust/src
+
+balias emacs 'emacs client -c -a ""'
