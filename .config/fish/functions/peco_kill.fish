@@ -1,1 +1,0 @@
-/home/ukun/.config/fisherman/peco/functions/peco_kill.fish

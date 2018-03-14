@@ -1,1 +1,0 @@
-/home/ukun/.config/fisherman/argu/functions/argu.fish

@@ -1,1 +1,0 @@
-/home/ukun/.config/fisherman/balias/functions/balias.fish
