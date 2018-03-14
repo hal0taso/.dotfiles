@@ -1,6 +1,6 @@
 alias updatedb='/usr/libexec/locate.updatedb'
 
-alias ls='ls -G --color=auto'
+alias ls='ls -GP'
 
 
 export LSCOLORS=gxfxcxdxbxegedabagacad

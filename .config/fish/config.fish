@@ -43,6 +43,8 @@ switch (uname)
 
         set -x PYTHONPATH "~/anaconda/pkgs/"
 
+        # set -x PYTHONPATH "/usr/local/lib/python2.7/site-packages"
+
         # For Linux
     case Linux
         # set POWERLINE path for tmux
