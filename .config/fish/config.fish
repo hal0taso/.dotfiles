@@ -68,11 +68,22 @@ function fish_user_key_bindings
 end
 
 
+set -x ALTERNATE_EDITOR ""
+set -x EDITOR "emacsclient -t"
+set -x VISUAL "emacsclient -c -a emacs"
+
+balias gget "ghq get"
+balias glist "ghq list"
+balias glook "ghq look"
+
+balias ec "emacsclient -c -a ''"
+balias ek "emacsclient -e '(kill-emacs)'"
 # if launch emacs from tmux,
 # launch cli emacs (emacs -nw)
 if test -z $TMUX
 else
     balias emacs 'emacs -nw'
+    balias ec "emacsclient -t"
 end
 
 if test -n '$EMACS'
@@ -86,5 +97,3 @@ end
 set -g theme_color_scheme terminal
 
 set -x RUST_SRC_PATH (rustc --print sysroot)/lib/rustlib/src/rust/src
-
-balias emacs 'emacsclient -c -a ""'
