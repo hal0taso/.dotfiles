@@ -26,3 +26,10 @@
   (define-key helm-gtags-mode-map (kbd "C-c <") 'helm-gtags-previous-history)
   (define-key helm-gtags-mode-map (kbd "C-c >") 'helm-gtags-next-history)
   (define-key helm-gtags-mode-map (kbd "M-,") 'helm-gtags-pop-stack))
+
+(defun my-c-c++-mode-init ()
+  (setq c-basic-offset 4)
+  )
+
+(add-hook 'c-mode-hook 'my-c-c++-mode-init)
+(add-hook 'c++-mode-hook 'my-c-c++-mode-init)
