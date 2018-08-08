@@ -73,9 +73,31 @@
 ;; (setq quail-japanese-use-double-n t)
 
 ;;; 括弧の補完
+(require 'editorconfig)
 (electric-pair-mode 1)
 
 ;;; 対応する括弧のハイライト
 (show-paren-mode t)
 
+;; editorconfigを有効にする
+(editorconfig-mode 1)
+
 ;;; init.el ends here
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(c-basic-offset 4)
+ '(flycheck-display-errors-function (function flycheck-pos-tip-error-messages))
+ '(global-linum-mode t)
+ '(helm-gtags-auto-update t)
+ '(helm-gtags-ignore-case t)
+ '(helm-gtags-path-style (quote relative))
+ '(helm-gtags-suggested-key-mapping t))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(linum-highlight-face ((t (:foreground "black" :background "green")))))
