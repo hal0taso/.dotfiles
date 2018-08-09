@@ -98,3 +98,4 @@ end
 set -g theme_color_scheme terminal
 
 set -x RUST_SRC_PATH (rustc --print sysroot)/lib/rustlib/src/rust/src
+set -x PATH /Users/hal0taso/Library/Python/2.7/bin /usr/local/bin /usr/bin /bin /usr/sbin /sbin

@@ -11,8 +11,9 @@
 
 (when (eq system-type 'darwin)
   (require 'cask)
-  (set-frame-font "Monospace 12")
+  (set-frame-font "Monospace 14")
   (define-key global-map (kbd "C-c RET") 'set-mark-command)
+  (set-frame-parameter nil 'fullscreen 'maximized)
   )
 
 ;; ============================================
@@ -79,3 +80,22 @@
 (show-paren-mode t)
 
 ;;; init.el ends here
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(global-linum-mode t)
+ '(helm-gtags-auto-update t)
+ '(helm-gtags-ignore-case t)
+ '(helm-gtags-path-style (quote relative))
+ '(helm-gtags-suggested-key-mapping t)
+ '(package-selected-packages
+   (quote
+    (helm-projectile helm-swoop company zygospore yatex yasnippet ws-butler web-mode volatile-highlights use-package undo-tree smex smartparens slack sage-shell-mode ranger racer py-autopep8 prodigy popwin pallet nyan-mode multiple-cursors markdown-mode+ magit jedi init-loader iedit idle-highlight-mode htmlize hlinum helm-gtags flycheck-rust flycheck-pos-tip flycheck-cask fish-mode expand-region exec-path-from-shell dtrt-indent drag-stuff direx dired-ranger darktooth-theme counsel-projectile color-theme-modern clean-aindent-mode anzu ac-math abyss-theme))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(linum-highlight-face ((t (:foreground "black" :background "green")))))
