@@ -30,6 +30,9 @@
 (depends-on "yasnippet")
 (depends-on "init-loader")
 
+(depends-on "tramp")
+(depends-on "helm-tramp")
+
 ;; Python
 (depends-on "epc")
 (depends-on "py-autopep8")
@@ -94,3 +97,6 @@
 (depends-on "counsel-projectile")
 (depends-on "clean-aindent-mode")
 (depends-on "anzu")
+
+;; editorconfig
+(depends-on "editorconfig")
